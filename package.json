@@ -1,0 +1,22 @@
+{
+  "name": "oglasi",
+  "version": "1.0.0",
+  "description": "Small home project for showing listings",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ucha-jedi-frontend/oglasi.git"
+  },
+  "keywords": [
+    "listings"
+  ],
+  "author": "dev/g1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ucha-jedi-frontend/oglasi/issues"
+  },
+  "homepage": "https://github.com/ucha-jedi-frontend/oglasi#readme"
+}
