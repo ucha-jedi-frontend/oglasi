@@ -1,3 +1,20 @@
-/*
- * Main CSS stylesheet
- */
+* {box-sizing: border-box;margin: 0;padding: 0;}
+html , body {font-family: 'Krub', sans-serif;background-color: #efefef;line-height: 1.5;}
+body {color: #333;overflow-x: hidden;font-size: 16px;}
+.text-center {text-align: center;}
+.text-left {text-align: left;}
+.row , nav , header{display: flex;}
+.row {flex-wrap: wrap;}
+header {justify-content: space-between;}
+aside {flex: 30%;}
+main {flex: 70%;}
+@media screen and (max-width: 700px) {
+    .row , nav {flex-direction: column;}
+  }
+  
+  
+  
+  .ana-m {background-color: rgb(143, 182, 62);}
+  .ana {background-color: rgb(65, 82, 99);color: #fff;}
+  .mirjana {background-color:rgb(249,192,52);height: 1000px;}
+  .jelena {background-color: white;height: 1000px;}
