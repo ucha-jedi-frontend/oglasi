@@ -27,14 +27,31 @@
         <a href="#">Bela tehnika</a>
         <a href="#">Mašine i alati</a>
     </nav>
-    <div class="row ana">   <!-- ****Ana ovo radi**** -->
-        Search
+    <div class="row ana"> 
+        <div class="empty"></div> 
+        <div class="searchy"> 
+        <input type="text" class="search" placeholder="What are you searching for">
+        <input type="text" class="search" placeholder="City">
+        <button type="button" class="searchbtn">Search</button>
+    </div>
     </div>
     <div class="row">
         <aside class="mirjana">Search filter</aside>   <!-- ****Mirjana ovo radi***** -->
         <main>
             <h1>Nekretnine</h1>
-            <div>Sort by</div>   <!-- ****Ana ovo radi**** -->
+            <div class="sortby">
+                <p id="catname">Category name</p>
+          
+            <select name="Sort by" id="sort">
+                <option value="">Sort by</option>
+                <option value="">Newest first</option>
+                <option value="">Oldest first</option>
+                <option value="">Price:Lowest first</option>
+                <option value="">Price:Highest first</option>
+                <option value="">Alphabetic order</option>
+                <option value="">Actions</option>
+            </select>
+        </div>   <!-- ****Ana ovo radi**** -->
             <div class="container jelena">  <!-- ****Jelena ovo radi***** -->
                 Oglasi
             </div>
