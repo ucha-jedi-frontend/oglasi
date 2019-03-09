@@ -1,12 +1,4 @@
-* {box-sizing: border-box;margin: 0;padding: 0;}
-html , body {font-family: 'Krub', sans-serif;background-color: #efefef;line-height: 1.5;}
-body {color: #333;overflow-x: hidden;font-size: 16px;}
-.text-center {text-align: center;}
-.text-left {text-align: left;}
-.row , nav , header{display: flex;}
-.row {flex-wrap: wrap;}
-header {justify-content: space-between;}
-aside {flex: 30%;}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -60,23 +52,29 @@ main, .searchy {
   /*responsive search i sort za mob*/
   div.ana {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
   }
   .searchy{
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between
+    align-content: space-between;
+    padding: 10px
+  }
+  input.search, button.searchbtn {
+    border:1px solid black;
+    margin-top: 20px;
+    margin-bottom: 3px;
+    border-radius: 4px;
   }
   input.search {
-    border:1px solid black;
-    margin-top: 5px;
-    margin-bottom: 3px;
     width: 100%;
-    height: 35px;
+    height: 50px;
+  }
+  div.movebtn{
+    margin: auto;
   }
   button.searchbtn {
-    border:1px solid black;
-    height: 35px;
+    height: 40px;
     width: 150px;
     background-color: orange;
     color: white;
@@ -121,6 +119,8 @@ main, .searchy {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 20px;
   }
   input.search, button.searchbtn {
     border:1px solid black;
@@ -130,7 +130,9 @@ main, .searchy {
     border-radius: 4px;
   }
   input.search {
-    width: 260px
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 10em
   }
   button.searchbtn {
     width: 100px;
@@ -159,6 +161,7 @@ main, .searchy {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-right: 10px
   }
   input.search, button.searchbtn {
     border:1px solid black;
@@ -166,6 +169,7 @@ main, .searchy {
     margin-top: 20px;
     height: 40px;
     border-radius: 4px;
+    
   }
   input.search {
     flex-grow: 2;
@@ -176,6 +180,7 @@ main, .searchy {
     width: 80px;
     background-color: orange;
     color: white;
+   
   }
   select#sort {
     height: 40px;
