@@ -8,42 +8,141 @@
     <link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
     <title>Oglasi</title>
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,400,300,700,300italic|Zilla+Slab:300,700"> -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
     <header class="ana-m">
         <div class="logo">Logo</div>
         <div class="right">
-            <div class="registracija"><a href="#">Prijava</a></div>   <!-- ****Zorica ovo radi**** -->
-            <div class="registracija"><a href="#">Registracija</a></div>   <!-- ****Zorica ovo radi**** -->
+            <div class="registracija"><button id="btn-prijava">Prijava</button></div> <!-- ****Zorica ovo radi**** -->
+            <div class="registracija"><button id="btn-registracija">Registracija</button></div>
+            <!-- ****Zorica ovo radi**** -->
             <div class="button"><a href="#">Postavi oglas</a></div>
         </div>
     </header>
-    <nav> <!-- ******AnaM ovo radi****** -->
+    <nav>
+        <!-- ******AnaM ovo radi****** -->
         <a href="#">Nekretnine</a>
         <a href="#">Vozila</a>
         <a href="#">Usluge</a>
         <a href="#">Bela tehnika</a>
         <a href="#">Mašine i alati</a>
     </nav>
-    <div class="row ana">   <!-- ****Ana ovo radi**** -->
-        Search
+    <div class="row container ana">
+        <div class="empty"></div> 
+        <div class="row searchy"> 
+        <input type="text" class="inp search" placeholder="What are you searching for">
+        <input type="text" class="inp search" placeholder="City">
+       <div class="movebtn"><button type="button" class="za-formu searchbtn">Search</button></div> 
+    </div>
     </div>
     <div class="row">
-        <aside class="mirjana">Search filter</aside>   <!-- ****Mirjana ovo radi***** -->
-        <main>
+        <aside class="mirjana">Search filter</aside> <!-- ****Mirjana ovo radi***** -->
+        <main class="container text-center">
             <h1>Nekretnine</h1>
-            <div>Sort by</div>   <!-- ****Ana ovo radi**** -->
-            <div class="container jelena">  <!-- ****Jelena ovo radi***** -->
+            <div class="row sortby">
+                <p id="catname">Category name</p>
+          
+            <select name="Sort by" id="sort" class="sort">
+                <option value="">Sort by</option>
+                <option value="">Newest first</option>
+                <option value="">Oldest first</option>
+                <option value="">Price:Lowest first</option>
+                <option value="">Price:Highest first</option>
+                <option value="">Alphabetic order</option>
+                <option value="">Actions</option>
+            </select>
+        </div> <!-- ****Ana ovo radi**** -->
+            <div class="container jelena">
+                <!-- ****Jelena ovo radi***** -->
                 Oglasi
             </div>
         </main>
     </div>
-    <footer>Footer</footer>
+    <footer>
 
-<script src="js/vendor/jquery-3.3.1.min.js"></script>
-<script src="js/main.js"></script>
+    </footer>
+
+
+    <div id="modal-prijava" class="moj-modal">
+        <div class="modal-content">
+            <span class="close close-modal">&times;</span>
+            <h3>Ulogujte se na sajt Oglasi</h3>
+
+            <form id="forma-prijava">
+                <div class="forma text-left">
+                    <label for="email-prijava">E-mail adresa:</label><br>
+                    <input type="email" id="email-prijava" name="email-prijava" placeholder="Email" size="30"
+                        class="inp" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                    <p id='emailporuka1' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-prijava">Lozinka:</label><br>
+                    <input type="password" id="lozinka-prijava" name="lozinka-prijava" placeholder="Lozinka" size="30"
+                        class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$" required>
+                    <p id='lozinkaporuka1' class="poruka-greska"></p>
+                </div>
+
+                <button type="submit" id="dugme-login1" class="za-formu">Ulogujte se</button>
+
+                <div class="marg-top"><label><input type="checkbox" name="upamti" checked=""> Upamti me na ovom
+                        kompjuteru</label></div>
+
+                <div class="marg-top"><a href="#" class="button">Lozinka zaboravljena?</a></div>
+
+                <h3 class="marg-top">Još uvek nemate nalog na sajt Oglasi?</h3>
+                <button type="submit" id="dugme-registracija1" class="za-formu">Registracija</button>
+                <p>Neophodno za postavljanje oglasa i kontakt sa oglašivačima. </p>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-registracija" class="moj-modal">
+        <div class="modal-content">
+            <span class="close close-modal">&times;</span>
+            <h3>Registracija naloga na sajt Oglasi</h3>
+
+            <form id="forma-registracija">
+                <div class="forma text-left">
+                    <label for="email-registracija">E-mail adresa:</label><br>
+                    <input type="email" id="email-registracija" name="email-registracija" placeholder="Email" size="30"
+                        class="inp" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                    <p id='emailporuka2' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-registracija1">Lozinka:</label><br>
+                    <input type="password" id="lozinka-registracija1" name="lozinka-registracija1" placeholder="Lozinka"
+                        size="30" class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$"
+                        required>
+                    <p id='lozinkaporuka2' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-registracija2">Ponovite lozinku:</label><br>
+                    <input type="password" id="lozinka-registracija2" name="lozinka-registracija2" placeholder="Lozinka"
+                        size="30" class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$"
+                        required>
+                    <p id='lozinkaporuka3' class="poruka-greska"></p>
+                </div>
+
+                <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked=""> Prihvatam
+                        pravila i uslove Oglasi.com</label></div>
+                <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked=""> Imam više od 16
+                        godina</label></div>
+
+                <button type="submit" id="dugme-registracija" class="za-formu">Pošalji</button>
+
+                <p>Registracija nije moguća ako e-mail adresa nije korektna! </p>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
