@@ -18,7 +18,7 @@ a, a:link, a:visited {
 .marg-top {margin-top: 20px;}
 
 .forma .inp:focus {
-  border-color: rgba(143, 182, 62,.9);
+  border-color:rgba(143, 182, 62,.9);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(143, 182, 62,.6); 
   }
@@ -29,11 +29,21 @@ a, a:link, a:visited {
   border: 1px solid rgba(143, 182, 62, .3);
   border-radius: 4px;
 }
+ input.search:focus{ border-color:black;
+  outline: 0;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;}
 .search , .searchbtn {
   border:1px solid black;
 }
 .za-formu {margin: 20px 0 10px; }
-.searchbtn {background-color: orange;color: white;margin: 0;}
+.searchbtn {background-color: orange;color: white;margin: 0;transition: all 0.5s ease-in 0s;
+  -webkit-transition: all 0.5 ease-in 0s;
+  -ms-transition: all 0.5 ease-in 0s;}
+.searchbtn:hover{background-color: rgb(233, 135, 6);}
+.searchbtn:active{background-color: rgb(238, 120, 78);}
+.searchbtn:focus{outline: 0;}
 input[type="checkbox"] {
   vertical-align: middle;
 }
