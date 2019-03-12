@@ -1,13 +1,13 @@
 * {box-sizing: border-box;margin: 0;padding: 0;}
 .non-scroll {overflow-y: hidden; overflow-x: hidden;}
 html , body {font-family: 'Krub', sans-serif;/*font-family: Nunito Sans,Helvetica Neue,Helvetica,Arial,sans-serif;*/background-color: #efefef;line-height: 1.5;}
-body {color: #333;overflow-x: hidden;font-size: 16px;}
+body {color: #333;overflow-x: hidden;font-size: 1em;}
 .text-center {text-align: center;}
 .text-left {text-align: left;}
 .clearfix {clear: both;}
 .row , nav , header{display: flex;}
 .row {flex-wrap: wrap;}
-header {justify-content: space-between;}
+header , .details{justify-content: space-between;}
 aside, .empty {flex: 30%;}
 main, .searchy {flex: 70%;}
 .container {padding: 25px;}
@@ -18,7 +18,7 @@ a, a:link, a:visited {
 .marg-top {margin-top: 20px;}
 
 .forma .inp:focus {
-  border-color:rgba(143, 182, 62,.9);
+  border-color: rgba(143, 182, 62,.9);
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(143, 182, 62,.6); 
   }
@@ -29,32 +29,86 @@ a, a:link, a:visited {
   border: 1px solid rgba(143, 182, 62, .3);
   border-radius: 4px;
 }
- input.search:focus{ border-color:black;
-  outline: 0;
-  -moz-box-shadow:    inset 0 0 10px #000000;
-  -webkit-box-shadow: inset 0 0 10px #000000;
-  box-shadow:         inset 0 0 10px #000000;}
 .search , .searchbtn {
   border:1px solid black;
 }
 .za-formu {margin: 20px 0 10px; }
-.searchbtn {background-color: orange;color: white;margin: 0;transition: all 0.5s ease-in 0s;
-  -webkit-transition: all 0.5 ease-in 0s;
-  -ms-transition: all 0.5 ease-in 0s;}
-.searchbtn:hover{background-color: rgb(233, 135, 6);}
-.searchbtn:active{background-color: rgb(238, 120, 78);}
-.searchbtn:focus{outline: 0;}
+.searchbtn {background-color: orange;color: white;margin: 0;}
 input[type="checkbox"] {
   vertical-align: middle;
 }
 .sortby {justify-content: space-between;padding:20px 0;}
 .sort {width: 50%;}
 #catname , .sort {padding: 10px}
+input.search:focus{
+  border-color:black;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0 2px #0000ff;
+  box-shadow:         inset 0 0 2px #0000ff;
+}
+.searchbtn {
+  background-color: orange;
+  color: white;
+  margin: 0;
+  -webkit-transition: all 0.5 ease-in 0s;
+  transition: all 0.5s ease-in 0s;
+}
+.searchbtn:hover{background-color: rgb(233, 135, 6);}
+.searchbtn:active{background-color: rgb(238, 120, 78);}
+.searchbtn:focus{outline: 0;}
+.box {
+  position: relative;
+  border: 1px solid #dfe3e6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box-body , .details{display: flex;}
+.box-img img{width: 100%;height:100%;object-fit:cover;}
+.box-body{flex-direction: column;justify-content: space-between;}
+.box a {
+  color: #333;
+  border-bottom-width: 2px;
+  border-bottom-color: transparent;
+  transition: all 0.2s ease-in 0s;
+  -webkit-transition: all 0.2 ease-in 0s;
+  -ms-transition: all 0.2 ease-in 0s;
+}
+.box a , .price , .size span {line-height: 1.17;}
+.box a:hover {border-bottom: 2px solid #333;}
+.location {color: #d60037;}
+.description {font-size: .875rem;line-height: 1.43;}
+.price {color: #c8264b;}
+.price small , .size-label {line-height: 1.5;color: #adb0b3;}
+.price small {
+  display: block;
+  font-size: .75rem;
+  margin-top: 3px;
+  font-weight: 400;
+  }
+  .size {
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .size-label {font-size: .625rem;}
+@media screen and (max-width: 575px) {
+   body {font-size: 14px;}
+  .marg-top {margin-top: 10px;}
+  .box-body {padding: 10px;}
+}
 @media screen and (max-width: 767px) {
     .row , nav {flex-direction: column;}
     .container {padding: 15px;}
   .search {margin-bottom: 10px}
   .sort {width: 100%;}
+  }
+  @media screen and (min-width: 576px) {
+    .box-img {flex: 30%;}
+    .box-body {flex: 70%;padding: 20px 16px;}
+    .box a , .price , .size span{font-size: 1.5rem;font-weight: 700;}
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .description {display: none;}
   }
   @media screen and (min-width: 768px) {
     .non-scroll {padding-right: 15px;}
@@ -69,7 +123,19 @@ input[type="checkbox"] {
     .search:nth-child(2) {margin-left: 15px;margin-right: 15px;}
   }  
 
-  
+  .stretched-link::after {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+
+}
   .ana-m {background-color: rgb(143, 182, 62);}
   .ana {background-color: rgb(65, 82, 99);color: #fff;}
   .mirjana {background-color:rgb(249,192,52);height: 1000px;}
