@@ -12,8 +12,11 @@
 
     <link rel="icon" type="image/gif" sizes="16x16" href="img/favicon.png">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
 
 </head>
@@ -32,50 +35,38 @@
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto main-nav ">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Pocetna</a>
-                            </li>
-                            <li class="nav-item dropdown dropdown-slide">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">Dashboard<span><i class="fa fa-angle-down"></i></span>
-                                </a>
 
-                                <!-- Dropdown list -->
-                                <div class="dropdown-menu">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Početna</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">O nama</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Opcija 1</a>
                                     <a class="dropdown-item" href="#">Opcija 2</a>
                                     <a class="dropdown-item" href="#">Opcija 3</a>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown dropdown-slide">
-                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages <span><i class="fa fa-angle-down"></i></span>
-                                </a>
-                                <!-- Dropdown list -->
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about-us.html">About Us</a>
-                                    <a class="dropdown-item" href="contact-us.html">Contact Us</a>
-
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profil</a>
+                                <div class="dropdown-menu" id="drop-down-move" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">Opcija 1</a>
+                                    <a class="dropdown-item" href="#">Opcija 2</a>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown dropdown-slide">
-                                <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Listing <span><i class="fa fa-angle-down"></i></span>
-                                </a>
-                                <!-- Dropdown list -->
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="category.html">Ad-Grid View</a>
-                                    <a class="dropdown-item" href="ad-listing-list.html">Ad-List View</a>
-                                </div>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Kontakt</a>
                             </li>
                         </ul>
                         <ul class="navbar-nav ml-auto mt-10">
                             <li class="nav-item">
-                                <a class="nav-link login-button" href="login.html">Login</a>
+                                <a class="nav-link login-button" href=".html">Uloguj se</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white add-button" href="ad-listing.html"><i class="fa fa-plus-circle"></i> Add Listing</a>
+                                <a class="nav-link text-white add-button" href="ad-listing.html"><i class="fa fa-plus-circle"></i>Dodaj oglas</a>
                             </li>
                         </ul>
                     </div>

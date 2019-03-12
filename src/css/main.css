@@ -1,3 +1,140 @@
-/*
- * Main CSS stylesheet
- */
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=latin-ext');
+
+body {
+    line-height: 1.5;
+    font-family: "PT Serif", sans-serif;
+}
+
+p, li, input, select, button {
+    font-family: "PT Serif", sans-serif;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Serif", sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+p {
+    color: #888;
+}
+
+label {
+    font-size: 16px;
+    letter-spacing: 0;
+    color: #848484;
+}
+.add-button {
+    background: #28a745;
+    color: #fff;
+    padding: 8px 20px !important;
+    display: inline-block;
+}
+
+.add-button:hover {
+    color: #fff;
+}
+
+.navigation {
+    padding: 20px 0;
+}
+
+.navigation .navbar-nav {
+    text-align: center;
+}
+
+.login-button {
+    border: 2px solid #dedede;
+    margin-right: 8px;
+    padding: 6px 20px !important;
+}
+
+.add-button {
+    background: #28a745;
+    color: #fff;
+    padding: 8px 20px !important;
+    display: inline-block;
+}
+
+.add-button:hover {
+    color: #fff;
+}
+
+.main-nav .nav-item .nav-link {
+    font-size: 16px;
+    line-height: 43px;
+    padding: 0 20px;
+}
+
+.main-nav .nav-item .nav-link span {
+    margin-left: 4px;
+}
+
+.main-nav .nav-item .nav-link.dropdown-toggle {
+    padding-right: 10px;
+}
+
+.main-nav .nav-item.active .nav-link {
+    color: #5672f9;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display:block;
+    margin:0;
+}
+
+.dropdown-menu {
+    text-align: center;
+    top: 120%;
+    left: -40%;
+}
+#drop-down-move {
+    left: -80%;
+}
+
+.navbar-nav, .mr-auto {
+    flex: 1; /*specify that the nav flexbox needs to take up all of the available space of the parent element*/
+    margin: auto!important;
+    display: flex;
+}
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+}
