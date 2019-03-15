@@ -148,5 +148,124 @@ input.search:focus{
   .ana {background-color: rgb(65, 82, 99);color: #fff;}
 
   .mirjana {background-color:rgb(249,192,52);}
-  
+  /* search filter css */
+
+aside>.grid-container {
+  border: 1px solid black;
+  display: grid;
+  align-content: center;
+  grid-template-columns: auto;
+  grid-gap: 5px;
+  padding: 1%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.grid-container>div {
+  background-color: rgb(249, 192, 52);
+  text-align: center;
+  padding: 1px 0;
+}
+
+.ul_grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  font-weight: bold;
+}
+
+.search_label {
+  font-weight: bold;
+}
+
+label {
+  background-color: none;
+  color: #333;
+  height: 0.8em;
+  width: 90px;
+  position: relative;
+}
+
+.filterWidth {
+  height: 30px;
+  font-size: 100%;
+  border: 1px solid black;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.inputWidth {
+  width: 30%;
+  text-align: center;
+}
+
+.optionWidth {
+  width: 60%;
+}
+
+li {
+  list-style: none;
+}
+
+/* button Ane J  */
+
+button {
+  height: 40px;
+  width: 150px;
+  color: white;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.button_filter_search{
+  font-size: 100%;
+  background-color: rgb(143, 182, 62);
+}
+ .dropbtn {
+  background-color: rgb(143, 182, 62);
+
+ }
+
+@media screen and (max-width: 1200px) and (min-width: 993px) {}
+
+@media screen and (min-width: 993px) {}
+
+@media screen and (max-width: 767px) and (min-width: 577px) {}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  aside>.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 2px;
+    padding: 1%;
+  }
+  .ul_grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .search_label {
+    font-size: 16px;
+  }
+  .inputWidth {
+    height: 35px;
+    font-size: 100%;
+  }
+  .optionWidth {
+    width: 90%;
+    font-size: 100%;
+  }
+  .filterWidth {
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+}
 
