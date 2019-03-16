@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/ucha-jedi-frontend/oglasi/issues"
   },
-  "homepage": "https://github.com/ucha-jedi-frontend/oglasi#readme"
+  "homepage": "https://github.com/ucha-jedi-frontend/oglasi#readme",
+  "devDependencies": {
+    "eslint": "^5.15.2"
+  }
 }
