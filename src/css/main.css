@@ -1,45 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&subset=latin-ext');
 
-body {
+*{
+    box-sizing: border-box;
     line-height: 1.5;
     font-family: "PT Serif", sans-serif;
 }
 
-p, li, input, select, button {
-    font-family: "PT Serif", sans-serif;
-    color: #666;
-    font-size: 16px;
-    font-weight: 400;
+a {
+    position: relative;
+    cursor: pointer;
 }
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: "PT Serif", sans-serif;
-    font-weight: 600;
-    color: #333;
+a:active {
+    top: 1px;
 }
-
-p {
-    color: #666;
-}
-
-h1 {
-    font-size: 35px;
-}
-
-h2 {
-    font-size: 25px;
-}
-
-h3 {
-    font-size: 20px;
-}
-
-h4 {
-    font-size: 18px;
-}
-
-p {
-    color: #888;
+a, a:hover, a:visited, a:active, a:focus {
+    outline: none;
+    text-decoration: none;
 }
 
 label {
@@ -47,23 +23,53 @@ label {
     letter-spacing: 0;
     color: #848484;
 }
-.add-button {
-    background: #28a745;
-    color: #fff;
-    padding: 8px 20px !important;
-    display: inline-block;
-}
-
-.add-button:hover {
-    color: #fff;
-}
 
 .navigation {
     padding: 20px 0;
 }
 
-.navigation .navbar-nav {
+.nav-link .fa-plus-circle {
+    padding-right: 6px;
+}
+.dropdown:hover .dropdown-menu {
+    display:block;
+    margin:0;
+}
+
+.dropdown-menu {
     text-align: center;
+    top: 120%;
+    left: -40%;
+}
+
+#drop-down-move {
+    left: -80%;
+}
+
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+}
+
+#navbarSupportedContent > ul:nth-child(1) {
+    flex: 1;
+    justify-content: space-around;
+}
+
+#navbarSupportedContent > ul:nth-child(1) > li {
+    font-size: 18px;
 }
 
 .login-button {
@@ -83,58 +89,70 @@ label {
     color: #fff;
 }
 
-.main-nav .nav-item .nav-link {
-    font-size: 16px;
-    line-height: 43px;
-    padding: 0 20px;
+.add-button {
+    background: #28a745;
+    color: #fff;
+    padding: 8px 20px !important;
+    display: inline-block;
 }
 
-.main-nav .nav-item .nav-link span {
-    margin-left: 4px;
+.add-button:hover {
+    color: #fff;
 }
 
-.main-nav .nav-item .nav-link.dropdown-toggle {
-    padding-right: 10px;
+.hero-area {
+    padding: 60px 0 0;
+    background: url("../img/home/hero.jpg") center center;
+    background-size: cover;
+    text-shadow: 2px 2px 4px black;
 }
 
-.main-nav .nav-item.active .nav-link {
-    color: #5672f9;
+.hero-area .content-block {
+    padding-bottom: 80px;
 }
 
-
-.dropdown:hover .dropdown-menu {
-    display:block;
-    margin:0;
+.hero-area .content-block h1, .hero-area-2 .content-block h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-bottom: 15px;
 }
 
-.dropdown-menu {
-    text-align: center;
-    top: 120%;
-    left: -40%;
-}
-#drop-down-move {
-    left: -80%;
+.hero-area h2 {
+    color: #ffffff;
 }
 
-.navbar-nav, .mr-auto {
-    flex: 1; /*specify that the nav flexbox needs to take up all of the available space of the parent element*/
-    margin: auto!important;
-    display: flex;
+.hero-area .content-block p, .hero-area-2 .content-block p {
+    color: #fff;
+    font-size: 1.5rem;
 }
 
-.dropdown .dropdown-menu {
-    -webkit-transition: all 0.7s;
-    -moz-transition: all 0.7s;
-    -o-transition: all 0.7s;
-    transition: all 0.7s;
-    max-height: 0;
+.hero-area .short-popular-category-list h2 {
+    font-size: 2.5rem;
+}
+.hero-area .advance-search {
+    background: #fff;
+    padding: 40px 15px 25px 15px;
+    border-radius: 3px;
+    margin-bottom: -50px;
+    box-shadow: -1px 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.hero-area .advance-search .form-control {
+    border-color: #dedede;
+}
+
+.hero-area .advance-search button {
     display: block;
-    overflow: hidden;
-    opacity: 0;
-    padding: 0;
+}
+.hero-area .list-inline {
+    font-size: 1.8rem;
+}
+.hero-area .list-inline-item {
+    margin-right: 1rem;
 }
 
-.dropdown:hover .dropdown-menu {
-    max-height: 200px;
-    opacity: 1;
+body > section > div > div > div > div.advance-search > div > div > div > form > div > div:nth-child(2) > label {
+    width: 100%;
 }

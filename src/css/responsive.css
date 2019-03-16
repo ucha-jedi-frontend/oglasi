@@ -12,6 +12,15 @@
         padding: 6px 45px !important;
         margin: 5px 0;
     }
+    .hero-area .advance-search {
+        margin-bottom: -80px;
+    }
+    .hero-area .advance-search .block {
+        display: block !important;
+    }
+    .hero-area .advance-search button {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -19,6 +28,13 @@
         display: inline-block;
         padding: 6px 45px !important;
         margin: 5px 0;
+    }
+
+    .hero-area .content-block p, .hero-area-2 .content-block p {
+        font-size: 17px;
+    }
+    .hero-area .content-block h1, .hero-area-2 .content-block h1 {
+        font-size: 40px;
     }
 }
 

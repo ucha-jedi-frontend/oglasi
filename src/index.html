@@ -42,7 +42,7 @@
                                 <a class="nav-link" href="#">Početna</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">O nama</a>
+                                <a class="nav-link dropdown-toggle navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Najnovije</a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="#">Opcija 1</a>
                                     <a class="dropdown-item" href="#">Opcija 2</a>
@@ -61,12 +61,12 @@
                                 <a class="nav-link" href="#">Kontakt</a>
                             </li>
                         </ul>
-                        <ul class="navbar-nav ml-auto mt-10">
+                        <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
                                 <a class="nav-link login-button" href="#">Uloguj se</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white add-button" href="#"><i class="fa fa-plus-circle"></i>Dodaj oglas</a>
+                                <a class="nav-link text-white add-button" href="#"><i class="fa fa-plus-circle"></i>Postavi oglas</a>
                             </li>
                         </ul>
                     </div>
@@ -75,6 +75,75 @@
         </div>
     </div>
 </header>
+
+<!--===============================
+=            Hero Section            =
+================================-->
+
+<section class="hero-area text-center overly">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content-block">
+                    <h1>Dobro došli na portal Code Oglasi</h1>
+                    <p>Pridružite se hiljadama naših zadovoljnih članova<br>koji svakodnevno vežbaju front-end i postavljaju oglase na ovom portalu</p>
+                    <div class="short-popular-category-list text-center mt-3">
+                        <h2 class="mb-4">Trenutno Popularne Kategorije</h2>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a href="#"><i class="fa fa-home"></i><span> Nekretnine</span></a></li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="fas fa-heart"></i> Fitnes</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="fa fa-car"></i> Autotmobili</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="fas fa-utensils"></i> Restorani</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#"><i class="fa fa-coffee"></i> Kafići</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Advanced Search -->
+                <div class="advance-search">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-12 col-md-12 align-content-center">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <input type="text" class="form-control my-2 my-lg-1" id="inputtext4" placeholder="Unesite pojam za pretragu oglasa...">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label>
+                                                <select class="form-control mt-lg-1 mt-md-2">
+                                                    <option>Kategorija</option>
+                                                    <option value="1">Najviša ocena</option>
+                                                    <option value="2">Najviše puta pregledano</option>
+                                                    <option value="3">Najniža cena</option>
+                                                    <option value="4">Najviša cena</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <input type="text" class="form-control my-2 my-lg-1" id="inputLocation4" placeholder="Lokacija">
+                                        </div>
+                                        <div class="form-group col-md-2 mt-1">
+                                            <button type="submit" class="btn btn-primary">Pretraži oglase</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <main>
 
