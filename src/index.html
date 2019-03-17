@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <title>Oglasi</title>
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,400,300,700,300italic|Zilla+Slab:300,700"> -->
@@ -14,22 +20,23 @@
 </head>
 
 <body>
-    <header class="ana-m">
-        <div class="logo">Logo</div>
-        <div class="right">
-            <div class="registracija"><button id="btn-prijava">Prijava</button></div> <!-- ****Zorica ovo radi**** -->
-            <div class="registracija"><button id="btn-registracija">Registracija</button></div>
-            <!-- ****Zorica ovo radi**** -->
+    <header>
+        <div class="logo">
+            <img src="./img/logo.jpg" alt="Oglasi logo">
+        </div>
+        <div class="signIn">
+            <div class="prijava"><a href="#">Prijava</a></div>   <!-- ****Zorica ovo radi**** -->
+            <div class="registracija"><a href="#">Registracija</a></div>   <!-- ****Zorica ovo radi**** -->
             <div class="button"><a href="#">Postavi oglas</a></div>
         </div>
     </header>
-    <nav>
-        <!-- ******AnaM ovo radi****** -->
-        <a href="#">Nekretnine</a>
-        <a href="#">Vozila</a>
-        <a href="#">Usluge</a>
-        <a href="#">Bela tehnika</a>
-        <a href="#">Mašine i alati</a>
+    <nav> <!-- ******AnaM ovo radi****** -->
+        <ul>
+            <li><a href="#">Kuće</a></li>
+            <li><a href="#">Stanovi</a></li>
+            <li><a href="#">Lokali</a></li>
+           
+        </ul>
     </nav>
     <div class="row container ana">
         <div class="empty"></div>
