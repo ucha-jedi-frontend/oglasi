@@ -1,0 +1,31 @@
+{
+  "listings": [
+    {
+      "id": 1,
+      "descriptionId": 1,
+      "street": "Savski nasip",
+      "area": "Beograd",
+      "m2": 44,
+      "floor": 1,
+      "state": "NEW",
+      "roomCount": 100,
+      "price": 199999,
+      "imgUrl":"https://xdn.tf.rs/2017/12/29/comtrade-2-830x553.jpg",
+      "visitsCount": 0
+    }
+  ],
+  "listingDescriptions": [
+    {
+      "id": 1,
+      "text": "..."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "ucha@home.rs",
+      "password": "ucha1234",
+      "favorites": [1]
+    }
+  ]
+}
