@@ -24,10 +24,6 @@
   },
   "homepage": "https://github.com/ucha-jedi-frontend/oglasi#readme",
   "devDependencies": {
-<<<<<<< HEAD
     "eslint": "^5.15.2"
-=======
-    "json-server": "^0.14.2"
->>>>>>> master
   }
 }
