@@ -24,20 +24,20 @@
             <div class="button"><a href="#">Postavi oglas</a></div>
         </div>
     </header>
-    <nav>
-        <!-- ******AnaM ovo radi****** -->
-        <a href="#">Nekretnine</a>
-        <a href="#">Vozila</a>
-        <a href="#">Usluge</a>
-        <a href="#">Bela tehnika</a>
-        <a href="#">Mašine i alati</a>
+    <nav> <!-- ******AnaM ovo radi****** -->
+        <ul>
+            <li><a href="#">Kuće</a></li>
+            <li><a href="#">Stanovi</a></li>
+            <li><a href="#">Lokali</a></li>
+           
+        </ul>
     </nav>
     <div class="row container ana">
         <div class="empty"></div>
         <div class="row searchy">
-            <input type="text" class="inp search" placeholder="What are you searching for">
-            <input type="text" class="inp search" placeholder="City">
-            <div class="movebtn"><button type="button" class="za-formu searchbtn">Search</button></div>
+            <input type="text" class="inp search" placeholder="Tražim">
+            <input type="text" class="inp search" placeholder="Grad">
+            <div class="movebtn"><button type="button" class="za-formu searchbtn">Pretraži</button></div>
         </div>
     </div>
     <div class="row">
@@ -46,16 +46,16 @@
             <h1>Nekretnine</h1>
 
             <div class="row sortby">
-                <p id="catname">Category name</p>
+                <p id="catname">Ime kategorije</p>
 
                 <select name="Sort by" id="sort" class="sort">
-                    <option value="">Sort by</option>
-                    <option value="">Newest first</option>
-                    <option value="">Oldest first</option>
-                    <option value="">Price:Lowest first</option>
-                    <option value="">Price:Highest first</option>
-                    <option value="">Alphabetic order</option>
-                    <option value="">Actions</option>
+                    <option value="0">Sortiraj po</option>
+                    <option value="1">Najnoviji</option>
+                    <option value="2">Najstariji</option>
+                    <option value="3">Cena:Najniže prvo</option>
+                    <option value="4">Cena:Najviše prvo</option>
+                    <option value="5">Azbučnom redu</option>
+                    <option value="6">Najpopularniji</option>
                 </select>
             </div> <!-- ****Ana ovo radi**** -->
             <div class="jelena">
