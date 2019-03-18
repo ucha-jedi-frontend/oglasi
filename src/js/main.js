@@ -93,7 +93,7 @@ $( `.close-modal` ).click(function() {
                     <p class="location">${ad.district}, ${ad.area}, Srbija</p>
                     <p class="description">${description}</p>
                     <div class="details">
-                        <div>
+                        <div>npm run
                             <p>Cena</p>
                             <p class="price">
                                 <span>${ad.price} &euro;</span>
