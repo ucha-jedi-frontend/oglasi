@@ -152,7 +152,7 @@ input.search:focus{
 
 aside>.grid-container {
   display: grid;
-  align-content: center;
+  align-content: top;
   grid-template-columns: auto;
   grid-gap: 5px;
   padding: 1%;
@@ -223,14 +223,29 @@ button {
 }
  .dropbtn {
   background-color: rgb(143, 182, 62);
+ }
+ .detailsbtn{
+   display: none;
+ }
+ 
 
+@media screen and (max-width: 1200px) and (min-width: 992px) {}
+/* PROBLEM NA 882px */
+@media screen and (max-width: 991px) and (min-width: 768px) { 
+  .detailsbtn{
+    display: none;
+   }
+  
  }
 
-@media screen and (max-width: 1200px) and (min-width: 993px) {}
-
-@media screen and (min-width: 993px) {}
-
-@media screen and (max-width: 767px) and (min-width: 577px) {}
+@media screen and (max-width: 767px) and (min-width: 577px) {
+  .detailsbtn{
+    display: block;
+   }
+   .detailsform{
+     display: none;
+   }
+}
 
 @media screen and (max-width: 576px) {
   h1 {
@@ -258,9 +273,15 @@ button {
     font-size: 100%;
   }
   .filterWidth {
-    height: 30px;
+    height: 35px;
     margin-top: 10px;
     margin-bottom: 3px;
   }
+  .detailsbtn{
+    display: block;
+   }
+   .detailsform{
+     display: none;
+   }
 }
 
