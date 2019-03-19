@@ -192,10 +192,10 @@ input.search:focus{
 
 /********************* NAVIGACIJA ************************/
 
-nav {
+/* nav {
     background-color: rgb(143, 182, 62);
     height: 40px;
-}
+} */
 nav ul {
     list-style-type: none;
     margin: 0;
