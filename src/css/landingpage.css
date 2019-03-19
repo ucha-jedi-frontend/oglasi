@@ -1,0 +1,262 @@
+div#landing {
+    width: 100%;
+    height: 60%;
+    background-image: url(../img/lp9.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    justify-content: center;
+  
+}
+
+h1.h1l {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+    color: orangered;
+  
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+}
+
+.lansr, .lbtn {
+    margin-left: 10px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.lansr {
+    width: 100%;
+    padding: 15px;
+}
+
+.lansr:focus {
+    border-color: black;
+    outline: 0;
+    -webkit-box-shadow: inset 0 0 2px #0000ff;
+    box-shadow: inset 0 0 2px #0000ff;
+}
+
+.lbtn {
+    width: 300px;
+    background-color: orange;
+    color: white;
+}
+
+.lbtn:hover {
+    background-color: rgb(233, 135, 6);
+}
+
+.lbtn:active {
+    background-color: rgb(238, 120, 78);
+}
+
+.lbtn:focus {
+    outline: 0;
+}
+
+.mainl {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+
+}
+
+.catland {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+
+}
+
+.icon {
+    height: 150px;
+    max-width: 400px;
+}
+
+.name {
+    height: 50px;
+    max-width: 400px;
+    background-image:linear-gradient(to bottom right, orangered , orange,orangered);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px
+}
+
+.cl {
+    height: 200px;
+    width: 250px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px; 
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+    .lansr {
+        width: 100%;
+    }
+    .catland {   
+        display: flex;
+        flex-direction: row;
+    }
+    .cl {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        flex: 2 1 calc(25% - 50px);  
+    }
+}
+
+@media screen and (max-width: 767px) {
+    div#landing {
+        display: flex;
+        flex-direction: column;
+    }
+    h1.h1l {
+        font-size: 90px;
+        margin-top:50px
+    }
+    .cont {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .lansr, .lbtn {
+        display: flex;
+        height: 40px;
+        width: 100%;
+        margin: 10px;
+        flex-grow: 2;
+        flex-shrink: 2;
+    }
+    .lbtn {
+        padding: 0
+    }
+    .catland {
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+    .cl {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin: 15px;
+    }
+    /* navbar */
+    .button, .prijava, .registracija{
+        display: flex;
+        justify-content: flex-start;
+        height: 40px;
+        width: 100%;
+        margin: 10px;
+        flex-grow: 2;
+        flex-shrink: 2;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .lansr {
+        width: 100%;
+    }
+    .catland {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+    .cl {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin: 15px;
+    }
+}
+
+/* navbar */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+.navbar {
+    font-size: 18px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+}
+
+#main-nav {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    padding-right: 50px;
+   
+}
+
+.logoimg{
+    height: 60px;
+}
+#logo {
+    display: inline-block;
+}
+
+#navbar-toggle {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    cursor: pointer;
+    color: black;
+    font-size: 28px;
+    height: 100px;
+  
+}
+
+#navbar-toggle:hover {
+    color: orange;
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        margin: auto;
+        padding: 0
+    }
+    #main-nav {
+        display: flex !important;
+        
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-left: 10px;
+    }
+    #main-nav li {
+        margin: 0;
+    }
+  
+    #logo {
+        margin-top: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    #navbar-toggle {
+        display: none;
+    }
+}
