@@ -1,7 +1,7 @@
 div#landing {
     width: 100%;
     height: 60%;
-    background-image: url(../img/lp6.jpg);
+    background-image: url(../img/lp9.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,19 +60,20 @@ h1.h1l {
 }
 
 .mainl {
-    width: 90%;
-    max-width: 100%;
-    margin: 20px 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+
 }
 
 .catland {
     display: flex;
-    justify-content: flex-start;
-    align-content: space-around;
+    justify-content: center;
+    align-content: space-between;
     flex-wrap: wrap;
-    margin-top: 10px;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-top: 15px;
+
 }
 
 .icon {
@@ -92,11 +93,10 @@ h1.h1l {
 
 .cl {
     height: 200px;
-    max-width: 400px;
+    width: 250px;
     background-color: white;
     border: 1px solid black;
-    margin-left: 35px;
-    margin-bottom: 20px;
+    margin: 20px; 
     cursor: pointer;
 }
 
@@ -104,19 +104,15 @@ h1.h1l {
     .lansr {
         width: 100%;
     }
-    .catland {
+    .catland {   
         display: flex;
-        justify-content: flex-start;
-        align-content: space-around;
-        flex-wrap: wrap;
-        margin-left: 5%;
-        margin-right: 5%;
+        flex-direction: row;
     }
     .cl {
         display: flex;
         flex-direction: column;
-        flex-grow: 2;
-        flex-shrink: 2;
+        box-sizing: border-box;
+        flex: 2 1 calc(25% - 50px);  
     }
 }
 
@@ -127,6 +123,7 @@ h1.h1l {
     }
     h1.h1l {
         font-size: 90px;
+        margin-top:60px
     }
     .cont {
         display: flex;
@@ -146,39 +143,121 @@ h1.h1l {
     }
     .catland {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-content: center;
-        flex-wrap: wrap;
-    }
-    .cl {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin: 10px;
-        flex-grow: 2;
-        flex-shrink: 2;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .lansr {
-        width: 100%;
-    }
-    .catland {
-        display: flex;
-        justify-content: flex-start;
         align-content: space-around;
         flex-wrap: wrap;
     }
     .cl {
         display: flex;
         flex-direction: column;
-        height: 200px;
-        width: 280px;
+        width: 250px;
+        margin: 15px;
+    }
+    /* navbar */
+    .button, .prijava, .registracija{
+        display: flex;
+        justify-content: flex-start;
+        height: 40px;
+        width: 100%;
+        margin: 10px;
         flex-grow: 2;
         flex-shrink: 2;
-        margin-left: 20px;
-        margin-bottom: 20px
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .lansr {
+        width: 100%;
+    }
+    .catland {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+    .cl {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin: 15px;
+    }
+}
+
+/* navbar */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+.navbar {
+    font-size: 18px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 10px;
+}
+
+#main-nav {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    padding-right: 50px;
+   
+}
+
+.logoimg{
+    margin-top:15px;
+    height: 60px;
+}
+#logo {
+    display: inline-block;
+}
+
+#navbar-toggle {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    cursor: pointer;
+    color: black;
+    font-size: 28px;
+    height: 100px;
+  
+}
+
+#navbar-toggle:hover {
+    color: orange;
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        margin: auto;
+        padding: 0
+    }
+    #main-nav {
+        display: flex !important;
+        
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-left: 10px;
+    }
+    #main-nav li {
+        margin: 0;
+    }
+  
+    #logo {
+        margin-top: 0;
+    }
+    .nav-links {
+        margin-left: 40px;
+    }
+    #navbar-toggle {
+        display: none;
     }
 }
