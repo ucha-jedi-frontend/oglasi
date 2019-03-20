@@ -109,4 +109,14 @@ $( `.close-modal` ).click(function() {
             </div>`)
               }
               displayAds()
+
+              $(document).ready(function () {
+
+                $("#formButton").click(function () {
+             
+                    $("#dropdown").toggle();
+             
+                });
+             
+             });
            
