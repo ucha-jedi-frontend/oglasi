@@ -49,11 +49,31 @@
     </nav>
     <div class="row container ana">
         <div class="empty"></div>
+        
         <div class="row searchy">
-            <input type="text" class="inp search" placeholder="Upišite za pretragu ...">
-            <input type="text" class="inp search" placeholder="Grad">
-            <div class="movebtn"><button type="button" class="searchbtn">Pretraži</button></div>
+            <select name="id_type" id="detail_search_id_type" class="inp search"
+        onchange="" onload="">
+        <option value="">Šta tražite...</option>
+        <option label="Kuća" value="1">Kuća</option>
+        <option label="Stan" value="">Stan</option>
+        <option label="Studio" value="">Studio</option>
+        <option label="Lokal" value="">Lokal</option>
+        <option label="Kancelarija" value="">Kancelarija</option>
+        <option label="Plac" value="">Plac</option>
+        <option label="Vikendica" value="">Vikendica</option>
+        <option label="Hala" value="">Hala</option>
+        <option label="Garaža" value="">Garaža</option>
+        <option label="Zemljište" value="">Zemljište</option>
+        <option label="Drugo" value="">Drugo</option>
+        <option label="U izgradnji" value="">U izgradnji</option>
+    </select>
+    <form autocomplete="off" action="/action_page.php"></form>
+            <div class=" autocomplete">
+            <input type="text" class="inp search" id="town" placeholder="Grad">
+        </div></form>
+            <div class="movebtn"><button type="button" class="searchbtn search">Pretraži</button></div>
         </div>
+    
     </div>
     <div class="row">
         <aside class="container text-center grid-container">
@@ -414,6 +434,7 @@
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/autocomplete.js" defer></script> 
 
 </body>
 
