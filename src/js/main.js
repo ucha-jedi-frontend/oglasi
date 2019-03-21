@@ -1,29 +1,3 @@
-/*MODALI*/
-$( `#btn-prijava` ).click(function() {
-  $(`#modal-prijava`).addClass(`opened`);
-  $(`body`).addClass(`non-scroll`);
-});
-
-$( `#btn-registracija` ).click(function() {
-	openregistracija();
-});
-
-// dugme na modalu prijava
-$( `#dugme-registracija1` ).click(function() {
-	$(`#modal-prijava`).removeClass(`opened`);
-	openregistracija();
-});
-
-
-function openregistracija() {
-  $(`#modal-registracija`).addClass(`opened`);
-  $(`body`).addClass(`non-scroll`);
-}
-
-$( `.close-modal` ).click(function() {
-  $(this).parent().parent().removeClass(`opened`);
-  $(`body`).removeClass(`non-scroll`);
-});
 
                 const _api = axios.create({
                   baseURL:`http://localhost:3000`
@@ -120,19 +94,4 @@ $( `.close-modal` ).click(function() {
              
              });
            
-//navbar toggle
-let mainNav=document.getElementById('main-nav');
-let navbarToggle=document.getElementById('navbar-toggle');
 
-navbarToggle.addEventListener('click',function(){
-
-    if(this.classList.contains('active')){
-        mainNav.style.display="none";
-        this.classList.remove('active');
-    }
-    else{
-        mainNav.style.display="flex";
-        this.classList.add('active');
-
-    }
-});

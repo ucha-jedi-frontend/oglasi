@@ -24,40 +24,21 @@ h1.h1l {
 
 .lansr, .lbtn {
     margin-left: 10px;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 4px;
+   
 }
 
 .lansr {
     width: 100%;
-    padding: 15px;
+    
 }
 
-.lansr:focus {
-    border-color: black;
-    outline: 0;
-    -webkit-box-shadow: inset 0 0 2px #0000ff;
-    box-shadow: inset 0 0 2px #0000ff;
+
+
+.lbtn{
+    width: 200px;
+    border-radius: 4px;
 }
 
-.lbtn {
-    width: 300px;
-    background-color: orange;
-    color: white;
-}
-
-.lbtn:hover {
-    background-color: rgb(233, 135, 6);
-}
-
-.lbtn:active {
-    background-color: rgb(238, 120, 78);
-}
-
-.lbtn:focus {
-    outline: 0;
-}
 
 .mainl {
     width: 100%;
@@ -84,8 +65,8 @@ h1.h1l {
 .name {
     height: 50px;
     max-width: 400px;
-    background-image:linear-gradient(to bottom right, orangered , orange,orangered);
-    color: white;
+    background-image:linear-gradient(to bottom right,rgb(143, 182, 62) , white,rgb(143, 182, 62));
+    color: black;
     text-align: center;
     padding: 10px;
     font-size: 24px
@@ -123,7 +104,7 @@ h1.h1l {
     }
     h1.h1l {
         font-size: 90px;
-        margin-top:60px
+       
     }
     .cont {
         display: flex;
@@ -153,16 +134,7 @@ h1.h1l {
         width: 250px;
         margin: 15px;
     }
-    /* navbar */
-    .button, .prijava, .registracija{
-        display: flex;
-        justify-content: flex-start;
-        height: 40px;
-        width: 100%;
-        margin: 10px;
-        flex-grow: 2;
-        flex-shrink: 2;
-    }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .lansr {
@@ -183,81 +155,3 @@ h1.h1l {
     }
 }
 
-/* navbar */
-nav.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    
-}
-
-.navbar {
-    font-size: 18px;
-    background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding-bottom: 10px;
-}
-
-#main-nav {
-    list-style-type: none;
-    display: none;
-    flex-direction: column;
-    padding-right: 50px;
-   
-}
-
-.logoimg{
-    margin-top:15px;
-    height: 60px;
-}
-#logo {
-    display: inline-block;
-}
-
-#navbar-toggle {
-    position: absolute;
-    top: 0px;
-    right: 20px;
-    cursor: pointer;
-    color: black;
-    font-size: 28px;
-    height: 100px;
-  
-}
-
-#navbar-toggle:hover {
-    color: orange;
-}
-
-
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-        margin: auto;
-        padding: 0
-    }
-    #main-nav {
-        display: flex !important;
-        
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-left: 10px;
-    }
-    #main-nav li {
-        margin: 0;
-    }
-  
-    #logo {
-        margin-top: 0;
-    }
-    .nav-links {
-        margin-left: 40px;
-    }
-    #navbar-toggle {
-        display: none;
-    }
-}
