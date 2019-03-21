@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="css/modal.css">  
     <link rel="stylesheet" href="css/landingpage.css">
+    <script src="jquery-3.3.1.min.js"></script>
     
     
     
@@ -39,11 +40,33 @@
 <div id="landing">
 
     <h1 class="h1l">Oglasi</h1>
-    <div class="cont">
-        <input type="text" class="lansr inp search" placeholder="Upišite za pretragu ...">
-        <input type="text" class="lansr inp search" placeholder="Grad">
-        <input type="button" class="lbtn searchbtn" value="Pretraži">
+ 
+    <div class="cont searchy">
+        
+        <select name="id_type" id="detail_search_id_type" class="lansr inp search "
+        onchange="" onload="">
+        <option value="">Šta tražite...</option>
+        <option label="Kuća" value="1">Kuća</option>
+        <option label="Stan" value="">Stan</option>
+        <option label="Studio" value="">Studio</option>
+        <option label="Lokal" value="">Lokal</option>
+        <option label="Kancelarija" value="">Kancelarija</option>
+        <option label="Plac" value="">Plac</option>
+        <option label="Vikendica" value="">Vikendica</option>
+        <option label="Hala" value="">Hala</option>
+        <option label="Garaža" value="">Garaža</option>
+        <option label="Zemljište" value="">Zemljište</option>
+        <option label="Drugo" value="">Drugo</option>
+        <option label="U izgradnji" value="">U izgradnji</option>
+    </select>
+    <form autocomplete="off" action="/action_page.php">
+        <div class=" autocomplete">
+        <input type="text" class="lansr inp search "  id="town" placeholder="Grad" >
+    </div></form>
+       
+        <input type="button" class="lbtn searchbtn search" value="Pretraži">
     </div>
+
 
 </div>
 
@@ -65,6 +88,7 @@
 
     </div>
 </div>
+<script src="js/autocomplete.js" defer></script> 
 <script src="js/main.js" defer></script>
 
 </body>

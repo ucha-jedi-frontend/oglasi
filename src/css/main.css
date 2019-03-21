@@ -75,6 +75,7 @@ a, a:link, a:visited {
   margin: 0;
   border:1px solid #E9B414;
 }
+
 .searchbtn:hover{background-color: rgb(233, 135, 6);}
 .searchbtn:active{background-color: rgb(238, 120, 78);}
 .searchbtn:focus{outline: 0;}
@@ -104,6 +105,7 @@ input.search:focus{
   -webkit-box-shadow: inset 0 0 2px #658295;
   box-shadow:         inset 0 0 2px #658295;
 }
+
 /*BOX */
 .box {
   position: relative;
@@ -248,5 +250,42 @@ aside h2 {margin-bottom: 10px;}
   .ana-m {background-color: rgb(143, 182, 62);}
   .ana {background-color: #658295;color: #fff;}
 
+    /* Autocomplete */
+.autocomplete {
+  position: relative;
+   margin-right:10px;  
   
+}
 
+.autocomplete-items {
+  position:absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;  
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-left: 10px 
+}
+
+.autocomplete-items div {
+   padding: 5px; 
+  cursor: pointer;
+  background-color: #fff; 
+  color: black;
+  border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+  background-color: rgb(143, 182, 62); 
+}
+
+.autocomplete-active {
+  background-color: orange !important; 
+  color: #ffffff; 
+}
+
+.search{
+  margin-left:10px
+}
