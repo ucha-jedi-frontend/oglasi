@@ -287,14 +287,14 @@
     },
     {
       "id": 20,
-      "descriptionId": 3,
-      "street": "Savski nasip",
+      "descriptionId": 1,
+      "street": "Sarajevska",
       "area": "Beograd",
-      "district": "Novi Beograd",
+      "district": "Stari grad",
       "m2": 44,
       "floor": 1,
       "state": "NEW",
-      "roomCount": 2.5,
+      "roomCount": 1.5,
       "price": 65400,
       "imgUrl": "./img/img20.jpg",
       "visitsCount": 0,
@@ -302,27 +302,27 @@
     },
     {
       "id": 21,
-      "descriptionId": 3,
-      "street": "Savski nasip",
+      "descriptionId": 2,
+      "street": "Požarevačka",
       "area": "Beograd",
-      "district": "Novi Beograd",
-      "m2": 44,
+      "district": "Dedinje",
+      "m2": 317,
       "floor": 1,
       "state": "NEW",
-      "roomCount": 2.5,
-      "price": 65400,
+      "roomCount": 4,
+      "price": 380400,
       "imgUrl": "./img/img21.jpg",
       "visitsCount": 0,
       "date": "21.02.2019"
     },
     {
       "id": 22,
-      "descriptionId": 3,
-      "street": "Savski nasip",
+      "descriptionId": 2,
+      "street": "Simićeva",
       "area": "Beograd",
-      "district": "Novi Beograd",
-      "m2": 44,
-      "floor": 1,
+      "district": "Senjak",
+      "m2": 550,
+      "floor": 0,
       "state": "NEW",
       "roomCount": 2.5,
       "price": 65400,
@@ -332,14 +332,14 @@
     },
     {
       "id": 23,
-      "descriptionId": 3,
-      "street": "Savski nasip",
-      "area": "Beograd",
-      "district": "Novi Beograd",
-      "m2": 44,
-      "floor": 1,
+      "descriptionId": 4,
+      "street": "Morović",
+      "area": "Šid",
+      "district": "Šid",
+      "m2": 1500,
+      "floor": 0,
       "state": "NEW",
-      "roomCount": 2.5,
+      "roomCount": 6,
       "price": 65400,
       "imgUrl": "./img/img23.jpg",
       "visitsCount": 0,
@@ -347,29 +347,29 @@
     },
     {
       "id": 24,
-      "descriptionId": 3,
-      "street": "Savski nasip",
+      "descriptionId": 1,
+      "street": "Mileševska",
       "area": "Beograd",
-      "district": "Novi Beograd",
-      "m2": 44,
+      "district": "Vračar",
+      "m2": 65,
       "floor": 1,
       "state": "NEW",
       "roomCount": 2.5,
-      "price": 65400,
+      "price": 115400,
       "imgUrl": "./img/img24.jpg",
       "visitsCount": 0,
       "date": "21.02.2019"
     },
     {
       "id": 25,
-      "descriptionId": 3,
-      "street": "Savski nasip",
+      "descriptionId": 2,
+      "street": "Jasenička",
       "area": "Beograd",
-      "district": "Novi Beograd",
-      "m2": 44,
-      "floor": 1,
+      "district": "Jajinci",
+      "m2": 250,
+      "floor": 0,
       "state": "NEW",
-      "roomCount": 2.5,
+      "roomCount": 4,
       "price": 65400,
       "imgUrl": "./img/img25.jpg",
       "visitsCount": 0,
@@ -518,7 +518,7 @@
     },
     {
       "id": 15,
-      "text": "Uknižena kuća, sama na parceli od 8 ari. Plac ograđen, uređen, osunčan, zasađene voćke, sa prednje strane ružičnjak sa dosta zelenila."
+      "text": "Uknjižena kuća, sama na parceli od 8 ari. Plac ograđen, uređen, osunčan, zasađene voćke, sa prednje strane ružičnjak sa dosta zelenila."
     },
     {
       "id": 16,
@@ -542,15 +542,15 @@
     },
     {
       "id": 21,
-      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+      "text": "Luksuzna kuca na exkluzivnoj lokaciji 3-etazna sa malom basticom ispred, 5 terasa (svaka spavaca soba, kao i dnevna imaju izlaz na terasu)."
     },
     {
       "id": 22,
-      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+      "text": "Savski venac , Senjak , rezidencijalna zona , Simiceva , predivna predratna , raskosna salonska vila , lepo uredjen plac pravilnog oblika."
     },
     {
       "id": 23,
-      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+      "text": "Prodajem plac u predivnom sremskom selu Morović (opština Šid). Selo kroz koje protiču dve reke (Bosut i Studva) i koje je okruženo šumama."
     },
     {
       "id": 24,
@@ -558,7 +558,7 @@
     },
     {
       "id": 25,
-      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+      "text": "NOVA luksuzna porodična kuća sa kompletnom infrastrukturom i građevinskom dozvolom. Objekat modernog eksterijera i enterijera, izgrađen 2018 godine."
     },
     {
       "id": 26,
