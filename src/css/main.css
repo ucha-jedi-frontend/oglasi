@@ -159,7 +159,6 @@ aside{
   display: grid;
   grid-template-columns: auto auto;
   text-align: left;
-  
 }
 .drugo div, .drugo{margin: 20px auto;}
 .inputWidth {width: 30%;}

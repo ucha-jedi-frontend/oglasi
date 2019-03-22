@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/ico" sizes="32x32" href="img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff"> -->
     <title>Oglasi</title>
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,400,300,700,300italic|Zilla+Slab:300,700"> -->
@@ -15,30 +21,60 @@
 </head>
 
 <body>
-      <header class="ana-m">
-        <div class="logo">Logo</div>
-        <div class="right">
-            <div class="registracija"><button id="btn-prijava">Prijava</button></div> <!-- ****Zorica ovo radi**** -->
-            <div class="registracija"><button id="btn-registracija">Registracija</button></div>
-            <!-- ****Zorica ovo radi**** -->
-            <div class="button"><a href="#">Postavi oglas</a></div>
+    <header>
+        <div class="nav-container">
+            <div class="wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Oglasi logo" class="veliki-logo"></a>
+                    <a href="index.html"><img src="img/logo-m.png" alt="Oglasi logo" class="mali-logo"></a>
+                </div>
+                <div class="signIn">
+                    <div class="registracija"><button id="btn-prijava" class="button reg-button">Prijava</button></div>
+                    <div class="crta"> | </div>
+                    <div class="registracija"><button id="btn-registracija" class="button reg-button">Registracija</button></div>
+                    <div class="postavi"><a href="#" class="button">Postavi oglas</a></div>
+                </div>
+            </div>
         </div>
     </header>
     <nav>
-        <!-- ******AnaM ovo radi****** -->
-        <a href="#">Nekretnine</a>
-        <a href="#">Vozila</a>
-        <a href="#">Usluge</a>
-        <a href="#">Bela tehnika</a>
-        <a href="#">Mašine i alati</a>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#">Kuće</a></li>
+                <li><a href="#">Stanovi</a></li>
+                <li><a href="#">Lokali</a></li>
+                <li><a href="#">Zemljišta </a></li>
+            </ul>
+          <div class="clearfix"></div>
+        </div>
     </nav>
     <div class="row container ana">
         <div class="empty"></div>
+        
         <div class="row searchy">
-            <input type="text" class="inp search" placeholder="What are you searching for">
-            <input type="text" class="inp search" placeholder="City">
-            <div class="movebtn"><button type="button" class="za-formu searchbtn">Search</button></div>
+            <select name="id_type" id="detail_search_id_type" class="inp search"
+        onchange="" onload="">
+        <option value="">Šta tražite...</option>
+        <option label="Kuća" value="1">Kuća</option>
+        <option label="Stan" value="">Stan</option>
+        <option label="Studio" value="">Studio</option>
+        <option label="Lokal" value="">Lokal</option>
+        <option label="Kancelarija" value="">Kancelarija</option>
+        <option label="Plac" value="">Plac</option>
+        <option label="Vikendica" value="">Vikendica</option>
+        <option label="Hala" value="">Hala</option>
+        <option label="Garaža" value="">Garaža</option>
+        <option label="Zemljište" value="">Zemljište</option>
+        <option label="Drugo" value="">Drugo</option>
+        <option label="U izgradnji" value="">U izgradnji</option>
+    </select>
+    <form autocomplete="off" action="/action_page.php"></form>
+            <div class=" autocomplete">
+            <input type="text" class="inp search" id="town" placeholder="Grad">
+        </div></form>
+            <div class="movebtn"><button type="button" class="searchbtn search">Pretraži</button></div>
         </div>
+    
     </div>
 
     <div class="row">
@@ -325,15 +361,9 @@
                     <option value="">Alphabetic order</option>
                     <option value="">Actions</option>
                 </select>
-            </div>
             <div class="jelena">
-
+               
             </div>
-        </main>
-    </div>
-    <footer>
-
-    </footer>
 
 
     <div id="modal-prijava" class="moj-modal">
@@ -360,7 +390,7 @@
                 <div class="marg-top"><label><input type="checkbox" name="upamti" checked=""> Upamti me na ovom
                         kompjuteru</label></div>
 
-                <div class="marg-top"><a href="#" class="button">Lozinka zaboravljena?</a></div>
+                <div class="marg-top"><a href="#">Lozinka zaboravljena?</a></div>
 
                 <h3 class="marg-top">Još uvek nemate nalog na sajt Oglasi?</h3>
                 <button type="submit" id="dugme-registracija1" class="za-formu">Registracija</button>
@@ -413,6 +443,7 @@
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/autocomplete.js" defer></script> 
 
 </body>
 
