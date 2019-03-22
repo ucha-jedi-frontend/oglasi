@@ -1,4 +1,5 @@
 * {box-sizing: border-box;margin: 0;padding: 0;}
+.hidden {display: none !important;}
 .non-scroll {overflow-y: hidden; overflow-x: hidden;}
 html {height: 100%;min-height: 100%;}
 html , body {font-family: 'Krub', sans-serif;/*font-family: Nunito Sans,Helvetica Neue,Helvetica,Arial,sans-serif;*/background-color: #fff;line-height: 1.5;}
@@ -64,7 +65,7 @@ a, a:link, a:visited {
   -webkit-transition: all 0.3 ease-in 0s;
   transition: all 0.3s ease-in 0s;
 }
-.button , button , .sort, .logo , select.filterWidth{
+nav li a , .button , button , .sort, .logo , select.filterWidth{
   cursor: pointer;
 }
 .inp , .sort , .filterWidth{font-size: 14px;}
