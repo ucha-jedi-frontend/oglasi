@@ -152,6 +152,9 @@ input.search:focus{
   background-color: #EFEFD6; 
 }
 aside h2 {margin-bottom: 10px;}
+aside{
+  align-content: flex-start;
+}
 .ul_grid {
   display: grid;
   grid-template-columns: auto auto;
