@@ -17,7 +17,7 @@
     },
     {
       "id": 2,
-      "descriptionId": 2,
+      "descriptionId": 1,
       "street": "Svetogorska",
       "area": "Beograd",
       "district": "Centar",
@@ -32,7 +32,7 @@
     },
     {
       "id": 3,
-      "descriptionId": 3,
+      "descriptionId": 1,
       "street": "Srđana Aleksića",
       "area": "Beograd",
       "district": "Novi Beograd",
@@ -47,7 +47,7 @@
     },
     {
       "id": 4,
-      "descriptionId": 4,
+      "descriptionId": 1,
       "street": "Niška",
       "area": "Beograd",
       "district": "Vračar",
@@ -62,7 +62,7 @@
     },
     {
       "id": 5,
-      "descriptionId": 5,
+      "descriptionId": 1,
       "street": "Poenkareova",
       "area": "Beograd",
       "district": "Palilula",
@@ -77,7 +77,7 @@
     },
     {
       "id": 6,
-      "descriptionId": 6,
+      "descriptionId": 1,
       "street": "Đuke Dinić",
       "area": "Beograd",
       "district": "Zvezdara",
@@ -92,7 +92,7 @@
     },
     {
       "id": 7,
-      "descriptionId": 7,
+      "descriptionId": 1,
       "street": "Njegoševa",
       "area": "Beograd",
       "district": "Cvetni trg",
@@ -107,7 +107,7 @@
     },
     {
       "id": 8,
-      "descriptionId": 8,
+      "descriptionId": 1,
       "street": "Luja Adamiča",
       "area": "Beograd",
       "district": "Novi Beograd",
@@ -122,7 +122,7 @@
     },
     {
       "id": 9,
-      "descriptionId": 9,
+      "descriptionId": 1,
       "street": "Nova detelinara",
       "area": "Novi Sad",
       "district": "Juzno-bački okrug",
@@ -137,7 +137,7 @@
     },
     {
       "id": 10,
-      "descriptionId": 10,
+      "descriptionId": 1,
       "street": "Cara Dušana",
       "area": "Novi Sad",
       "district": "Južno-bački",
@@ -152,7 +152,7 @@
     },
     {
       "id": 11,
-      "descriptionId": 11,
+      "descriptionId": 1,
       "street": "Toplice Milana",
       "area": "Novi Sad",
       "district": "Južno-bački",
@@ -167,7 +167,7 @@
     },
     {
       "id": 12,
-      "descriptionId": 12,
+      "descriptionId": 1,
       "street": "Jovanke Jeftanovic",
       "area": "Zlatibor",
       "district": "Zlatibor",
@@ -182,7 +182,7 @@
     },
     {
       "id": 13,
-      "descriptionId": 13,
+      "descriptionId": 1,
       "street": "Čelebićka",
       "area": "Beograd",
       "district": "Rakovica",
@@ -197,7 +197,7 @@
     },
     {
       "id": 14,
-      "descriptionId": 14,
+      "descriptionId": 1,
       "street": "Salvadora Aljendea",
       "area": "Beograd",
       "district": "Karaburma",
@@ -212,7 +212,7 @@
     },
     {
       "id": 15,
-      "descriptionId": 15,
+      "descriptionId": 2,
       "street": "Žička",
       "area": "Beograd",
       "district": "Sremčica",
@@ -242,7 +242,7 @@
     },
     {
       "id": 17,
-      "descriptionId": 17,
+      "descriptionId": 1,
       "street": "Đorđa Zličića",
       "area": "Novi Sad",
       "district": "Salajka",
@@ -257,7 +257,7 @@
     },
     {
       "id": 18,
-      "descriptionId": 18,
+      "descriptionId": 1,
       "street": "Bulevar Despota Stefana",
       "area": "Beograd",
       "district": "Centar",
@@ -272,7 +272,7 @@
     },
     {
       "id": 19,
-      "descriptionId": 19,
+      "descriptionId": 1,
       "street": "Marka Pola",
       "area": "Beograd",
       "district": "Novi Beograd",
@@ -287,7 +287,7 @@
     },
     {
       "id": 20,
-      "descriptionId": 20,
+      "descriptionId": 3,
       "street": "Savski nasip",
       "area": "Beograd",
       "district": "Novi Beograd",
@@ -299,12 +299,170 @@
       "imgUrl": "./img/img20.jpg",
       "visitsCount": 0,
       "date": "21.02.2019"
+    },
+    {
+      "id": 21,
+      "descriptionId": 3,
+      "street": "Savski nasip",
+      "area": "Beograd",
+      "district": "Novi Beograd",
+      "m2": 44,
+      "floor": 1,
+      "state": "NEW",
+      "roomCount": 2.5,
+      "price": 65400,
+      "imgUrl": "./img/img21.jpg",
+      "visitsCount": 0,
+      "date": "21.02.2019"
+    },
+    {
+      "id": 22,
+      "descriptionId": 3,
+      "street": "Savski nasip",
+      "area": "Beograd",
+      "district": "Novi Beograd",
+      "m2": 44,
+      "floor": 1,
+      "state": "NEW",
+      "roomCount": 2.5,
+      "price": 65400,
+      "imgUrl": "./img/img22.jpg",
+      "visitsCount": 0,
+      "date": "21.02.2019"
+    },
+    {
+      "id": 23,
+      "descriptionId": 3,
+      "street": "Savski nasip",
+      "area": "Beograd",
+      "district": "Novi Beograd",
+      "m2": 44,
+      "floor": 1,
+      "state": "NEW",
+      "roomCount": 2.5,
+      "price": 65400,
+      "imgUrl": "./img/img23.jpg",
+      "visitsCount": 0,
+      "date": "21.02.2019"
+    },
+    {
+      "id": 24,
+      "descriptionId": 3,
+      "street": "Savski nasip",
+      "area": "Beograd",
+      "district": "Novi Beograd",
+      "m2": 44,
+      "floor": 1,
+      "state": "NEW",
+      "roomCount": 2.5,
+      "price": 65400,
+      "imgUrl": "./img/img24.jpg",
+      "visitsCount": 0,
+      "date": "21.02.2019"
+    },
+    {
+      "id": 25,
+      "descriptionId": 3,
+      "street": "Savski nasip",
+      "area": "Beograd",
+      "district": "Novi Beograd",
+      "m2": 44,
+      "floor": 1,
+      "state": "NEW",
+      "roomCount": 2.5,
+      "price": 65400,
+      "imgUrl": "./img/img25.jpg",
+      "visitsCount": 0,
+      "date": "21.02.2019"
+    },
+    {
+      "id": 26,
+      "descriptionId": 4,
+      "street": "Rabrovac",
+      "area": "Beograd",
+      "district": "Mladenovac",
+      "m2": 1000,
+      "floor": 0,
+      "state": "NEW",
+      "roomCount": 6,
+      "price": 65400,
+      "imgUrl": "./img/img26.jpg",
+      "visitsCount": 0,
+      "date": "21.02.2019"
+    },
+    {
+      "id": 27,
+      "descriptionId": 4,
+      "street": "Bioska",
+      "area": "Zlatibor",
+      "district": "Zlatibor",
+      "m2": 4000,
+      "floor": 0,
+      "state": "NEW",
+      "roomCount": 6,
+      "price": 6000,
+      "imgUrl": "./img/img27.jpg",
+      "visitsCount": 0,
+      "date": "21.09.2018"
+    },
+    {
+      "id": 28,
+      "descriptionId": 3,
+      "street": "Koče Kapetana",
+      "area": "Beograd",
+      "district": "Vračar",
+      "m2": 101,
+      "floor": 0,
+      "state": "NEW",
+      "roomCount": 5,
+      "price": 65400,
+      "imgUrl": "./img/img28.jpg",
+      "visitsCount": 0,
+      "date": "15.01.2019"
+    },
+    {
+      "id": 29,
+      "descriptionId": 3,
+      "street": "Bore Stankovica",
+      "area": "Indjija",
+      "district": "Srem",
+      "m2": 450,
+      "floor": 0,
+      "state": "NEW",
+      "roomCount": 5,
+      "price": 265400,
+      "imgUrl": "./img/img29.jpg",
+      "visitsCount": 0,
+      "date": "01.02.2019"
+    },
+    {
+      "id": 30,
+      "descriptionId": 3,
+      "street": "Kraljice Natalije",
+      "area": "Beograd",
+      "district": "Palilula",
+      "m2": 79,
+      "floor": 0,
+      "state": "NEW",
+      "roomCount": 5,
+      "price": 118000,
+      "imgUrl": "./img/img30.jpg",
+      "visitsCount": 0,
+      "date": "21.03.2019"
     }
   ],
   "listingDescriptions": [
     {
       "id": 1,
-      "text": "Jednoiposoban stan u prizemlju luksuzne zgrade na prestižnoj lokaciji na Voždovcu. Stan poseduje jednu spavaću sobu, dnevni boravak, kuhinju,predsoblje."
+      "text": "Jednoiposoban stan u prizemlju luksuzne zgrade na prestižnoj lokaciji na Voždovcu. Stan poseduje jednu spavaću sobu, dnevni boravak, kuhinju,predsoblje.",
+      "grejanje": "",
+      "garaza": "",
+      "terasa": "",
+      "lift": "",
+      "telefon": "",
+      "klima": "",
+      "legalizacija": "",
+      "novogradnja": ""
     },
     {
       "id": 2,
@@ -372,7 +530,7 @@
     },
     {
       "id": 18,
-      "text": "Botanička bašta, kod Ktitora, uknjižen konforan jednoiposoban stan 49m2 korisne površine i zastakljena velika lođa od 6m2. Stan u odličnom stanju, istočno orjentisan,svetao sa prelepim pogledom."
+      "text": "Botanička bašta, kod Ktitora, uknjižen komforan trosoban stan 85m2 korisne površine i zastakljena velika lođa od 6m2. Stan u odličnom stanju, istočno orjentisan,svetao sa prelepim pogledom."
     },
     {
       "id": 19,
@@ -381,13 +539,90 @@
     {
       "id": 20,
       "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+    },
+    {
+      "id": 21,
+      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+    },
+    {
+      "id": 22,
+      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+    },
+    {
+      "id": 23,
+      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+    },
+    {
+      "id": 24,
+      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+    },
+    {
+      "id": 25,
+      "text": "Stan je salonskog tipa sa visinom plafona od 3m. Dvostrano orijentisan. Iznad stana je tavan. Uknjižen."
+    },
+    {
+      "id": 26,
+      "text": "Prodajem 44 ara šume u selu Rabrovac, opština Mladenovac (uz asfaltni put). Vrsta drveta: Granica ---> Tehničko i Ogrevno."
+    },
+    {
+      "id": 27,
+      "text": "Plac se nalazi na tromeđi: Kremna, Šljivovica, Bioska. Potez zvani Ravnice. Pogled prema istoku na Vručansko jezero, a prema zapadu na planinu Tari."
+    },
+    {
+      "id": 28,
+      "text": "Vračar, Koče Kapetana, lokal, klinika, škola, pp.. / blizu Kalenićeve pijace, Krunske i Vukovog spomenika, blizu škole, izlog, ulazi sa trotoara, bašta."
+    },
+    {
+      "id": 29,
+      "text": "Prodajem restoran (svecana sala za svadbe) u Indjiji sa komplet opremom ,kapaciteta do 250 mesta. Restoran je velicine 450m2 sa velikim parkingom."
+    },
+    {
+      "id": 30,
+      "text": "Prodaje se lokal, opstina Palilula, ulica kraljice Marije, povrsine 78,74m2. Poseduje vise prikljucaka za struju i vodu. Moguca je visenamenska delatnost."
     }
   ],
   "users": [
     {
       "id": 1,
+      "user": "Mihailo",
       "email": "ucha@home.rs",
       "password": "ucha1234",
+      "favorites": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "user": "Zorica",
+      "email": "zorica@home.rs",
+      "password": "zorica",
+      "favorites": [
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "user": "Mirjana",
+      "email": "mirjana@home.rs",
+      "password": "mirjana",
+      "favorites": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "user": "Ana",
+      "email": "ana@home.rs",
+      "password": "ana",
+      "favorites": [
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "user": "Marija",
+      "email": "marija@home.rs",
+      "password": "marija",
       "favorites": [
         1
       ]

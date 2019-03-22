@@ -53,6 +53,12 @@
               case 4:
                 room = `četvorosoban`;
                 break;
+              case 5:
+                room = `lokal`;
+                break;
+              case 6:
+                room = `zemljište`;
+                break;
               }
               return room;
             }
@@ -63,11 +69,11 @@
                     <img src="${ad.imgUrl}" alt="${ad.id}">
                 </div>
                 <div class="box-body text-left">
-                    <h2><a href="#" class="stretched-link">${ad.street}, ${ad.m2}m2, ${room}</a></h2>
+                    <h2><a href="details.html" onclick="saveToSessionStorage(${ad.id})"  class="stretched-link">${ad.street}, ${ad.m2}m2, ${room}</a></h2>
                     <p class="location">${ad.district}, ${ad.area}, Srbija</p>
-                    <p class="description">${description}</p>
+                    <p class="description">${description}..</p>
                     <div class="details">
-                        <div>npm run
+                        <div>
                             <p>Cena</p>
                             <p class="price">
                                 <span>${ad.price} &euro;</span>
@@ -93,20 +99,31 @@
                 });
              
              });
-           
-//navbar toggle
-let mainNav=document.getElementById('main-nav');
-let navbarToggle=document.getElementById('navbar-toggle');
+         
+ $('#nav-list').click(async(e)=>{
+      const prop = e.target.innerHTML;
+      let id;
+      switch(prop){
+        case 'Stanovi': id = 1;
+          break;
+        case 'Kuće': id = 2;
+          break;
+        case 'Lokali': id = 3;
+          break;
+        case 'Zemljišta': id= 4;
+          break; 
+      }
+      let response = await _api.get(`/listings?descriptionId=${id}`)
+      let ads = await response.data;
+      $(`.jelena`).html('')
+      for (const ad of ads) {
+        let description =await getDescription(ad.id);
+        let room = getRoomDescription(ad.roomCount);
+        _render(ad,description,room);
+      }
+ })  
 
-navbarToggle.addEventListener('click',function(){
-
-    if(this.classList.contains('active')){
-        mainNav.style.display="none";
-        this.classList.remove('active');
-    }
-    else{
-        mainNav.style.display="flex";
-        this.classList.add('active');
-
-    }
-});
+ function saveToSessionStorage(id){
+    sessionStorage.setItem('id oglasa', JSON.stringify(id));
+ }
+        

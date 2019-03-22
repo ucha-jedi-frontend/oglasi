@@ -31,7 +31,8 @@
                 <div class="signIn">
                     <div class="registracija"><button id="btn-prijava" class="button reg-button">Prijava</button></div>
                     <div class="crta"> | </div>
-                    <div class="registracija"><button id="btn-registracija" class="button reg-button">Registracija</button></div>
+                    <div class="registracija"><button id="btn-registracija"
+                            class="button reg-button">Registracija</button></div>
                     <div class="postavi"><a href="#" class="button">Postavi oglas</a></div>
                 </div>
             </div>
@@ -39,14 +40,14 @@
     </header>
     <nav>
         <div class="nav-container">
-            <ul>
-                <li><a href="#">Kuće</a></li>
-                <li><a href="#">Stanovi</a></li>
-                <li><a href="#">Lokali</a></li>
-                <li><a href="#">Zemljišta </a></li>
+            <ul id="nav-list">
+                <li><a>Kuće</a></li>
+                <li><a>Stanovi</a></li>
+                <li><a>Lokali</a></li>
+                <li><a>Zemljišta</a></li>
             </ul>
-          <div class="clearfix"></div>
-        </div>
+            <div class="clearfix">
+            </div>
     </nav>
     <div class="row container ana">
         <div class="empty"></div>
@@ -58,259 +59,295 @@
     </div>
     <div class="row">
         <aside class="container text-center grid-container">
-        	<h2>Filteri</h2>
-         <div class="filteri">
+            <h2>Filteri</h2>
+            <div class="filteri">
 
-                <div class="detailsbtn"> <button type="button" id="formButton" class="dropbtn">Detaljna pretraga</button></div>
+                <div class="detailsbtn"> <button type="button" id="formButton" class="dropbtn">Detaljna
+                        pretraga</button></div>
                 <div id="dropdown" class="detailsform">
                     <div class="city">
-                        
-                            <p class="search_label">Grad</p>
-                                <select name="id_city" id="detail_search_id_city" class="optionWidth filterWidth"
-                                    onchange="">
-                                    <option value="0">Svi gradovi</option>
 
-                                    <option label="Beograd" value="1">Beograd</option>
-                                    <option label="Novi Sad" value="2">Novi Sad</option>
-                                    <option label="Niš" value="3">Niš</option>
-                                    <option label="Kragujevac" value="4">Kragujevac</option>
-                                    <option label="-------------------" value="">-------------------</option>
+                        <p class="search_label">Grad</p>
+                        <select name="id_city" id="detail_search_id_city" class="optionWidth filterWidth" onchange="">
+                            <option value="0">Svi gradovi</option>
+
+                            <option label="Beograd" value="1">Beograd</option>
+                            <option label="Novi Sad" value="2">Novi Sad</option>
+                            <option label="Niš" value="3">Niš</option>
+                            <option label="Kragujevac" value="4">Kragujevac</option>
+                            <option label="-------------------" value="">-------------------</option>
 
 
-                                    <option label="Aleksandrovac" value="306">Aleksandrovac</option>
-                                    <option label="Aleksinac" value="261">Aleksinac</option>
-                                    <option label="Alibunar" value="307">Alibunar</option>
-                                    <option label="Apatin" value="259">Apatin</option>
-                                    <option label="Aranđelovac" value="5">Aranđelovac</option>
-                                    <option label="Arilje" value="6">Arilje</option>
-                                    <option label="Bač" value="297">Bač</option>
-                                    <option label="Bačka Palanka" value="291">Bačka Palanka</option>
-                                    <option label="Bačka Topola" value="273">Bačka Topola</option>
-                                    <option label="Bački Petrovac" value="275">Bački Petrovac</option>
-                                    <option label="Bajina Bašta" value="7">Bajina Bašta</option>
-                                    <option label="Batočina" value="294">Batočina</option>
-                                    <option label="Bečej" value="8">Bečej</option>
-                                    <option label="Bela crkva" value="280">Bela crkva</option>
-                                    <option label="Bela Crkva" value="311">Bela Crkva</option>
-                                    <option label="Beočin" value="279">Beočin</option>
-                                    <option label="Beograd" value="1">Beograd</option>
-                                    <option label="Blace" value="282">Blace</option>
-                                    <option label="Bogatić" value="301">Bogatić</option>
-                                    <option label="Boljevac" value="310">Boljevac</option>
-                                    <option label="Bor" value="9">Bor</option>
-                                    <option label="Brus" value="315">Brus</option>
-                                    <option label="Čačak" value="10">Čačak</option>
-                                    <option label="Čajetina" value="11">Čajetina</option>
-                                    <option label="Ćićevac" value="283">Ćićevac</option>
-                                    <option label="Ćuprija" value="12">Ćuprija</option>
-                                    <option label="Despotovac" value="13">Despotovac</option>
-                                    <option label="Doljevac" value="303">Doljevac</option>
-                                    <option label="Gadžin Han" value="284">Gadžin Han</option>
-                                    <option label="Gnjilane" value="14">Gnjilane</option>
-                                    <option label="Gornji Milanovac" value="15">Gornji Milanovac</option>
-                                    <option label="Inđija" value="16">Inđija</option>
-                                    <option label="Irig" value="278">Irig</option>
-                                    <option label="Ivanjica" value="17">Ivanjica</option>
-                                    <option label="Jagodina" value="18">Jagodina</option>
-                                    <option label="Kikinda" value="19">Kikinda</option>
-                                    <option label="Kladovo" value="20">Kladovo</option>
-                                    <option label="Knjaževac" value="316">Knjaževac</option>
-                                    <option label="Koceljeva" value="300">Koceljeva</option>
-                                    <option label="Kopaonik" value="258">Kopaonik</option>
-                                    <option label="Kosovska Mitrovica" value="21">Kosovska Mitrovica</option>
-                                    <option label="Kostolac" value="289">Kostolac</option>
-                                    <option label="Kovačica" value="319">Kovačica</option>
-                                    <option label="Kovin" value="22">Kovin</option>
-                                    <option label="Kragujevac" value="4">Kragujevac</option>
-                                    <option label="Kraljevo" value="23">Kraljevo</option>
-                                    <option label="Kruševac" value="24">Kruševac</option>
-                                    <option label="Kučevo" value="299">Kučevo</option>
-                                    <option label="Kula" value="272">Kula</option>
-                                    <option label="Kuršumlija" value="313">Kuršumlija</option>
-                                    <option label="Lapovo" value="260">Lapovo</option>
-                                    <option label="Leskovac" value="25">Leskovac</option>
-                                    <option label="Ljig" value="26">Ljig</option>
-                                    <option label="Ljubovija" value="286">Ljubovija</option>
-                                    <option label="Loznica" value="267">Loznica</option>
-                                    <option label="Lučani" value="305">Lučani</option>
-                                    <option label="Majdanpek" value="27">Majdanpek</option>
-                                    <option label="Negotin" value="28">Negotin</option>
-                                    <option label="Niš" value="3">Niš</option>
-                                    <option label="Nova Pazova" value="269">Nova Pazova</option>
-                                    <option label="Nova Varoš" value="29">Nova Varoš</option>
-                                    <option label="Novi Pazar" value="30">Novi Pazar</option>
-                                    <option label="Novi Sad" value="2">Novi Sad</option>
-                                    <option label="Odžaci" value="298">Odžaci</option>
-                                    <option label="Opovo" value="320">Opovo</option>
-                                    <option label="Pančevo" value="31">Pančevo</option>
-                                    <option label="Paraćin" value="32">Paraćin</option>
-                                    <option label="Peć" value="33">Peć</option>
-                                    <option label="Pećinci" value="302">Pećinci</option>
-                                    <option label="Petrovac na Mlavi" value="314">Petrovac na Mlavi</option>
-                                    <option label="Pirot" value="34">Pirot</option>
-                                    <option label="Požarevac" value="35">Požarevac</option>
-                                    <option label="Požega" value="270">Požega</option>
-                                    <option label="Prijepolje" value="36">Prijepolje</option>
-                                    <option label="Priština" value="37">Priština</option>
-                                    <option label="Prizren" value="38">Prizren</option>
-                                    <option label="Prokuplje" value="285">Prokuplje</option>
-                                    <option label="Rača" value="304">Rača</option>
-                                    <option label="Ražanj" value="308">Ražanj</option>
-                                    <option label="Region/Ostalo" value="265">Region/Ostalo</option>
-                                    <option label="Ruma" value="256">Ruma</option>
-                                    <option label="Šabac" value="39">Šabac</option>
-                                    <option label="Senta" value="287">Senta</option>
-                                    <option label="Šid" value="40">Šid</option>
-                                    <option label="Sjenica" value="292">Sjenica</option>
-                                    <option label="Smederevo" value="41">Smederevo</option>
-                                    <option label="Smederevska Palanka" value="42">Smederevska Palanka</option>
-                                    <option label="Soko Banja" value="262">Soko Banja</option>
-                                    <option label="Sombor" value="43">Sombor</option>
-                                    <option label="Srbobran" value="277">Srbobran</option>
-                                    <option label="Sremska Mitrovica" value="44">Sremska Mitrovica</option>
-                                    <option label="Sremski Karlovci" value="263">Sremski Karlovci</option>
-                                    <option label="Stara Pazova" value="257">Stara Pazova</option>
-                                    <option label="Subotica" value="45">Subotica</option>
-                                    <option label="Svilajnac" value="46">Svilajnac</option>
-                                    <option label="Temerin" value="274">Temerin</option>
-                                    <option label="Titel" value="264">Titel</option>
-                                    <option label="Topola" value="47">Topola</option>
-                                    <option label="Trstenik" value="317">Trstenik</option>
-                                    <option label="Tutin" value="288">Tutin</option>
-                                    <option label="Ub" value="296">Ub</option>
-                                    <option label="Užice" value="48">Užice</option>
-                                    <option label="Valjevo" value="49">Valjevo</option>
-                                    <option label="Varvarin" value="290">Varvarin</option>
-                                    <option label="Velika Plana" value="266">Velika Plana</option>
-                                    <option label="Veliko Gradište" value="268">Veliko Gradište</option>
-                                    <option label="Vladičin Han" value="293">Vladičin Han</option>
-                                    <option label="Vlasotince" value="281">Vlasotince</option>
-                                    <option label="Vranje" value="50">Vranje</option>
-                                    <option label="Vrbas" value="271">Vrbas</option>
-                                    <option label="Vrdnik" value="276">Vrdnik</option>
-                                    <option label="Vrnjačka banja" value="255">Vrnjačka banja</option>
-                                    <option label="Vršac" value="51">Vršac</option>
-                                    <option label="Žabalj" value="318">Žabalj</option>
-                                    <option label="Žabari" value="309">Žabari</option>
-                                    <option label="Žagubica" value="312">Žagubica</option>
-                                    <option label="Zaječar" value="52">Zaječar</option>
-                                    <option label="Zlatibor" value="53">Zlatibor</option>
-                                    <option label="Zrenjanin" value="54">Zrenjanin</option>
-                                </select>
-                        
-                    </div>
-                    <div>
-                            <p class="search_label">Tip</p>
-                                <select name="id_type" id="detail_search_id_type" class="optionWidth filterWidth"
-                                    onchange="" onload="">
-                                    <option value="">Svi tipovi</option>
-                                    <option label="Kuća" value="1">Kuća</option>
-                                    <option label="Stan" value="">Stan</option>
-                                    <option label="Studio" value="">Studio</option>
-                                    <option label="Lokal" value="">Lokal</option>
-                                    <option label="Kancelarija" value="">Kancelarija</option>
-                                    <option label="Plac" value="">Plac</option>
-                                    <option label="Vikendica" value="">Vikendica</option>
-                                    <option label="Hala" value="">Hala</option>
-                                    <option label="Garaža" value="">Garaža</option>
-                                    <option label="Zemljište" value="">Zemljište</option>
-                                    <option label="Drugo" value="">Drugo</option>
-                                    <option label="U izgradnji" value="">U izgradnji</option>
-                                </select>
-                      
-                    <div>
-                        <p class="search_label">Cena (€)</p>
-                        <div>
-                            <input type="text" name="min_price" id="min_price" class="inputWidth filterWidth" value=""
-                                placeholder="min €"> -
-                            <input type="text" name="max_price" id="max_price" class="inputWidth filterWidth" value=""
-                                placeholder="max €">
-                        </div>
-                    </div>
-
-                    <div>
-                        <div id="surface_search" class="">
-                            <p class="search_label">Kvadratura (m<sup>2</sup>)</p>
-                            <div class="search_input">
-                                <input type="text" name="min_surface" id="min_surface" class="inputWidth filterWidth"
-                                    value="" placeholder="min"> -
-                                <input type="text" name="max_surface" id="max_surface" class="inputWidth filterWidth"
-                                    value="" placeholder="max"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div id="land_surface_search">
-                            <p class="search_label">Površina (ar) </p>
-                            <input type="text" name="min_surface" id="min_surface_land" class="inputWidth filterWidth"
-                                value="" placeholder="min"> -
-                            <input type="text" name="max_surface" id="max_surface_land" class="inputWidth filterWidth"
-                                value="" placeholder="max">
-                        </div>
-                    </div>
-
-                    <div>
-                        <div><p class="search_label">Broj soba</p>
-                            <input type="text" name="min_nb_rooms" class="inputWidth filterWidth" value="" placeholder="min"> -
-                            <input type="text" name="max_nb_rooms" class="inputWidth filterWidth" value="" placeholder="max"></div>
-                    </div>
-
-                    <div>
-                        <div><p class="search_label">Spratnost</p>
-                            <input type="text" name="min_nb_floor" class="inputWidth filterWidth" value="" placeholder="min"> -
-                            <input type="text" name="max_nb_floor" class="inputWidth filterWidth" value="" placeholder="max"></div>
-                    </div>
-                    <div>
-                        <p class="search_label">Grejanje</p>
-                        <select name="id_heating[]" class="filterWidth optionWidth">
-                            <option value="">Sve opcije</option>
-                            <option label="Centralno" value="1">Centralno</option>
-                            <option label="Gas" value="2">Gas</option>
-                            <option label="Struja" value="3">Struja</option>
-                            <option label="Čvsto gorivo" value="4">Čvsto gorivo</option>
-                            <option label="Podno" value="9">Podno</option>
-                            <!-- <option label="" value="10"></option> -->
+                            <option label="Aleksandrovac" value="306">Aleksandrovac</option>
+                            <option label="Aleksinac" value="261">Aleksinac</option>
+                            <option label="Alibunar" value="307">Alibunar</option>
+                            <option label="Apatin" value="259">Apatin</option>
+                            <option label="Aranđelovac" value="5">Aranđelovac</option>
+                            <option label="Arilje" value="6">Arilje</option>
+                            <option label="Bač" value="297">Bač</option>
+                            <option label="Bačka Palanka" value="291">Bačka Palanka</option>
+                            <option label="Bačka Topola" value="273">Bačka Topola</option>
+                            <option label="Bački Petrovac" value="275">Bački Petrovac</option>
+                            <option label="Bajina Bašta" value="7">Bajina Bašta</option>
+                            <option label="Batočina" value="294">Batočina</option>
+                            <option label="Bečej" value="8">Bečej</option>
+                            <option label="Bela crkva" value="280">Bela crkva</option>
+                            <option label="Bela Crkva" value="311">Bela Crkva</option>
+                            <option label="Beočin" value="279">Beočin</option>
+                            <option label="Beograd" value="1">Beograd</option>
+                            <option label="Blace" value="282">Blace</option>
+                            <option label="Bogatić" value="301">Bogatić</option>
+                            <option label="Boljevac" value="310">Boljevac</option>
+                            <option label="Bor" value="9">Bor</option>
+                            <option label="Brus" value="315">Brus</option>
+                            <option label="Čačak" value="10">Čačak</option>
+                            <option label="Čajetina" value="11">Čajetina</option>
+                            <option label="Ćićevac" value="283">Ćićevac</option>
+                            <option label="Ćuprija" value="12">Ćuprija</option>
+                            <option label="Despotovac" value="13">Despotovac</option>
+                            <option label="Doljevac" value="303">Doljevac</option>
+                            <option label="Gadžin Han" value="284">Gadžin Han</option>
+                            <option label="Gnjilane" value="14">Gnjilane</option>
+                            <option label="Gornji Milanovac" value="15">Gornji Milanovac</option>
+                            <option label="Inđija" value="16">Inđija</option>
+                            <option label="Irig" value="278">Irig</option>
+                            <option label="Ivanjica" value="17">Ivanjica</option>
+                            <option label="Jagodina" value="18">Jagodina</option>
+                            <option label="Kikinda" value="19">Kikinda</option>
+                            <option label="Kladovo" value="20">Kladovo</option>
+                            <option label="Knjaževac" value="316">Knjaževac</option>
+                            <option label="Koceljeva" value="300">Koceljeva</option>
+                            <option label="Kopaonik" value="258">Kopaonik</option>
+                            <option label="Kosovska Mitrovica" value="21">Kosovska Mitrovica</option>
+                            <option label="Kostolac" value="289">Kostolac</option>
+                            <option label="Kovačica" value="319">Kovačica</option>
+                            <option label="Kovin" value="22">Kovin</option>
+                            <option label="Kragujevac" value="4">Kragujevac</option>
+                            <option label="Kraljevo" value="23">Kraljevo</option>
+                            <option label="Kruševac" value="24">Kruševac</option>
+                            <option label="Kučevo" value="299">Kučevo</option>
+                            <option label="Kula" value="272">Kula</option>
+                            <option label="Kuršumlija" value="313">Kuršumlija</option>
+                            <option label="Lapovo" value="260">Lapovo</option>
+                            <option label="Leskovac" value="25">Leskovac</option>
+                            <option label="Ljig" value="26">Ljig</option>
+                            <option label="Ljubovija" value="286">Ljubovija</option>
+                            <option label="Loznica" value="267">Loznica</option>
+                            <option label="Lučani" value="305">Lučani</option>
+                            <option label="Majdanpek" value="27">Majdanpek</option>
+                            <option label="Negotin" value="28">Negotin</option>
+                            <option label="Niš" value="3">Niš</option>
+                            <option label="Nova Pazova" value="269">Nova Pazova</option>
+                            <option label="Nova Varoš" value="29">Nova Varoš</option>
+                            <option label="Novi Pazar" value="30">Novi Pazar</option>
+                            <option label="Novi Sad" value="2">Novi Sad</option>
+                            <option label="Odžaci" value="298">Odžaci</option>
+                            <option label="Opovo" value="320">Opovo</option>
+                            <option label="Pančevo" value="31">Pančevo</option>
+                            <option label="Paraćin" value="32">Paraćin</option>
+                            <option label="Peć" value="33">Peć</option>
+                            <option label="Pećinci" value="302">Pećinci</option>
+                            <option label="Petrovac na Mlavi" value="314">Petrovac na Mlavi</option>
+                            <option label="Pirot" value="34">Pirot</option>
+                            <option label="Požarevac" value="35">Požarevac</option>
+                            <option label="Požega" value="270">Požega</option>
+                            <option label="Prijepolje" value="36">Prijepolje</option>
+                            <option label="Priština" value="37">Priština</option>
+                            <option label="Prizren" value="38">Prizren</option>
+                            <option label="Prokuplje" value="285">Prokuplje</option>
+                            <option label="Rača" value="304">Rača</option>
+                            <option label="Ražanj" value="308">Ražanj</option>
+                            <option label="Region/Ostalo" value="265">Region/Ostalo</option>
+                            <option label="Ruma" value="256">Ruma</option>
+                            <option label="Šabac" value="39">Šabac</option>
+                            <option label="Senta" value="287">Senta</option>
+                            <option label="Šid" value="40">Šid</option>
+                            <option label="Sjenica" value="292">Sjenica</option>
+                            <option label="Smederevo" value="41">Smederevo</option>
+                            <option label="Smederevska Palanka" value="42">Smederevska Palanka</option>
+                            <option label="Soko Banja" value="262">Soko Banja</option>
+                            <option label="Sombor" value="43">Sombor</option>
+                            <option label="Srbobran" value="277">Srbobran</option>
+                            <option label="Sremska Mitrovica" value="44">Sremska Mitrovica</option>
+                            <option label="Sremski Karlovci" value="263">Sremski Karlovci</option>
+                            <option label="Stara Pazova" value="257">Stara Pazova</option>
+                            <option label="Subotica" value="45">Subotica</option>
+                            <option label="Svilajnac" value="46">Svilajnac</option>
+                            <option label="Temerin" value="274">Temerin</option>
+                            <option label="Titel" value="264">Titel</option>
+                            <option label="Topola" value="47">Topola</option>
+                            <option label="Trstenik" value="317">Trstenik</option>
+                            <option label="Tutin" value="288">Tutin</option>
+                            <option label="Ub" value="296">Ub</option>
+                            <option label="Užice" value="48">Užice</option>
+                            <option label="Valjevo" value="49">Valjevo</option>
+                            <option label="Varvarin" value="290">Varvarin</option>
+                            <option label="Velika Plana" value="266">Velika Plana</option>
+                            <option label="Veliko Gradište" value="268">Veliko Gradište</option>
+                            <option label="Vladičin Han" value="293">Vladičin Han</option>
+                            <option label="Vlasotince" value="281">Vlasotince</option>
+                            <option label="Vranje" value="50">Vranje</option>
+                            <option label="Vrbas" value="271">Vrbas</option>
+                            <option label="Vrdnik" value="276">Vrdnik</option>
+                            <option label="Vrnjačka banja" value="255">Vrnjačka banja</option>
+                            <option label="Vršac" value="51">Vršac</option>
+                            <option label="Žabalj" value="318">Žabalj</option>
+                            <option label="Žabari" value="309">Žabari</option>
+                            <option label="Žagubica" value="312">Žagubica</option>
+                            <option label="Zaječar" value="52">Zaječar</option>
+                            <option label="Zlatibor" value="53">Zlatibor</option>
+                            <option label="Zrenjanin" value="54">Zrenjanin</option>
                         </select>
+
                     </div>
-               <div class="drugo"> 
                     <div>
+                        <p class="search_label">Tip</p>
+                        <select name="id_type" id="detail_search_id_type" class="optionWidth filterWidth" onchange=""
+                            onload="">
+                            <option value="">Svi tipovi</option>
+                            <option label="Kuća" value="1">Kuća</option>
+                            <option label="Stan" value="">Stan</option>
+                            <option label="Studio" value="">Studio</option>
+                            <option label="Lokal" value="">Lokal</option>
+                            <option label="Kancelarija" value="">Kancelarija</option>
+                            <option label="Plac" value="">Plac</option>
+                            <option label="Vikendica" value="">Vikendica</option>
+                            <option label="Hala" value="">Hala</option>
+                            <option label="Garaža" value="">Garaža</option>
+                            <option label="Zemljište" value="">Zemljište</option>
+                            <option label="Drugo" value="">Drugo</option>
+                            <option label="U izgradnji" value="">U izgradnji</option>
+                        </select>
 
-                        <p class="search_label">Drugo</p>
-                        <ul class="ul_grid">
-                            <li><label><input type="checkbox" name="parking" class="radio" value="1">Parking
-                                    mesto</label></li>
-                            <li><label><input type="checkbox" name="garage" class="radio" value="1">Garaža</label></li>
-                            <li><label><input type="checkbox" name="lift" class="radio" value="1">Lift</label></li>
-                            <li><label><input type="checkbox" name="terrace" class="radio" value="1">Terasa</label></li>
-                            <li><label><input type="checkbox" name="loda" class="radio" value="1">Lodja</label></li>
-                            <li><label><input type="checkbox" name="yard" class="radio" value="1">Bašta</label></li>
-                            <li><label><input type="checkbox" name="internet" class="radio" value="1">Internet</label></li>
-                            <li><label><input type="checkbox" name="cable" class="radio" value="1">Kablovska TV</label></li>
-                            <li><label><input type="checkbox" name="phone" class="radio" value="1">Telefon</label></li>
-                            <li><label><input type="checkbox" name="air_conditioner" class="radio" value="1">Klima</label></li>
-                            <li><label><input type="checkbox" name="recent" class="radio" value="1">Novogradnja</label></li>
-                            <li><label><input type="checkbox" name="in_construction" class="radio" value="1">U
-                                    izgradnji</label></li>
-                            <li><label><input type="checkbox" name="legalized" class="radio" value="1">Legalizacija
-                                    u toku</label></li>
-                            <li><label><input type="checkbox" name="legalization_complete" class="radio" value="1">Legalizovano</label></li>
-                        </ul>
+                        <div>
+                            <p class="search_label">Cena (€)</p>
+                            <div>
+                                <input type="text" name="min_price" id="min_price" class="inputWidth filterWidth"
+                                    value="" placeholder="min €"> -
+                                <input type="text" name="max_price" id="max_price" class="inputWidth filterWidth"
+                                    value="" placeholder="max €">
+                            </div>
+                        </div>
 
-                    </div>
-                </div>
-                    <div class="drugo">
-                        <!-- <li> --><!-- <label for="idOglasa" class="search-label">ID oglasa</label> -->
-                            <label for="idOglasa">ID oglasa</label> 
-                            <input type="text" name="idOglasa" id="idOglasa" class="filterWidth optionWidth" placeholder="ID oglasa">
-                            <!-- </li> -->
-                    </div>
+                        <div>
+                            <div id="surface_search" class="">
+                                <p class="search_label">Kvadratura (m<sup>2</sup>)</p>
+                                <div class="search_input">
+                                    <input type="text" name="min_surface" id="min_surface"
+                                        class="inputWidth filterWidth" value="" placeholder="min"> -
+                                    <input type="text" name="max_surface" id="max_surface"
+                                        class="inputWidth filterWidth" value="" placeholder="max"></div>
+                            </div>
+                        </div>
 
-                    <div class="drugo"> <a id="resetSearch" href="#" class="button reg-button" onclick="">Poništi filtere</a>
-                        <button type="button" class="button_filter_search"> PRETRAGA</button>
+                        <div>
+                            <div id="land_surface_search">
+                                <p class="search_label">Površina (ar) </p>
+                                <input type="text" name="min_surface" id="min_surface_land"
+                                    class="inputWidth filterWidth" value="" placeholder="min"> -
+                                <input type="text" name="max_surface" id="max_surface_land"
+                                    class="inputWidth filterWidth" value="" placeholder="max">
+                            </div>
+                        </div>
+
+                        <div>
+                            <div>
+                                <p class="search_label">Broj soba</p>
+                                <input type="text" name="min_nb_rooms" class="inputWidth filterWidth" value=""
+                                    placeholder="min"> -
+                                <input type="text" name="max_nb_rooms" class="inputWidth filterWidth" value=""
+                                    placeholder="max">
+                            </div>
+
+                            <div>
+                                <div>
+                                    <p class="search_label">Spratnost</p>
+                                    <input type="text" name="min_nb_floor" class="inputWidth filterWidth" value=""
+                                        placeholder="min"> -
+                                    <input type="text" name="max_nb_floor" class="inputWidth filterWidth" value=""
+                                        placeholder="max">
+                                </div>
+                                <div>
+                                    <p class="search_label">Grejanje</p>
+                                    <select name="id_heating[]" class="filterWidth optionWidth">
+                                        <option value="">Sve opcije</option>
+                                        <option label="Centralno" value="1">Centralno</option>
+                                        <option label="Gas" value="2">Gas</option>
+                                        <option label="Struja" value="3">Struja</option>
+                                        <option label="Čvsto gorivo" value="4">Čvsto gorivo</option>
+                                        <option label="Podno" value="9">Podno</option>
+                                        <!-- <option label="" value="10"></option> -->
+                                    </select>
+                                </div>
+                                <div class="drugo">
+                                    <div>
+
+                                        <p class="search_label">Drugo</p>
+                                        <ul class="ul_grid">
+                                            <li><label><input type="checkbox" name="parking" class="radio"
+                                                        value="1">Parking
+                                                    mesto</label></li>
+                                            <li><label><input type="checkbox" name="garage" class="radio"
+                                                        value="1">Garaža</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="lift" class="radio"
+                                                        value="1">Lift</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="terrace" class="radio"
+                                                        value="1">Terasa</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="loda" class="radio"
+                                                        value="1">Lodja</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="yard" class="radio"
+                                                        value="1">Bašta</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="internet" class="radio"
+                                                        value="1">Internet</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="cable" class="radio"
+                                                        value="1">Kablovska
+                                                    TV</label></li>
+                                            <li><label><input type="checkbox" name="phone" class="radio"
+                                                        value="1">Telefon</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="air_conditioner" class="radio"
+                                                        value="1">Klima</label></li>
+                                            <li><label><input type="checkbox" name="recent" class="radio"
+                                                        value="1">Novogradnja</label>
+                                            </li>
+                                            <li><label><input type="checkbox" name="in_construction" class="radio"
+                                                        value="1">U
+                                                    izgradnji</label></li>
+                                            <li><label><input type="checkbox" name="legalized" class="radio"
+                                                        value="1">Legalizacija
+                                                    u toku</label></li>
+                                            <li><label><input type="checkbox" name="legalization_complete" class="radio"
+                                                        value="1">Legalizovano</label>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="drugo">
+                                    <!-- <li> -->
+                                    <!-- <label for="idOglasa" class="search-label">ID oglasa</label> -->
+                                    <label for="idOglasa">ID oglasa</label>
+
+                                    <input type="text" name="idOglasa" id="idOglasa" class="filterWidth optionWidth"
+                                        placeholder="ID oglasa">
+                                    <!-- </li> -->
+                                </div>
+
+                                <div class="drugo"> <a id="resetSearch" href="#" class="button reg-button"
+                                        onclick="">Poništi
+                                        filtere</a>
+                                    <button type="button" class="button_filter_search">
+                                        PRETRAGA</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-          </div>
         </aside>
         <main class="container text-center">
             <h1>Nekretnine</h1>
@@ -327,9 +364,9 @@
                     <option value="">Alphabetic order</option>
                     <option value="">Actions</option>
                 </select>
-            </div> 
+            </div>
             <div class="jelena">
-               
+
             </div>
         </main>
     </div>
