@@ -170,7 +170,11 @@ aside h2 {margin-bottom: 10px;}
   nav ul {margin-left: 0;}
   nav .nav-container li a {padding: 13px 16px;}
   .box {flex-direction: column;}
-  .box-img , .box-body{flex: 100%;}
+  .box-img{
+  	display: block;
+   width: 100%;
+    height: auto;
+    }
   .box-body {padding: 10px;}
   .veliki-logo {display: none;}
   .logo img {
