@@ -17,6 +17,7 @@
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,400,300,700,300italic|Zilla+Slab:300,700"> -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modal.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -71,7 +72,7 @@
             <div class=" autocomplete">
             <input type="text" class="inp search" id="town" placeholder="Grad">
         </div></form>
-            <div class="movebtn"><button type="button" class="searchbtn search">Pretraži</button></div>
+            <div class="movebtn"><button type="button" class="searchbtn">Pretraži</button></div>
         </div>
     
     </div>
@@ -335,16 +336,16 @@
             <h1>Nekretnine</h1>
 
             <div class="row sortby">
-                <p id="catname">Category name</p>
+                <p id="catname">Naziv kategorije</p>
 
                 <select name="Sort by" id="sort" class="sort">
-                    <option value="">Sort by</option>
-                    <option value="">Newest first</option>
-                    <option value="">Oldest first</option>
-                    <option value="">Price:Lowest first</option>
-                    <option value="">Price:Highest first</option>
-                    <option value="">Alphabetic order</option>
-                    <option value="">Actions</option>
+                    <option value="">Sortiraj po</option>
+                    <option value="">Najnoviji prvo</option>
+                    <option value="">Najstariji prvo</option>
+                    <option value="">Rastućim cenama</option>
+                    <option value="">Opadajućim cenama</option>
+                    <option value="">Azbučnom redu</option>
+                    <option value="">Najpopularniji</option>
                 </select>
             </div> 
             <div class="jelena">

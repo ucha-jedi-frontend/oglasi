@@ -193,6 +193,7 @@ aside h2 {margin-bottom: 10px;}
   .sort {width: 100%;}
     .detailsbtn{display: block;}
    .detailsform{display: none;}
+
   }
   @media screen and (min-width: 576px) {
     .box {flex-direction: row;}
@@ -252,8 +253,9 @@ aside h2 {margin-bottom: 10px;}
 
     /* Autocomplete */
 .autocomplete {
+
   position: relative;
-   margin-right:10px;  
+   margin-right:15px;  
   
 }
 
