@@ -38,13 +38,15 @@ body {
 }
 
 .kontejner {
-    margin-top: 15px;
+    margin-top: 3%;
 }
 
-.asidee,
-.kalkulator {
+.asidee {
     flex: 20%;
-    /* align-items: stretch; */
+}
+
+.kalkulator {
+    flex: 15%;
 }
 
 .aside_slike,
@@ -54,7 +56,7 @@ body {
 }
 
 .aside_slike {
-    margin-top: 20px;
+    margin-top: 10%;
     margin: auto;
     flex-direction: column;
     max-height: 130px;
@@ -63,7 +65,7 @@ body {
 }
 
 .aside_kalkulator {
-    margin: 50% 30% 50% 30%;
+    margin: 10% 30% 50% 30%;
     flex-direction: column;
     max-height: 120px;
     max-width: 190px;
@@ -74,7 +76,7 @@ body {
 /* div glavni */
 
 .glavni {
-    flex: 60%;
+    flex: 65%;
 }
 
 .slike,
@@ -89,7 +91,8 @@ p,
 .slike,
 .ukratko,
 .opis_oglasa {
-    margin: 10px 10px 10px 10px;
+    /* margin: 10px 10px 10px 10px; */
+    margin: 3% 2% 2% 2%;
 }
 
 .slike {
@@ -109,10 +112,54 @@ p,
 }
 
 .s_leva {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 8%;
+    margin-right: 10%;
 }
 
 p {
+    margin: 2% 2% 2% 2%;
     flex-flow: wrap;
 }
+
+
+/* @media screen and (min-width: 992px) {}
+
+@media screen and (max-width: 767px) {
+    .glavni,
+    .sadrzaj {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+    .glavni {
+        flex-direction: row;
+        width: 100%;
+    }
+    .sadrzaj,
+    .slike,
+    .ukratko {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .glavni,
+    .sadrzaj,
+    .asidee {
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+    .glavni {
+        flex-direction: row;
+        width: 100%;
+    }
+    .sadrzaj,
+    .slike,
+    .ukratko,
+    .aside_slike {
+        flex-direction: column;
+        width: 100%;
+    }
+} */
