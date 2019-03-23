@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
@@ -57,6 +58,7 @@
             <div class="movebtn"><button type="button" class="searchbtn">Pretraži</button></div>
         </div>
     </div>
+
     <div class="row">
         <aside class="container text-center grid-container">
             <h2>Filteri</h2>
@@ -219,6 +221,7 @@
                             <option label="U izgradnji" value="">U izgradnji</option>
                         </select>
 
+
                         <div>
                             <p class="search_label">Cena (€)</p>
                             <div>
@@ -226,10 +229,12 @@
                                     value="" placeholder="min €"> -
                                 <input type="text" name="max_price" id="max_price" class="inputWidth filterWidth"
                                     value="" placeholder="max €">
+
                             </div>
                         </div>
 
                         <div>
+
                             <div id="surface_search" class="">
                                 <p class="search_label">Kvadratura (m<sup>2</sup>)</p>
                                 <div class="search_input">
@@ -240,114 +245,93 @@
                             </div>
                         </div>
 
-                        <div>
-                            <div id="land_surface_search">
-                                <p class="search_label">Površina (ar) </p>
-                                <input type="text" name="min_surface" id="min_surface_land"
-                                    class="inputWidth filterWidth" value="" placeholder="min"> -
-                                <input type="text" name="max_surface" id="max_surface_land"
-                                    class="inputWidth filterWidth" value="" placeholder="max">
-                            </div>
-                        </div>
+                  
 
                         <div>
                             <div>
                                 <p class="search_label">Broj soba</p>
-                                <input type="text" name="min_nb_rooms" class="inputWidth filterWidth" value=""
+
+                                <input type="text" id="min_nb_rooms" class="inputWidth filterWidth" value=""
                                     placeholder="min"> -
-                                <input type="text" name="max_nb_rooms" class="inputWidth filterWidth" value=""
+                                <input type="text" id="max_nb_rooms" class="inputWidth filterWidth" value=""
                                     placeholder="max">
                             </div>
+                        </div>
 
+                        <div>
                             <div>
-                                <div>
-                                    <p class="search_label">Spratnost</p>
-                                    <input type="text" name="min_nb_floor" class="inputWidth filterWidth" value=""
-                                        placeholder="min"> -
-                                    <input type="text" name="max_nb_floor" class="inputWidth filterWidth" value=""
-                                        placeholder="max">
-                                </div>
-                                <div>
-                                    <p class="search_label">Grejanje</p>
-                                    <select name="id_heating[]" class="filterWidth optionWidth">
-                                        <option value="">Sve opcije</option>
-                                        <option label="Centralno" value="1">Centralno</option>
-                                        <option label="Gas" value="2">Gas</option>
-                                        <option label="Struja" value="3">Struja</option>
-                                        <option label="Čvsto gorivo" value="4">Čvsto gorivo</option>
-                                        <option label="Podno" value="9">Podno</option>
-                                        <!-- <option label="" value="10"></option> -->
-                                    </select>
-                                </div>
-                                <div class="drugo">
-                                    <div>
-
-                                        <p class="search_label">Drugo</p>
-                                        <ul class="ul_grid">
-                                            <li><label><input type="checkbox" name="parking" class="radio"
-                                                        value="1">Parking
-                                                    mesto</label></li>
-                                            <li><label><input type="checkbox" name="garage" class="radio"
-                                                        value="1">Garaža</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="lift" class="radio"
-                                                        value="1">Lift</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="terrace" class="radio"
-                                                        value="1">Terasa</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="loda" class="radio"
-                                                        value="1">Lodja</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="yard" class="radio"
-                                                        value="1">Bašta</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="internet" class="radio"
-                                                        value="1">Internet</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="cable" class="radio"
-                                                        value="1">Kablovska
-                                                    TV</label></li>
-                                            <li><label><input type="checkbox" name="phone" class="radio"
-                                                        value="1">Telefon</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="air_conditioner" class="radio"
-                                                        value="1">Klima</label></li>
-                                            <li><label><input type="checkbox" name="recent" class="radio"
-                                                        value="1">Novogradnja</label>
-                                            </li>
-                                            <li><label><input type="checkbox" name="in_construction" class="radio"
-                                                        value="1">U
-                                                    izgradnji</label></li>
-                                            <li><label><input type="checkbox" name="legalized" class="radio"
-                                                        value="1">Legalizacija
-                                                    u toku</label></li>
-                                            <li><label><input type="checkbox" name="legalization_complete" class="radio"
-                                                        value="1">Legalizovano</label>
-                                            </li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                                <div class="drugo">
-                                    <!-- <li> -->
-                                    <!-- <label for="idOglasa" class="search-label">ID oglasa</label> -->
-                                    <label for="idOglasa">ID oglasa</label>
-
-                                    <input type="text" name="idOglasa" id="idOglasa" class="filterWidth optionWidth"
-                                        placeholder="ID oglasa">
-                                    <!-- </li> -->
-                                </div>
-
-                                <div class="drugo"> <a id="resetSearch" href="#" class="button reg-button"
-                                        onclick="">Poništi
-                                        filtere</a>
-                                    <button type="button" class="button_filter_search">
-                                        PRETRAGA</button>
-                                </div>
+                                <p class="search_label">Spratnost</p>
+                                <input type="text" id="min_floor" class="inputWidth filterWidth" value=""
+                                    placeholder="min"> -
+                                <input type="text" id="max_floor" class="inputWidth filterWidth" value=""
+                                    placeholder="max">
                             </div>
                         </div>
+                        <div>
+                            <p class="search_label">Grejanje</p>
+                            <select name="id_heating[]" class="filterWidth optionWidth">
+                                <option value="">Sve opcije</option>
+                                <option label="Centralno" value="1">Centralno</option>
+                                <option label="Gas" value="2">Gas</option>
+                                <option label="Struja" value="3">Struja</option>
+                                <option label="Čvsto gorivo" value="4">Čvsto gorivo</option>
+                                <option label="Podno" value="9">Podno</option>
+                                <!-- <option label="" value="10"></option> -->
+                            </select>
+                        </div>
+                        <div class="drugo">
+                            <div>
+
+                                <p class="search_label">Drugo</p>
+                                <ul class="ul_grid">
+                                    <li><label><input type="checkbox" name="parking" class="radio" value="1">Parking
+                                            mesto</label></li>
+                                    <li><label><input type="checkbox" name="garage" class="radio"
+                                                value="1">Garaža</label></li>
+                                    <li><label><input type="checkbox" name="lift" class="radio" value="1">Lift</label>
+                                    </li>
+                                    <li><label><input type="checkbox" name="terrace" class="radio"
+                                                value="1">Terasa</label></li>
+                                    <li><label><input type="checkbox" name="loda" class="radio" value="1">Lodja</label>
+                                    </li>
+                                    <li><label><input type="checkbox" name="yard" class="radio" value="1">Bašta</label>
+                                    </li>
+                                    <li><label><input type="checkbox" name="internet" class="radio"
+                                                value="1">Internet</label></li>
+                                    <li><label><input type="checkbox" name="cable" class="radio" value="1">Kablovska
+                                            TV</label></li>
+                                    <li><label><input type="checkbox" name="phone" class="radio"
+                                                value="1">Telefon</label></li>
+                                    <li><label><input type="checkbox" name="air_conditioner" class="radio"
+                                                value="1">Klima</label></li>
+                                    <li><label><input type="checkbox" name="recent" class="radio"
+                                                value="1">Novogradnja</label></li>
+                                    <li><label><input type="checkbox" name="in_construction" class="radio" value="1">U
+                                            izgradnji</label></li>
+                                    <li><label><input type="checkbox" name="legalized" class="radio"
+                                                value="1">Legalizacija
+                                            u toku</label></li>
+                                    <li><label><input type="checkbox" name="legalization_complete" class="radio"
+                                                value="1">Legalizovano</label></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="drugo">
+                            
+                            <label for="idAd">ID oglasa</label>
+                            <input type="text" name="idOglasa" id="idAd" class="filterWidth optionWidth"
+                                placeholder="ID oglasa">
+                                                    </div>
+
+                        <div class="drugo"> <a id="resetSearch" href="#" class="button reg-button" onclick="">Poništi
+                                filtere</a>
+                            <button type="button" class="button_filter_search" onclick="filter()"> PRETRAGA</button>
+                        </div>
                     </div>
+                </div>
+            </div>
+
         </aside>
         <main class="container text-center">
             <h1>Nekretnine</h1>
@@ -364,15 +348,10 @@
                     <option value="">Alphabetic order</option>
                     <option value="">Actions</option>
                 </select>
-            </div>
+
             <div class="jelena">
 
             </div>
-        </main>
-    </div>
-    <footer>
-
-    </footer>
 
 
     <div id="modal-prijava" class="moj-modal">
@@ -446,7 +425,7 @@
     </div>
 
 
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
