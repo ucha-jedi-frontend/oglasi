@@ -16,6 +16,7 @@
     <title>Oglasi</title>
     <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,400,300,700,300italic|Zilla+Slab:300,700"> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modal.css">
 </head>
@@ -31,7 +32,8 @@
                 <div class="signIn">
                     <div class="registracija"><button id="btn-prijava" class="button reg-button">Prijava</button></div>
                     <div class="crta"> | </div>
-                    <div class="registracija"><button id="btn-registracija" class="button reg-button">Registracija</button></div>
+                    <div class="registracija"><button id="btn-registracija"
+                            class="button reg-button">Registracija</button></div>
                     <div class="postavi"><a href="#" class="button">Postavi oglas</a></div>
                 </div>
             </div>
@@ -39,42 +41,22 @@
     </header>
     <nav>
         <div class="nav-container">
-            <ul>
-                <li><a href="#">Kuće</a></li>
-                <li><a href="#">Stanovi</a></li>
-                <li><a href="#">Lokali</a></li>
-                <li><a href="#">Zemljišta </a></li>
+            <ul id="nav-list">
+                <li><a>Kuće</a></li>
+                <li><a>Stanovi</a></li>
+                <li><a>Lokali</a></li>
+                <li><a>Zemljišta</a></li>
             </ul>
-          <div class="clearfix"></div>
-        </div>
+            <div class="clearfix">
+            </div>
     </nav>
     <div class="row container ana">
         <div class="empty"></div>
-        
         <div class="row searchy">
-            <select name="id_type" id="detail_search_id_type" class="inp search"
-        onchange="" onload="">
-        <option value="">Šta tražite...</option>
-        <option label="Kuća" value="1">Kuća</option>
-        <option label="Stan" value="">Stan</option>
-        <option label="Studio" value="">Studio</option>
-        <option label="Lokal" value="">Lokal</option>
-        <option label="Kancelarija" value="">Kancelarija</option>
-        <option label="Plac" value="">Plac</option>
-        <option label="Vikendica" value="">Vikendica</option>
-        <option label="Hala" value="">Hala</option>
-        <option label="Garaža" value="">Garaža</option>
-        <option label="Zemljište" value="">Zemljište</option>
-        <option label="Drugo" value="">Drugo</option>
-        <option label="U izgradnji" value="">U izgradnji</option>
-    </select>
-    <form autocomplete="off" action="/action_page.php"></form>
-            <div class=" autocomplete">
-            <input type="text" class="inp search" id="town" placeholder="Grad">
-        </div></form>
-            <div class="movebtn"><button type="button" class="searchbtn search">Pretraži</button></div>
+            <input type="text" class="inp search" placeholder="Upišite za pretragu ...">
+            <input type="text" class="inp search" placeholder="Grad">
+            <div class="movebtn"><button type="button" class="searchbtn">Pretraži</button></div>
         </div>
-    
     </div>
 
     <div class="row">
@@ -239,6 +221,7 @@
                             <option label="U izgradnji" value="">U izgradnji</option>
                         </select>
 
+
                         <div>
                             <p class="search_label">Cena (€)</p>
                             <div>
@@ -246,10 +229,12 @@
                                     value="" placeholder="min €"> -
                                 <input type="text" name="max_price" id="max_price" class="inputWidth filterWidth"
                                     value="" placeholder="max €">
+
                             </div>
                         </div>
 
                         <div>
+
                             <div id="surface_search" class="">
                                 <p class="search_label">Kvadratura (m<sup>2</sup>)</p>
                                 <div class="search_input">
@@ -265,6 +250,7 @@
                         <div>
                             <div>
                                 <p class="search_label">Broj soba</p>
+
                                 <input type="text" id="min_nb_rooms" class="inputWidth filterWidth" value=""
                                     placeholder="min"> -
                                 <input type="text" id="max_nb_rooms" class="inputWidth filterWidth" value=""
@@ -345,6 +331,7 @@
                     </div>
                 </div>
             </div>
+
         </aside>
         <main class="container text-center">
             <h1>Nekretnine</h1>
@@ -361,8 +348,9 @@
                     <option value="">Alphabetic order</option>
                     <option value="">Actions</option>
                 </select>
+
             <div class="jelena">
-               
+
             </div>
 
 
@@ -371,17 +359,17 @@
             <span class="close close-modal">&times;</span>
             <h3>Ulogujte se na sajt Oglasi</h3>
 
-            <form id="forma-prijava">
+            <form id="forma-prijava" class="nosubmit">
                 <div class="forma text-left">
                     <label for="email-prijava">E-mail adresa:</label><br>
                     <input type="email" id="email-prijava" name="email-prijava" placeholder="Email" size="30"
-                        class="inp" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                        class="inp" required>
                     <p id='emailporuka1' class="poruka-greska"></p>
                 </div>
                 <div class="forma text-left">
                     <label for="lozinka-prijava">Lozinka:</label><br>
                     <input type="password" id="lozinka-prijava" name="lozinka-prijava" placeholder="Lozinka" size="30"
-                        class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$" required>
+                        class="inp" required>
                     <p id='lozinkaporuka1' class="poruka-greska"></p>
                 </div>
 
@@ -404,31 +392,29 @@
             <span class="close close-modal">&times;</span>
             <h3>Registracija naloga na sajt Oglasi</h3>
 
-            <form id="forma-registracija">
+            <form id="forma-registracija" class="nosubmit">
                 <div class="forma text-left">
                     <label for="email-registracija">E-mail adresa:</label><br>
                     <input type="email" id="email-registracija" name="email-registracija" placeholder="Email" size="30"
-                        class="inp" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                        class="inp" required>
                     <p id='emailporuka2' class="poruka-greska"></p>
                 </div>
                 <div class="forma text-left">
                     <label for="lozinka-registracija1">Lozinka:</label><br>
                     <input type="password" id="lozinka-registracija1" name="lozinka-registracija1" placeholder="Lozinka"
-                        size="30" class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$"
-                        required>
+                        size="30" class="inp" required>
                     <p id='lozinkaporuka2' class="poruka-greska"></p>
                 </div>
                 <div class="forma text-left">
                     <label for="lozinka-registracija2">Ponovite lozinku:</label><br>
                     <input type="password" id="lozinka-registracija2" name="lozinka-registracija2" placeholder="Lozinka"
-                        size="30" class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$"
-                        required>
+                        size="30" class="inp" required>
                     <p id='lozinkaporuka3' class="poruka-greska"></p>
                 </div>
 
-                <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked=""> Prihvatam
+                <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked="" required=""> Prihvatam
                         pravila i uslove Oglasi.com</label></div>
-                <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked=""> Imam više od 16
+                <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked="" required=""> Imam više od 16
                         godina</label></div>
 
                 <button type="submit" id="dugme-registracija" class="za-formu">Pošalji</button>
@@ -443,7 +429,6 @@
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/autocomplete.js" defer></script> 
 
 </body>
 
