@@ -1,0 +1,118 @@
+html,
+body {
+    color: #03091d;
+    background-color: #efefd6;
+}
+
+.kontejner,
+.asidee,
+.glavni,
+.sadrzaj,
+.kalkulator,
+.opis_oglasa,
+.ukratko,
+.ukratko_tekst {
+    display: flex;
+}
+
+
+/* .responsive {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+} */
+
+.kontejner,
+.sadrzaj,
+.kalkulator {
+    flex-direction: row;
+}
+
+.asidee,
+.glavni,
+.ukratko,
+.opis_oglasa {
+    flex-direction: column;
+}
+
+.kontejner {
+    margin-top: 15px;
+}
+
+.asidee,
+.kalkulator {
+    flex: 20%;
+    /* align-items: stretch; */
+}
+
+.aside_slike,
+.ukratko,
+.opis_oglasa {
+    background: white;
+}
+
+.aside_slike {
+    margin-top: 20px;
+    margin: auto;
+    flex-direction: column;
+    max-height: 130px;
+    max-width: 200px;
+    padding: 5px;
+}
+
+.aside_kalkulator {
+    margin: 50% 30% 50% 30%;
+    flex-direction: column;
+    max-height: 120px;
+    max-width: 190px;
+    border: 5px solid white;
+}
+
+
+/* div glavni */
+
+.glavni {
+    flex: 60%;
+}
+
+.slike,
+.ukratko,
+.aside_slike,
+.opis_oglasa,
+.aside_kalkulator {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+p,
+.slike,
+.ukratko,
+.opis_oglasa {
+    margin: 10px 10px 10px 10px;
+}
+
+.slike {
+    flex: 50%;
+    max-width: 500px;
+    max-height: 300px;
+}
+
+.ukratko {
+    flex: 50%;
+}
+
+.naslov {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+.s_leva {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+p {
+    flex-flow: wrap;
+}
