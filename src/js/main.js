@@ -1,11 +1,13 @@
+import a from "./moduleTest"
+console.log(a)
+
 const _api = axios.create({
   baseURL: `http://localhost:3000`
 });
 
 async function displayAds() {
   let response = await _api.get(`/listings`);
-  let ads = await response.data
-
+  let ads = await response.data;
   for (const ad of ads) {
     let description = await getDescription(ad.id);
     let room = getRoomDescription(ad.roomCount);
@@ -51,10 +53,16 @@ function getRoomDescription(roomCount) {
     case 4:
       room = `četvorosoban`;
       break;
+    case 4.5:
+      room = `četvoroiposoban`;
+      break;
     case 5:
+      room = `petosoban`;
+      break;
+    case 600:
       room = `lokal`;
       break;
-    case 6:
+    case 700:
       room = `zemljište`;
       break;
   }
@@ -62,19 +70,19 @@ function getRoomDescription(roomCount) {
 }
 
 async function _render(ad, description, room = ``) {
-  $(`.jelena`).append(`<div class="row box marg-top">
+  $(`.mainBox`).append(`<div class="row box marg-top">
                 <div class="box-img">
                     <img src="${ad.imgUrl}" alt="${ad.id}">
                 </div>
                 <div class="box-body text-left">
-                    <h2><a href="details.html" onclick="saveToSessionStorage(${ad.id})"  class="stretched-link">${ad.street}, ${ad.m2}m2, ${room}</a></h2>
+                    <h2><a href="oglas.html" onclick="saveToSessionStorage(${ad.id})"  class="stretched-link">${ad.street}, ${ad.m2}m<sup>2</sup>, ${room}</a></h2>
                     <p class="location">${ad.district}, ${ad.area}, Srbija</p>
                     <p class="description">${description}..</p>
                     <div class="details">
                         <div>
                             <p>Cena</p>
                             <p class="price">
-                                <span>${ad.price} &euro;</span>
+                                <span>${ad.price.toLocaleString(`sr-RS`)} &euro;</span>
                                 <small>datum postavljanja oglasa : ${ad.date}</small>
                             </p>
                         </div>
@@ -89,144 +97,120 @@ async function _render(ad, description, room = ``) {
 displayAds()
 
 $(document).ready(function () {
-
-  $("#formButton").click(function () {
-
-    $("#dropdown").toggle();
-
-  });
-
+  $(`#formButton`).click(function (){$(`#dropdown`).toggle();});
+  $(`#buttonSearch`).click(filter);
+  $(`#resetSearch`).click(resetSearch);
+  $(`#nav-list`).click(searchRealEstates);
 });
 
-$('#nav-list').click(async (e) => {
+
+const searchRealEstates = async (e) => {
   const prop = e.target.innerHTML;
   let id;
   switch (prop) {
-    case 'Stanovi': id = 1;
+    case `Stanovi`: id = 1;
       break;
-    case 'Kuće': id = 2;
+    case `Kuće`: id = 2;
       break;
-    case 'Lokali': id = 3;
+    case `Lokali`: id = 3;
       break;
-    case 'Zemljišta': id = 4;
+    case `Zemljišta`: id = 4;
       break;
   }
   let response = await _api.get(`/listings?descriptionId=${id}`)
   let ads = await response.data;
-  $(`.jelena`).html('')
+  $(`.mainBox`).html(``)
   for (const ad of ads) {
     let description = await getDescription(ad.id);
     let room = getRoomDescription(ad.roomCount);
     _render(ad, description, room);
   }
-})
-
-function saveToSessionStorage(id) {
-  sessionStorage.setItem('id oglasa', JSON.stringify(id));
 }
 
-async function filter() {
-  let city = searchArea();
-  let price = searchPrice();
-  let surface = searchSurface();
-  let room = searchNumberRooms();
-  let floor = searchFloor();
-  let id = searchId();
-
-  let response = await _api.get(`/listings?${city}&${price}&${surface}&${room}&${floor}&${id}`);
-  let ads = await response.data
-  console.log(ads)
-  $(`.jelena`).empty()
-  if (ads.length === 0) {
-      $(`.jelena`).append('Nema rezultata koji ispunjavaju vase zahteve. Vratite se na pretragu. ');
-  }
-  for (const ad of ads) {
-      let description = await getDescription(ad.id);
-      let room = getRoomDescription(ad.roomCount);
-      _render(ad, description, room);
-  }
+function saveToSessionStorage(id) {
+  sessionStorage.setItem(`id oglasa`, JSON.stringify(id));
 }
 
 function searchArea() {
-  let cityInput = document.getElementById('detail_search_id_city');
-  let city = '';
+  let cityInput = document.getElementById(`detail_search_id_city`);
+  let city = ``;
   if (!(cityInput.selectedIndex == 0 || cityInput.selectedIndex == 5)) {
       city = `area=${cityInput.options[cityInput.selectedIndex].label}`;
   }
   return city;
 }
-
-function searchNumberRooms() {
-  let roomMin = document.getElementById('min_nb_rooms').value;
-  let roomMax = document.getElementById('max_nb_rooms').value;
-  let rooms = '';
-  if (roomMin == 0 & roomMax == 0) {
-      rooms = '';
-  } else if (roomMin == 0 & roomMax != 0) {
-      rooms = `roomCount_lte=${roomMax}`;
-  } else if (roomMin != 0 & roomMax == 0) {
-      rooms = `roomCount_gte=${roomMin}`;
-  } else {
-      rooms = `roomCount_gte=${roomMin}&roomCount_lte=${roomMax}`;
+function searchInput(id,name){
+  let input = document.getElementById(id);
+  let value = ``;
+  if (input.selectedIndex != 0) {
+    value = `${name}=${input.options[input.selectedIndex].value}`;
   }
-  return rooms;
+  return value;
 }
 
-function searchPrice() {
-  let priceMin = document.getElementById('min_price').value;
-  let priceMax = document.getElementById('max_price').value;
-  let price = '';
-  if (priceMin == 0 & priceMax == 0) {
-      price = '';
-  } else if (priceMin == 0 & priceMax != 0) {
-      price = `price_lte=${priceMax}`;
-  } else if (priceMin != 0 & priceMax == 0) {
-      price = `price_gte=${priceMin}`;
+function searching(minVal,maxVal,name){
+  let min = document.getElementById(minVal).value;
+  let max = document.getElementById(maxVal).value;
+  let value = ``;
+  if(min == 0 & max == 0) {
+    value = ``;
+  } else if (min == 0 & max != 0) {
+    value = (`${name}_lte=${max}`)
+  } else if (min != 0 & max == 0) {
+    value = (`${name}_gte=${min}`);
   } else {
-      price = `price_gte=${priceMin}&price_lte=${priceMax}`;
+    value = `${name}_gte=${min}&${name}_lte=${max}`
   }
-
-  return price;
+  return value;
 }
-
-function searchSurface() {
-  let surfaceMin = document.getElementById('min_surface').value;
-  let surfaceMax = document.getElementById('max_surface').value;
-  let surface = '';
-  if (surfaceMin == 0 & surfaceMax == 0) {
-      surface = '';
-  } else if (surfaceMin == 0 & surfaceMax != 0) {
-      surface = `m2_lte=${surfaceMax}`;
-  } else if (surfaceMin != 0 & surfaceMax == 0) {
-      surface = `m2_gte=${surfaceMin}`;
-  } else {
-      surface = `m2_gte=${surfaceMin}&m2_lte=${surfaceMax}`;
-  }
-  return surface;
-}
-
-function searchFloor() {
-  let floorMin = document.getElementById('min_floor').value;
-  let floorMax = document.getElementById('max_floor').value;
-  let floor = '';
-  if (floorMin == 0 & floorMax == 0) {
-      floor = '';
-  } else if (floorMin == 0 & floorMax != 0) {
-      floor = `floor_lte=${floorMax}`;
-  } else if (floorMin != 0 & floorMax == 0) {
-      floor = `floor_gte=${floorMin}`;
-  } else {
-      floor = `floor_gte=${floorMin}&floor_lte=${floorMax}`;
-  }
-  return floor;
-}
-
 function searchId() {
-  let idInput = document.getElementById('idAd').value;
-  let idAd = '';
-  if (idAd != 0) {
-      let idAd = `id=${idInput}`;
+  let idInput = document.getElementById(`idAd`).value;
+  let idAd = ``;
+  if (idInput != 0) {
+      idAd = `id=${idInput}`;
   }
-
   return idAd;
 }               
+
+async function filter() {
+  let id = searchId();
+  if(id != ``){
+    let response = await _api.get(`/listings?${id}`);
+    let ads = await response.data;
+    $(`.mainBox`).empty()
+  if (ads.length === 0) {
+      $(`.mainBox`).append(`Nema rezultata koji ispunjavaju vase zahteve. Vratite se na pretragu.`);
+  } else{
+    let ad = ads[0];
+    let description = await getDescription(ad.id);
+    let room = getRoomDescription(ad.roomCount);
+    _render(ad, description, room);
+  }
+} else{
+    filteringAll()
+  }
+}
+
+async function filteringAll(){
+  const values = [searchArea(),searching(`min_price`,`max_price`,`price`),searching(`min_surface`,`max_surface`,`m2`),
+                  searching(`min_nb_rooms`,`max_nb_rooms`,`roomCount`),searching(`min_floor`,`max_floor`,`floor`),
+                  searchInput(`id_heating`,`grejanje`),searchInput(`detail_type`,`descriptionId`)].filter(w=>w);
+const sda = values.length > 0 ? `?${values.join(`&`)}` : ``;
+let response = await _api.get(`/listings${sda}`);
+let ads = await response.data;
+$(`.mainBox`).empty()
+if (ads.length === 0) {
+    $(`.mainBox`).append(`Nema rezultata koji ispunjavaju vase zahteve. Vratite se na pretragu.`);
+} else{
+for (const ad of ads) {
+    let description = await getDescription(ad.id);
+    let room = getRoomDescription(ad.roomCount);
+    _render(ad, description, room);
+}
+}
+}
+
+function resetSearch(){
+  $(`#filteri`).find(`input`).val(``);
+  displayAds();
+}
