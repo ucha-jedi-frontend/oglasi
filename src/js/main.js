@@ -1,6 +1,6 @@
-import a from "./moduleTest"
-console.log(a)
-
+// import a from "./moduleTest"
+// console.log(a)
+(function (){
 const _api = axios.create({
   baseURL: `http://localhost:3000`
 });
@@ -99,8 +99,8 @@ displayAds()
 $(document).ready(function () {
   $(`#formButton`).click(function (){$(`#dropdown`).toggle();});
   $(`#buttonSearch`).click(filter);
-  $(`#resetSearch`).click(resetSearch);
   $(`#nav-list`).click(searchRealEstates);
+  $(`#check`).click(getChechboxValues);
 });
 
 
@@ -191,10 +191,21 @@ async function filter() {
   }
 }
 
+function getChechboxValues(){
+  let checkBtn = []
+  const checkButtons = $(`#filt :checkbox:checked`)
+  for (const btn of checkButtons) {
+    const str = `${btn.name}=${true}`
+    checkBtn.push(str)
+  } 
+   return  checkBtn;
+}
+
 async function filteringAll(){
+  const checkBoxes = getChechboxValues();
   const values = [searchArea(),searching(`min_price`,`max_price`,`price`),searching(`min_surface`,`max_surface`,`m2`),
                   searching(`min_nb_rooms`,`max_nb_rooms`,`roomCount`),searching(`min_floor`,`max_floor`,`floor`),
-                  searchInput(`id_heating`,`grejanje`),searchInput(`detail_type`,`descriptionId`)].filter(w=>w);
+                  searchInput(`id_heating`,`grejanje`),searchInput(`detail_type`,`descriptionId`),...checkBoxes].filter(w=>w);
 const sda = values.length > 0 ? `?${values.join(`&`)}` : ``;
 let response = await _api.get(`/listings${sda}`);
 let ads = await response.data;
@@ -209,8 +220,4 @@ for (const ad of ads) {
 }
 }
 }
-
-function resetSearch(){
-  $(`#filteri`).find(`input`).val(``);
-  displayAds();
-}
+})()

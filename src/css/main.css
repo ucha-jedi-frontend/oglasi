@@ -308,6 +308,9 @@ input.search:focus {
 }
 .grid-container {
   background-color: #EFEFD6;
+  display: grid;
+  grid-template-columns: auto;
+  align-content: flex-start;
 }
 aside h2 {
   margin-bottom: 10px;
