@@ -75,7 +75,7 @@ async function _render(ad, description, room = ``) {
                     <img src="${ad.imgUrl}" alt="${ad.id}">
                 </div>
                 <div class="box-body text-left">
-                    <h2><a href="oglas.html" onclick="saveToSessionStorage(${ad.id})"  class="stretched-link">${ad.street}, ${ad.m2}m<sup>2</sup>, ${room}</a></h2>
+                    <h2><a href="oglas.html" data-id=${ad.id}  class="stretched-link">${ad.street}, ${ad.m2}m<sup>2</sup>, ${room}</a></h2>
                     <p class="location">${ad.district}, ${ad.area}, Srbija</p>
                     <p class="description">${description}..</p>
                     <div class="details">
@@ -101,6 +101,7 @@ $(document).ready(function () {
   $(`#buttonSearch`).click(filter);
   $(`#nav-list`).click(searchRealEstates);
   $(`#check`).click(getChechboxValues);
+  $(`#mainBox`).click(saveToSessionStorage)
 });
 
 
@@ -127,8 +128,11 @@ const searchRealEstates = async (e) => {
   }
 }
 
-function saveToSessionStorage(id) {
+function saveToSessionStorage(e) {
+  if (e.target.classList.contains(`stretched-link`)) {
+  const id = e.target.attributes[1].value;
   sessionStorage.setItem(`id oglasa`, JSON.stringify(id));
+  }
 }
 
 function searchArea() {
@@ -205,7 +209,7 @@ async function filteringAll(){
   const checkBoxes = getChechboxValues();
   const values = [searchArea(),searching(`min_price`,`max_price`,`price`),searching(`min_surface`,`max_surface`,`m2`),
                   searching(`min_nb_rooms`,`max_nb_rooms`,`roomCount`),searching(`min_floor`,`max_floor`,`floor`),
-                  searchInput(`id_heating`,`grejanje`),searchInput(`detail_type`,`descriptionId`),...checkBoxes].filter(w=>w);
+                  searchInput(`id_heating`,`heating`),searchInput(`detail_type`,`descriptionId`),...checkBoxes].filter(w=>w);
 const sda = values.length > 0 ? `?${values.join(`&`)}` : ``;
 let response = await _api.get(`/listings${sda}`);
 let ads = await response.data;
