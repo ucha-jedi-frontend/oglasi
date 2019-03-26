@@ -71,18 +71,16 @@
                 <option label="U izgradnji" value="">U izgradnji</option>
             </select>
             <form autocomplete="off" action="/action_page.php"></form>
-            <div class=" autocomplete">
-                <input type="text" class="inp search" id="town" placeholder="Grad">
+            <div class="autocomplete">
+                <input type="text" class="inp search form-control" id="town" placeholder="Grad">
             </div>
-            </form>
+            <!-- </form> -->
             <div class="movebtn"><button type="button" class="searchbtn search">Pretraži</button></div>
         </div>
-
     </div>
-
     <div class="row">
         <aside class="container text-center grid-container">
-            <form action="" id="filt">
+            <form id="filt">
                 <h2>Filteri</h2>
                 <div class="filteri" id="filteri">
 
@@ -92,8 +90,8 @@
                         <div class="city">
 
                             <p class="search_label">Grad</p>
-                            <select name="id_city" id="detail_search_id_city" class="optionWidth filterWidth"
-                                onchange="">
+                            <select name="id_city" id="detail_search_id_city"
+                                class="optionWidth filterWidth form-control">
                                 <option value="0">Svi gradovi</option>
 
                                 <option label="Beograd" value="1">Beograd</option>
@@ -227,7 +225,7 @@
                         </div>
                         <div>
                             <p class="search_label">Tip</p>
-                            <select name="id_type" id="detail_type" class="optionWidth filterWidth">
+                            <select name="id_type" id="detail_type" class="optionWidth filterWidth form-control">
                                 <option value="" placeholder="Svi tipovi">Svi tipovi</option>
                                 <option label="Stan" value="1">Stan</option>
                                 <option label="Kuća" value="2">Kuća</option>
@@ -246,57 +244,58 @@
 
                             <div>
                                 <p class="search_label">Cena (€)</p>
-                                <div>
-                                    <input type="number" name="min_price" id="min_price" class="inputWidth filterWidth"
-                                        value="" placeholder="min €" min="0">
-                                    <input type="number" name="max_price" id="max_price" class="inputWidth filterWidth"
-                                        value="" placeholder="max €" min="0">
+                                <div class="form-pola">
+                                    <input type="number" name="min_price" id="min_price"
+                                        class="inputWidth filterWidth form-control" value="" placeholder="min €"
+                                        min="0">
+                                    <input type="number" name="max_price" id="max_price"
+                                        class="inputWidth filterWidth form-control" value="" placeholder="max €"
+                                        min="0">
 
                                 </div>
                             </div>
 
                             <div>
-
                                 <div id="surface_search" class="">
                                     <p class="search_label">Kvadratura (m<sup>2</sup>)</p>
-                                    <div class="search_input">
+                                    <div class="search_input form-pola-i">
                                         <input type="number" name="min_surface" id="min_surface"
-                                            class="inputWidth filterWidth" value="" placeholder="min" min="0"> -
+                                            class="inputWidth filterWidth form-control" value="" placeholder="min"
+                                            min="0"> <span class="crta-form">-</span>
                                         <input type="number" name="max_surface" id="max_surface"
-                                            class="inputWidth filterWidth" value="" placeholder="max" min="0"></div>
-                                </div>
-                            </div>
-
-
-
-                            <div>
-                                <div>
-                                    <p class="search_label">Broj soba</p>
-
-                                    <input type="number" id="min_nb_rooms" class="inputWidth filterWidth" value=""
-                                        placeholder="min" min="0"> -
-                                    <input type="number" id="max_nb_rooms" class="inputWidth filterWidth" value=""
-                                        placeholder="max" min="0">
+                                            class="inputWidth filterWidth form-control" value="" placeholder="max"
+                                            min="0"></div>
                                 </div>
                             </div>
 
                             <div>
-                                <div>
-                                    <p class="search_label">Spratnost</p>
-                                    <input type="number" id="min_floor" class="inputWidth filterWidth" value=""
-                                        placeholder="min" min="0">
-                                    <input type="number" id="max_floor" class="inputWidth filterWidth" value=""
-                                        placeholder="max" min="0">
+                                <p class="search_label">Broj soba</p>
+                                <div class="form-pola-i">
+                                    <input type="number" id="min_nb_rooms" class="inputWidth filterWidth form-control"
+                                        value="" placeholder="min" min="0"> <span class="crta-form">-</span>
+                                    <input type="number" id="max_nb_rooms" class="inputWidth filterWidth form-control"
+                                        value="" placeholder="max" min="0">
+                                </div>
+                            </div>
+                            <div>
+                                <p class="search_label">Spratnost</p>
+                                <div class="form-pola">
+
+                                    <input type="number" id="min_floor" class="inputWidth filterWidth form-control"
+                                        value="" placeholder="min" min="0">
+                                    <input type="number" id="max_floor" class="inputWidth filterWidth form-control"
+                                        value="" placeholder="max" min="0">
                                 </div>
                             </div>
                             <div>
                                 <p class="search_label">Grejanje</p>
-                                <select name="id_heating[]" class="filterWidth optionWidth" id="id_heating">
+                                <select name="id_heating[]" class="filterWidth optionWidth form-control"
+                                    id="id_heating">
                                     <option value="">Sve opcije</option>
                                     <option label="Centralno" value="1">Centralno</option>
                                     <option label="Gas" value="2">Gas</option>
                                     <option label="Struja" value="3">Struja</option>
-                                    <option label="Čvsto gorivo" value="4">Čvsto gorivo</option>
+                                    <option label="Čvrsto gorivo" value="4">Čvsto gorivo</option>
                                     <option label="Podno" value="5">Podno</option>
                                     <!-- <option label="" value="10"></option> -->
                                 </select>
@@ -345,13 +344,11 @@
 
                                 </div>
                             </div>
-
-
                             <div class="drugo">
 
                                 <label for="idAd">ID oglasa</label>
-                                <input type="text" name="idOglasa" id="idAd" class="filterWidth optionWidth"
-                                    placeholder="ID oglasa">
+                                <input type="text" name="idOglasa" id="idAd"
+                                    class="filterWidth optionWidth form-control" placeholder="ID oglasa">
                             </div>
                             <div class="drugo">
                                 <!-- <button type="button" class="button reg-button" id="check">Poništi
@@ -360,110 +357,111 @@
                                     PRETRAGA</button>
                             </div>
                         </div>
+
+                        <button type="reset" class="button reg-button">Poništi filtere</button>
                     </div>
                 </div>
-                <button type="reset" class="button reg-button">Poništi filtere</button>
+
             </form>
         </aside>
         <main class="container text-center">
             <h1>Nekretnine</h1>
 
             <div class="row sortby">
-                <p id="catname">Category name</p>
+                <p id="catname">Kategorija:</p>
 
-                <select name="Sort by" id="sort" class="sort">
-                    <option value="">Sort by</option>
-                    <option value="">Newest first</option>
-                    <option value="">Oldest first</option>
-                    <option value="">Price:Lowest first</option>
-                    <option value="">Price:Highest first</option>
-                    <option value="">Alphabetic order</option>
-                    <option value="">Actions</option>
+                <select name="Sort by" id="sort" class="sort form-control">
+                    <option value="">Sortiraj</option>
+                    <!-- <option value="1">Najnovije</option>
+                    <option value="2">Najstarije</option> -->
+                    <option value="3">Najniža cena</option>
+                    <option value="4">Najviša cena</option>
                 </select>
                 <div class="mainBox" id="mainBox">
 
                 </div>
-                <div id="modal-prijava" class="moj-modal">
-                    <div class="modal-content">
-                        <span class="close close-modal">&times;</span>
-                        <h3>Ulogujte se na sajt Oglasi</h3>
+        </main>
+        <div id="modal-prijava" class="moj-modal">
+            <div class="modal-content">
+                <span class="close close-modal">&times;</span>
+                <h3>Ulogujte se na sajt Oglasi</h3>
 
-                        <form id="forma-prijava" class="nosubmit">
-                            <div class="forma text-left">
-                                <label for="email-prijava">E-mail adresa:</label><br>
-                                <input type="email" id="email-prijava" name="email-prijava" placeholder="Email"
-                                    size="30" class="inp" required>
-                                <p id=' emailporuka1' class="poruka-greska"></p>
-                            </div>
-                            <div class="forma text-left">
-                                <label for="lozinka-prijava">Lozinka:</label><br>
-                                <input type="password" id="lozinka-prijava" name="lozinka-prijava" placeholder="Lozinka"
-                                    size="30" class="inp" required>
-                                <p id='lozinkaporuka1' class="poruka-greska"></p>
-                            </div>
-
-                            <button type="submit" id="dugme-login1" class="za-formu">Ulogujte se</button>
-
-                            <div class="marg-top"><label><input type="checkbox" name="upamti" checked="">
-                                    Upamti
-                                    me na
-                                    ovom
-                                    kompjuteru</label></div>
-
-                            <div class="marg-top"><a href="#">Lozinka zaboravljena?</a></div>
-
-                            <h3 class="marg-top">Još uvek nemate nalog na sajt Oglasi?</h3>
-                            <button type="submit" id="dugme-registracija1" class="za-formu">Registracija</button>
-                            <p>Neophodno za postavljanje oglasa i kontakt sa oglašivačima. </p>
-                        </form>
+                <form id="forma-prijava" class="nosubmit">
+                    <div class="forma text-left">
+                        <label for="email-prijava">E-mail adresa:</label><br>
+                        <input type="email" id="email-prijava" name="email-prijava" placeholder="Email" size="30"
+                            class="inp form-control" required>
+                        <p id=' emailporuka1' class="poruka-greska"></p>
                     </div>
-                </div>
-
-                <div id="modal-registracija" class="moj-modal">
-                    <div class="modal-content">
-                        <span class="close close-modal">&times;</span>
-                        <h3>Registracija naloga na sajt Oglasi</h3>
-
-                        <form id="forma-registracija" class="nosubmit">
-                            <div class="forma text-left">
-                                <label for="email-registracija">E-mail adresa:</label><br>
-                                <input type="email" id="email-registracija" name="email-registracija"
-                                    placeholder="Email" size="30" class="inp" required>
-                                <p id='emailporuka2' class="poruka-greska"></p>
-                            </div>
-                            <div class="forma text-left">
-                                <label for="lozinka-registracija1">Lozinka:</label><br>
-                                <input type="password" id="lozinka-registracija1" name="lozinka-registracija1"
-                                    placeholder="Lozinka" size="30" class="inp" required>
-                                <p id='lozinkaporuka2' class="poruka-greska"></p>
-                            </div>
-                            <div class="forma text-left">
-                                <label for="lozinka-registracija2">Ponovite lozinku:</label><br>
-                                <input type="password" id="lozinka-registracija2" name="lozinka-registracija2"
-                                    placeholder="Lozinka" size="30" class="inp" required>
-                                <p id='lozinkaporuka3' class="poruka-greska"></p>
-                            </div>
-
-                            <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked=""
-                                        required=""> Prihvatam
-                                    pravila i uslove Oglasi.com</label></div>
-                            <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked=""
-                                        required=""> Imam više od 16
-                                    godina</label></div>
-
-                            <button type="submit" id="dugme-registracija" class="za-formu">Pošalji</button>
-
-                            <p>Registracija nije moguća ako e-mail adresa nije korektna! </p>
-                        </form>
+                    <div class="forma text-left">
+                        <label for="lozinka-prijava">Lozinka:</label><br>
+                        <input type="password" id="lozinka-prijava" name="lozinka-prijava" placeholder="Lozinka"
+                            size="30" class="inp form-control" required>
+                        <p id='lozinkaporuka1' class="poruka-greska"></p>
                     </div>
-                </div>
+
+                    <button type="submit" id="dugme-login1" class="za-formu">Ulogujte se</button>
+
+                    <div class="marg-top"><label><input type="checkbox" name="upamti" checked="">
+                            Upamti
+                            me na
+                            ovom
+                            kompjuteru</label></div>
+
+                    <div class="marg-top"><a href="#">Lozinka zaboravljena?</a></div>
+
+                    <h3 class="marg-top">Još uvek nemate nalog na sajt Oglasi?</h3>
+                    <button type="submit" id="dugme-registracija1" class="za-formu">Registracija</button>
+                    <p>Neophodno za postavljanje oglasa i kontakt sa oglašivačima. </p>
+                </form>
+            </div>
+        </div>
+
+        <div id="modal-registracija" class="moj-modal">
+            <div class="modal-content">
+                <span class="close close-modal">&times;</span>
+                <h3>Registracija naloga na sajt Oglasi</h3>
+
+                <form id="forma-registracija" class="nosubmit">
+                    <div class="forma text-left">
+                        <label for="email-registracija">E-mail adresa:</label><br>
+                        <input type="email" id="email-registracija" name="email-registracija" placeholder="Email"
+                            size="30" class="inp form-control" required>
+                        <p id='emailporuka2' class="poruka-greska"></p>
+                    </div>
+                    <div class="forma text-left">
+                        <label for="lozinka-registracija1">Lozinka:</label><br>
+                        <input type="password" id="lozinka-registracija1" name="lozinka-registracija1"
+                            placeholder="Lozinka" size="30" class="inp" required>
+                        <p id='lozinkaporuka2' class="poruka-greska"></p>
+                    </div>
+                    <div class="forma text-left">
+                        <label for="lozinka-registracija2">Ponovite lozinku:</label><br>
+                        <input type="password" id="lozinka-registracija2" name="lozinka-registracija2"
+                            placeholder="Lozinka" size="30" class="inp form-control" required>
+                        <p id='lozinkaporuka3' class="poruka-greska"></p>
+                    </div>
+
+                    <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked="" required="">
+                            Prihvatam
+                            pravila i uslove Oglasi.com</label></div>
+                    <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked="" required="">
+                            Imam više od 16
+                            godina</label></div>
+
+                    <button type="submit" id="dugme-registracija" class="za-formu">Pošalji</button>
+
+                    <p>Registracija nije moguća ako e-mail adresa nije korektna! </p>
+                </form>
+            </div>
+        </div>
 
 
-                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-                <script src="js/vendor/jquery-3.3.1.min.js"></script>
-                <script src="js/main.js"></script>
-                <script src="js/modal.js"></script>
-                <script src="js/autocomplete.js" defer></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/vendor/jquery-3.3.1.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/modal.js"></script>
+        <script src="js/autocomplete.js" defer></script>
 
 </body>
 

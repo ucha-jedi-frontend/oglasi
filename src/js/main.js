@@ -13,6 +13,7 @@ async function displayAds() {
     let room = getRoomDescription(ad.roomCount);
     _render(ad, description, room);
   }
+  getCategoryName(0)
 }
 async function getDescription(id) {
   try {
@@ -97,11 +98,14 @@ async function _render(ad, description, room = ``) {
 displayAds()
 
 $(document).ready(function () {
-  $(`#formButton`).click(function (){$(`#dropdown`).toggle();});
+  $(`#formButton`).click(function (){
+  $(`#dropdown`).toggle();
+});
   $(`#buttonSearch`).click(filter);
   $(`#nav-list`).click(searchRealEstates);
   $(`#check`).click(getChechboxValues);
-  $(`#mainBox`).click(saveToSessionStorage)
+  $(`#mainBox`).click(saveToSessionStorage);
+  $(`#sort`).change(sortBy);
 });
 
 
@@ -109,15 +113,16 @@ const searchRealEstates = async (e) => {
   const prop = e.target.innerHTML;
   let id;
   switch (prop) {
-    case `Stanovi`: id = 1;
+    case `Stanovi`: id = `1`;
       break;
-    case `Kuće`: id = 2;
+    case `Kuće`: id = `2`;
       break;
-    case `Lokali`: id = 3;
+    case `Lokali`: id = `3`;
       break;
-    case `Zemljišta`: id = 4;
+    case `Zemljišta`: id = `4`;
       break;
   }
+  getCategoryName(id);
   let response = await _api.get(`/listings?descriptionId=${id}`)
   let ads = await response.data;
   $(`.mainBox`).html(``)
@@ -223,5 +228,55 @@ for (const ad of ads) {
     _render(ad, description, room);
 }
 }
+const idd = $(`#detail_type`).val();
+getCategoryName(idd);
 }
+
+function getCategoryName(id){
+  let str = `Kategorija: `
+  const catname = $(`#catname`);
+  switch(id){
+    case ``: catname.text(`${str}sve`).attr(`data-id`,``);
+    break;
+    case `1`: catname.text(`${str}stanovi`).attr(`data-id`,`1`);
+    break;
+    case `2`:  catname.text(`${str}kuće`).attr(`data-id`,`2`);
+    break;
+    case `3`:  catname.text(`${str}lokali`).attr(`data-id`,`3`);
+    break;
+    case `4`: catname.text(`${str}zemljište`).attr(`data-id`,`4`);
+    break;
+  }
+}
+///////////////mora da se doradi
+async function sortBy(){
+  const id = $(`#catname`).attr(`data-id`);
+  const sort = $(`#sort`).val();
+  let val = getSortValue(sort);
+  let response = await _api.get(`/listings?descriptionId=${id}${val}`)
+  let ads = await response.data;
+  $(`.mainBox`).html(``)
+  for (const ad of ads) {
+    let description = await getDescription(ad.id);
+    let room = getRoomDescription(ad.roomCount);
+    _render(ad, description, room);
+  } 
+}
+
+function getSortValue(sort){
+  let val;
+  switch(sort){
+    case ``: val=``
+     break;
+    // case `1`: val= `jedan`;
+    // break;
+    // case `2`: val= `dva`;
+    // break;
+    case `3`: val=`&_sort=price&_order=asc`;
+    break;
+    case `4`: val=`&_sort=price&_order=desc`;
+  }
+  return val;
+}
+
 })()
