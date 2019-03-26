@@ -12,12 +12,12 @@
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:600,400,300,700,300italic|Zilla+Slab:300,700"> -->
     <link rel="stylesheet" href="css/main.css">
-     <link rel="stylesheet" href="css/modal.css">  
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/landingpage.css">
     <script src="jquery-3.3.1.min.js"></script>
-    
-    
-    
+
+
+
 </head>
 
 <header>
@@ -30,7 +30,8 @@
             <div class="signIn">
                 <div class="registracija"><button id="btn-prijava" class="button reg-button">Prijava</button></div>
                 <div class="crta"> | </div>
-                <div class="registracija"><button id="btn-registracija" class="button reg-button">Registracija</button></div>
+                <div class="registracija"><button id="btn-registracija" class="button reg-button">Registracija</button>
+                </div>
                 <div class="postavi"><a href="#" class="button">Postavi oglas</a></div>
             </div>
         </div>
@@ -40,30 +41,30 @@
 <div id="landing">
 
     <h1 class="h1l">Oglasi</h1>
- 
+
     <div class="cont searchy">
-        
-        <select name="id_type" id="detail_search_id_type" class="lansr inp search "
-        onchange="" onload="">
-        <option value="">Šta tražite...</option>
-        <option label="Kuća" value="1">Kuća</option>
-        <option label="Stan" value="">Stan</option>
-        <option label="Studio" value="">Studio</option>
-        <option label="Lokal" value="">Lokal</option>
-        <option label="Kancelarija" value="">Kancelarija</option>
-        <option label="Plac" value="">Plac</option>
-        <option label="Vikendica" value="">Vikendica</option>
-        <option label="Hala" value="">Hala</option>
-        <option label="Garaža" value="">Garaža</option>
-        <option label="Zemljište" value="">Zemljište</option>
-        <option label="Drugo" value="">Drugo</option>
-        <option label="U izgradnji" value="">U izgradnji</option>
-    </select>
-    <form autocomplete="off" action="/action_page.php">
-        <div class=" autocomplete">
-        <input type="text" class="lansr inp search "  id="town" placeholder="Grad" >
-    </div></form>
-       
+
+        <select name="id_type" id="detail_search_id_type" class="lansr inp search " onchange="" onload="">
+            <option value="">Šta tražite...</option>
+            <option label="Kuća" value="1">Kuća</option>
+            <option label="Stan" value="">Stan</option>
+            <option label="Studio" value="">Studio</option>
+            <option label="Lokal" value="">Lokal</option>
+            <option label="Kancelarija" value="">Kancelarija</option>
+            <option label="Plac" value="">Plac</option>
+            <option label="Vikendica" value="">Vikendica</option>
+            <option label="Hala" value="">Hala</option>
+            <option label="Garaža" value="">Garaža</option>
+            <option label="Zemljište" value="">Zemljište</option>
+            <option label="Drugo" value="">Drugo</option>
+            <option label="U izgradnji" value="">U izgradnji</option>
+        </select>
+        <form autocomplete="off" action="/action_page.php">
+            <div class=" autocomplete">
+                <input type="text" class="lansr inp search " id="town" placeholder="Grad">
+            </div>
+        </form>
+
         <input type="button" class="lbtn searchbtn search" value="Pretraži">
     </div>
 
@@ -80,7 +81,7 @@
             <div class="name">Stanovi</div><img src="./img/a.jpg" alt="err" class="icon">
         </div>
         <div class="cl" onclick="location.href='http://www.google.com'">
-            <div class="name">Lokali</div><img src="./img/o.png" alt="err" class="icon">
+            <div class=" name">Lokali</div><img src="./img/o.png" alt="err" class="icon">
         </div>
         <div class="cl" onclick="location.href='http://www.google.com'">
             <div class="name">Zemljište</div><img src="./img/p.png" alt="err" class="icon">
@@ -88,7 +89,7 @@
 
     </div>
 </div>
-<script src="js/autocomplete.js" defer></script> 
+<script src="js/autocomplete.js" defer></script>
 <script src="js/main.js" defer></script>
 
 </body>
