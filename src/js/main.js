@@ -236,7 +236,7 @@ function getCategoryName(id){
   let str = `Kategorija: `
   const catname = $(`#catname`);
   switch(id){
-    case ``: catname.text(`${str}sve`).attr(`data-id`,``);
+    case `0`: catname.text(`${str}sve`).attr(`data-id`,`0`);
     break;
     case `1`: catname.text(`${str}stanovi`).attr(`data-id`,`1`);
     break;
@@ -248,12 +248,17 @@ function getCategoryName(id){
     break;
   }
 }
-///////////////mora da se doradi
+
 async function sortBy(){
-  const id = $(`#catname`).attr(`data-id`);
   const sort = $(`#sort`).val();
   let val = getSortValue(sort);
-  let response = await _api.get(`/listings?descriptionId=${id}${val}`)
+  let response;
+    const checkBoxes = getChechboxValues();
+    const values = [searchArea(),searching(`min_price`,`max_price`,`price`),searching(`min_surface`,`max_surface`,`m2`),
+                    searching(`min_nb_rooms`,`max_nb_rooms`,`roomCount`),searching(`min_floor`,`max_floor`,`floor`),
+                    searchInput(`id_heating`,`heating`),searchInput(`detail_type`,`descriptionId`),...checkBoxes,val].filter(w=>w);
+  const sda = values.length > 0 ? `?${values.join(`&`)}` : ``;
+  response = await _api.get(`/listings${sda}`);
   let ads = await response.data;
   $(`.mainBox`).html(``)
   for (const ad of ads) {
@@ -266,15 +271,15 @@ async function sortBy(){
 function getSortValue(sort){
   let val;
   switch(sort){
-    case ``: val=``
+    case `0`: val=`0`
      break;
     // case `1`: val= `jedan`;
     // break;
     // case `2`: val= `dva`;
     // break;
-    case `3`: val=`&_sort=price&_order=asc`;
+    case `3`: val=`_sort=price&_order=asc`;
     break;
-    case `4`: val=`&_sort=price&_order=desc`;
+    case `4`: val=`_sort=price&_order=desc`;
   }
   return val;
 }

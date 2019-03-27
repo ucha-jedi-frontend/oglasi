@@ -13,9 +13,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel=" stylesheet " href="css/oglas.css " />
     <link rel=" stylesheet " href="css/modal.css " />
+    <link rel=" stylesheet " href="css/carousel.css " />
 </head>
-
-
 
 <body>
     <header>
@@ -49,23 +48,50 @@
     <div class="kontejner">
         <div class="container asidee">
             <div class="aside_slike_kontejner">
-                <img src="https://www.belgradewaterfront.com/wp-content/uploads/2018/07/BW_Magnolia_7e_1600x700.jpg "
-                    alt="ispred_zgrade " class="aside_slike " />
-                <img src="https://www.belgradewaterfront.com/wp-content/uploads/2018/07/BW_Magnolia_1i_1600x700.jpg "
-                    alt="prikaz_stana " class="aside_slike " />
-                <img src="https://www.belgradewaterfront.com/wp-content/uploads/2018/07/BW_Magnolia_3e_1600x700.jpg "
-                    alt="panorama " class="aside_slike " />
-                <img src="https://www.belgradewaterfront.com/wp-content/uploads/2018/07/BW_Magnolia_4i_1600x700.jpg"
-                    alt="prikaz_stana " class="aside_slike " />
+                <img src="img/glavna-img2.jpg" alt="" class="previmg" data-goto="0" />
+                <img src="img/glavna-img1.jpg" alt="" class="previmg" data-goto="1" />
+                <img src="img/glavna-img4.jpg" alt="" class="previmg" data-goto="2" />
+                <img src="img/glavna-img5.jpg" alt="" class="previmg" data-goto="3" />
             </div>
-            <div class="kalkulator ">Kalkulator</div>
+            <!-- <div class="kalkulator ">Kalkulator</div> -->
         </div>
         <div class="glavni ">
             <div class="glavni_oglas">
-                <div class="container sadrzaj ">
-                    <div class="slike ">
-                        <img src="img/slike.gif" alt="slike" class="responsive" height="300px" width="500px">
-                        <!-- <img src="https://www.belgradewaterfront.com/wp-content/uploads/2018/07/BW_Magnolia_7e_1600x700.jpg " alt="ispred_zgrade " class="responsive" height="300px" width="500px/> -->
+                <div class="container sadrzaj">
+                    <div class="slike">
+                        <div class="carousel">
+
+                            <div class="slika caroitem item-current" data-slide="0">
+                                <div class="glavna-slika">
+                                    <div><img src="img/glavna-img2.jpg" alt="" class="responsive"></div>
+                                </div>
+                            </div>
+
+                            <div class="slika caroitem" data-slide="1">
+                                <div class="glavna-slika">
+                                    <div><img src="img/glavna-img1.jpg" alt="" class="responsive"></div>
+                                </div>
+                            </div>
+
+                            <div class="slika caroitem" data-slide="2">
+                                <div class="glavna-slika">
+                                    <div><img src="img/glavna-img4.jpg" alt="" class="responsive"></div>
+                                </div>
+                            </div>
+
+                            <div class="slika caroitem" data-slide="3">
+                                <div class="glavna-slika">
+                                    <div><img src="img/glavna-img5.jpg" alt="" class="responsive"></div>
+                                </div>
+                            </div>
+
+                            <div class="extra-buttons">
+                                <div class="zoom"></div>
+                                <div class="stop"></div>
+                                <div class="play hidden"></div>
+                            </div>
+
+                        </div>
                     </div>
                     <div class="ukratko ">
                         <div class="naslov ">
@@ -112,10 +138,101 @@
                 </p>
             </div>
         </div>
+
+        <!--  DRUGI CAROUSEL -->
+        <div class="enlarged" id="enlarged">
+
+            <div class="tekucaslika velikaslika">
+                <img src="img/glavna-img4.jpg" alt="" class="crnaslika vidisme" />
+            </div>
+            <div class="sledecaslika velikaslika">
+                <img src="img/glavna-img4.jpg" alt="" class="crnaslika videcesme" />
+            </div>
+            <div class="left"><img src="img/levo.svg" alt="<" /></div>
+            <div class="rihgt"><img src="img/desno.svg" alt=">" /></div>
+            <div class="close-carousel">&times;</div>
+        </div> <!-- DRUGI CAROUSEL -kraj -->
     </div>
+    <div id="modal-prijava" class="moj-modal">
+        <div class="modal-content">
+            <span class="close close-modal">&times;</span>
+            <h3>Ulogujte se na sajt Oglasi</h3>
+
+            <form id="forma-prijava" class="nosubmit">
+                <div class="forma text-left">
+                    <label for="email-prijava">E-mail adresa:</label><br>
+                    <input type="email" id="email-prijava" name="email-prijava" placeholder="Email" size="30"
+                        class="inp form-control" required>
+                    <p id='emailporuka1' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-prijava">Lozinka:</label><br>
+                    <input type="password" id="lozinka-prijava" name="lozinka-prijava" placeholder="Lozinka" size="30"
+                        class="inp form-control" required>
+                    <p id='lozinkaporuka1' class="poruka-greska"></p>
+                </div>
+
+                <button type="submit" id="dugme-login1" class="za-formu">Ulogujte se</button>
+
+                <div class="marg-top"><label><input type="checkbox" name="upamti" checked="">
+                        Upamti
+                        me na
+                        ovom
+                        kompjuteru</label></div>
+
+                <div class="marg-top"><a href="#">Lozinka zaboravljena?</a></div>
+
+                <h3 class="marg-top">Još uvek nemate nalog na sajt Oglasi?</h3>
+                <button type="submit" id="dugme-registracija1" class="za-formu">Registracija</button>
+                <p>Neophodno za postavljanje oglasa i kontakt sa oglašivačima. </p>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-registracija" class="moj-modal">
+        <div class="modal-content">
+            <span class="close close-modal">&times;</span>
+            <h3>Registracija naloga na sajt Oglasi</h3>
+
+            <form id="forma-registracija" class="nosubmit">
+                <div class="forma text-left">
+                    <label for="email-registracija">E-mail adresa:</label><br>
+                    <input type="email" id="email-registracija" name="email-registracija" placeholder="Email" size="30"
+                        class="inp form-control" required>
+                    <p id='emailporuka2' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-registracija1">Lozinka:</label><br>
+                    <input type="password" id="lozinka-registracija1" name="lozinka-registracija1" placeholder="Lozinka"
+                        size="30" class="inp form-control" required>
+                    <p id='lozinkaporuka2' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-registracija2">Ponovite lozinku:</label><br>
+                    <input type="password" id="lozinka-registracija2" name="lozinka-registracija2" placeholder="Lozinka"
+                        size="30" class="inp form-control" required>
+                    <p id='lozinkaporuka3' class="poruka-greska"></p>
+                </div>
+
+                <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked="" required="">
+                        Prihvatam
+                        pravila i uslove Oglasi.com</label></div>
+                <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked="" required=""> Imam
+                        više od 16
+                        godina</label></div>
+
+                <button type="submit" id="dugme-registracija" class="za-formu">Pošalji</button>
+
+                <p>Registracija nije moguća ako e-mail adresa nije korektna! </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 
 </html>

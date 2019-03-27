@@ -1,0 +1,78 @@
+/* Carousel Djoci/Mitar */
+.carousel {position: relative; height: 300px;}
+.carousel .caroitem {position: absolute; }
+.carousel .caroitem {z-index: 99; opacity: 0;}
+.carousel .caroitem.item-current {z-index: 100; opacity: 100;}
+
+@-webkit-keyframes imgshow {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
+}
+@keyframes imgshow {
+  0%   {opacity: 0;}
+  100% {opacity: 100;}
+}
+@-webkit-keyframes imghide {
+  0%   {opacity: 100;}
+  100% {opacity: 0;}
+}
+@keyframes imghide {
+  0%   {opacity: 100;}
+  100% {opacity: 0;}
+}
+
+.carousel  .caroitem.item-current.trans{
+  -webkit-animation: imghide 1s; 
+  animation: imghide 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
+  }
+
+.carousel  .caroitem.item-next.trans{
+  -webkit-animation: imgshow 1s; 
+  animation: imgshow 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
+}
+
+
+.extra-buttons {position: absolute; left:20px; z-index: 101;  }
+.zoom {display: inline-block; width: 48px; height: 48px; background: url(../img/zoom.svg);opacity: 0; }
+.play {display: inline-block; width: 48px; height: 48px; background: url(../img/play.svg);opacity: 0; }
+.stop {display: inline-block; width: 32px; height: 32px; background: #000;opacity: 0; padding: 0 6px; vertical-align: top; margin-top: 5px; margin-left: 10px; cursor: pointer;}
+.carousel:hover  .zoom, .carousel:hover  .stop, .carousel:hover  .play {opacity: 0.6; transition: all 1s;} 
+.carousel:hover  .zoom:hover, .carousel:hover  .stop:hover, .carousel:hover  .play:hover  {opacity: 1; transition: all .1s; cursor: pointer;} 
+
+.enlarged{position: fixed; left:0; top:0; width: 100%; width: 100vw;   background: #000;  height: 0; opacity: 0;transition: all 0.5s;z-index:0; overflow: hidden;
+display: table-cell; vertical-align: middle; text-align: center;
+ }
+.enlarged.show{height: 100vh; opacity: 1; width: 100vw;  z-index: 150; }
+
+.velikaslika {margin-left: auto; margin-right: auto;}
+.velikaslika img{max-width: 98vw; max-height: 98vh; width: auto; height: auto; display: inline-block; margin-left: 1vw; margin-top: 1vh;}
+.close-carousel {color: rgba(255,255,255,0.4); position: absolute; right: 20px; top: -10px; font-size: 40px; cursor: pointer; transition:all 0.3s; }
+.close-carousel:hover {color: rgba(255,255,255,0.7);  }
+body.noscroll {overflow: hidden;}
+.left, .rihgt {color: #fff; display: inline-block; width: 30px; height: 80px;  position:  absolute; top: 50vh; margin-top: -40px; opacity: 0.4; cursor: pointer; }
+.left {left: 5px;}
+.rihgt {right: 5px;}
+.left:hover, .rihgt:hover {opacity: 0.7}
+
+.velikaslika {position: absolute; left: 50%;top: 23vh;}
+.velikaslika img {margin-left: -100%;}
+.velikaslika .videcesme { opacity: 0}
+.velikaslika .vidisme { opacity: 1}
+
+.velikaslika .videcesme.prelaz {
+  -webkit-animation: imgshow 1s; 
+  animation: imgshow 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
+}
+.velikaslika .vidisme.prelaz{
+  -webkit-animation: imghide 1s; 
+  animation: imghide 1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; 
+}
+
