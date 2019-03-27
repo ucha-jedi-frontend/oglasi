@@ -273,9 +273,9 @@ function getSortValue(sort){
   switch(sort){
     case `0`: val=`0`
      break;
-    // case `1`: val= `jedan`;
+    // case `1`: val= `_sort=date&_order=desc`;
     // break;
-    // case `2`: val= `dva`;
+    // case `2`: val= `_sort=date&_order=asc`;
     // break;
     case `3`: val=`_sort=price&_order=asc`;
     break;
