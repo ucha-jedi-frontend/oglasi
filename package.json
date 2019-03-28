@@ -39,6 +39,7 @@
     "webpack": "^4.29.6"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.4.0",
     "acorn": "^6.1.1",
     "webpack-cli": "^3.3.0"
   }

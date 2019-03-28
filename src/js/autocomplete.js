@@ -210,4 +210,5 @@ function autocomplete(inp, arr) {
     `Zrenjanin`]
   
   
-  autocomplete(document.getElementById(`town`), city);
+ 
+  export {autocomplete, city} 
