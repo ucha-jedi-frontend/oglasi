@@ -515,6 +515,12 @@ aside h2 {
       margin-right: 15px;
   }
   .autocomplete {margin-right: 10px;margin-left: 10px;}
+  .search{
+    margin-left:10px
+  }
+  .autocomplete {
+       margin-right:15px;    
+  }
 }
 @media screen and (min-width: 992px) {
   .box a,
@@ -553,4 +559,35 @@ aside h2 {
 .ana {
   background-color: #658295;
   color: #fff;
+}
+
+.autocomplete {
+  position: relative;
+   margin-right:15px;  
+  
+}
+.autocomplete-items {
+  position:absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;  
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-left: 10px 
+}
+.autocomplete-items div {
+   padding: 5px; 
+  cursor: pointer;
+  background-color: #fff; 
+  color: black;
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  background-color: rgb(143, 182, 62); 
+}
+.autocomplete-active {
+  background-color: orange !important; 
+  color: #ffffff; 
 }

@@ -60,10 +60,10 @@ function getRoomDescription(roomCount) {
     case 5:
       room = `petosoban`;
       break;
-    case 600:
+    case -2:
       room = `lokal`;
       break;
-    case 700:
+    case -3:
       room = `zemljište`;
       break;
   }
@@ -106,6 +106,7 @@ $(document).ready(function () {
   $(`#check`).click(getChechboxValues);
   $(`#mainBox`).click(saveToSessionStorage);
   $(`#sort`).change(sortBy);
+  $(`#searhInNav`).click(searchNav);
 });
 
 
@@ -210,24 +211,12 @@ function getChechboxValues(){
    return  checkBtn;
 }
 
-async function filteringAll(){
+function filteringAll(){
   const checkBoxes = getChechboxValues();
   const values = [searchArea(),searching(`min_price`,`max_price`,`price`),searching(`min_surface`,`max_surface`,`m2`),
                   searching(`min_nb_rooms`,`max_nb_rooms`,`roomCount`),searching(`min_floor`,`max_floor`,`floor`),
                   searchInput(`id_heating`,`heating`),searchInput(`detail_type`,`descriptionId`),...checkBoxes].filter(w=>w);
-const sda = values.length > 0 ? `?${values.join(`&`)}` : ``;
-let response = await _api.get(`/listings${sda}`);
-let ads = await response.data;
-$(`.mainBox`).empty()
-if (ads.length === 0) {
-    $(`.mainBox`).append(`Nema rezultata koji ispunjavaju vase zahteve. Vratite se na pretragu.`);
-} else{
-for (const ad of ads) {
-    let description = await getDescription(ad.id);
-    let room = getRoomDescription(ad.roomCount);
-    _render(ad, description, room);
-}
-}
+serchValues(values);
 const idd = $(`#detail_type`).val();
 getCategoryName(idd);
 }
@@ -249,23 +238,23 @@ function getCategoryName(id){
   }
 }
 
-async function sortBy(){
+function sortBy(){
   const sort = $(`#sort`).val();
   let val = getSortValue(sort);
-  let response;
+  const valNav=document.getElementById(`detail_search_id_type`).value;
+  const townName=document.getElementById(`town`).value;
+  if(valNav!=``||townName!=``){
+    const descId = getValueForNavSearch(`descriptionId=`,valNav);
+    const town = getValueForNavSearch(`area=`,townName)
+    const values = [descId,town,val].filter(w=>w);
+    serchValues(values)
+  }else{
     const checkBoxes = getChechboxValues();
     const values = [searchArea(),searching(`min_price`,`max_price`,`price`),searching(`min_surface`,`max_surface`,`m2`),
                     searching(`min_nb_rooms`,`max_nb_rooms`,`roomCount`),searching(`min_floor`,`max_floor`,`floor`),
                     searchInput(`id_heating`,`heating`),searchInput(`detail_type`,`descriptionId`),...checkBoxes,val].filter(w=>w);
-  const sda = values.length > 0 ? `?${values.join(`&`)}` : ``;
-  response = await _api.get(`/listings${sda}`);
-  let ads = await response.data;
-  $(`.mainBox`).html(``)
-  for (const ad of ads) {
-    let description = await getDescription(ad.id);
-    let room = getRoomDescription(ad.roomCount);
-    _render(ad, description, room);
-  } 
+  serchValues(values);
+  }
 }
 
 function getSortValue(sort){
@@ -283,5 +272,35 @@ function getSortValue(sort){
   }
   return val;
 }
+function getValueForNavSearch(text,val){
+if(val===``){
+  return ``;
+}
+return `${text}${val}`
+}
+function searchNav(){
+  const val=document.getElementById(`detail_search_id_type`).value;
+  const descId = getValueForNavSearch(`descriptionId=`,val);
+  getCategoryName(val);
+  const townName=document.getElementById(`town`).value;
+  const town = getValueForNavSearch(`area=`,townName)
+  const values = [descId,town].filter(w=>w);
+  serchValues(values)
+}
 
+async function serchValues(values){
+  const sda = values.length > 0 ? `?${values.join(`&`)}` : ``;
+let response = await _api.get(`/listings${sda}`);
+let ads = await response.data;
+$(`.mainBox`).empty()
+if (ads.length === 0) {
+$(`.mainBox`).append(`Nema rezultata koji ispunjavaju vase zahteve. Vratite se na pretragu.`);
+} else{
+for (const ad of ads) {
+let description = await getDescription(ad.id);
+let room = getRoomDescription(ad.roomCount);
+_render(ad, description, room);
+}
+}
+}
 })()
