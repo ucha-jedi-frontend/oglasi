@@ -25,11 +25,18 @@
                     <a href="index.html"><img src="img/logo-m.png" alt="Oglasi logo" class="mali-logo"></a>
                 </div>
                 <div class="signIn">
-                    <div class="registracija"><button id="btn-prijava" class="button reg-button">Prijava</button></div>
-                    <div class="crta"> | </div>
-                    <div class="registracija"><button id="btn-registracija"
-                            class="button reg-button">Registracija</button></div>
-                    <div class="postavi"><a href="#" class="button">Postavi oglas</a></div>
+                    <div class="registracija">
+                        <button id="btn-prijava" class="button reg-button">Prijava</button>
+                    </div>
+                    <div class="crta">
+                        |
+                    </div>
+                    <div class="registracija">
+                        <button id="btn-registracija" class="button reg-button">Registracija</button>
+                    </div>
+                    <div class="postavi">
+                        <a href="#" class="button">Postavi oglas</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,10 +44,19 @@
     <nav>
         <div class="nav-container">
             <ul>
-                <li><a href="#">Kuće</a></li>
-                <li><a href="#">Stanovi</a></li>
-                <li><a href="#">Lokali</a></li>
-                <li><a href="#">Zemljišta </a></li>
+                <li>
+                    <a href="index.html">Kuće</a>
+                </li>
+                <li>
+                    <a href="index.html">Stanovi</a>
+                </li>
+                <li>
+                    <a href="index.html">Lokali</a>
+                </li>
+                <li>
+                    <a href="index.html">Zemljišta
+                    </a>
+                </li>
             </ul>
             <div class="clearfix"></div>
         </div>
@@ -48,10 +64,10 @@
     <div class="kontejner">
         <div class="container asidee">
             <div class="aside_slike_kontejner">
-                <img src="img/glavna-img2.jpg" alt="" class="previmg" data-goto="0" />
-                <img src="img/glavna-img1.jpg" alt="" class="previmg" data-goto="1" />
-                <img src="img/glavna-img4.jpg" alt="" class="previmg" data-goto="2" />
-                <img src="img/glavna-img5.jpg" alt="" class="previmg" data-goto="3" />
+                <img id="asideImg1" src="" alt="" class="previmg" data-goto="0" />
+                <img id="asideImg2" src="" alt="" class="previmg" data-goto="1" />
+                <img id="asideImg3" src="" alt="" class="previmg" data-goto="2" />
+                <img id="asideImg4" src="" alt="" class="previmg" data-goto="3" />
             </div>
             <!-- <div class="kalkulator ">Kalkulator</div> -->
         </div>
@@ -63,25 +79,25 @@
 
                             <div class="slika caroitem item-current" data-slide="0">
                                 <div class="glavna-slika">
-                                    <div><img src="img/glavna-img2.jpg" alt="" class="responsive"></div>
+                                    <div id="img1"></div>
                                 </div>
                             </div>
 
                             <div class="slika caroitem" data-slide="1">
                                 <div class="glavna-slika">
-                                    <div><img src="img/glavna-img1.jpg" alt="" class="responsive"></div>
+                                    <div id="img2"></div>
                                 </div>
                             </div>
 
                             <div class="slika caroitem" data-slide="2">
                                 <div class="glavna-slika">
-                                    <div><img src="img/glavna-img4.jpg" alt="" class="responsive"></div>
+                                    <div id="img3"></div>
                                 </div>
                             </div>
 
                             <div class="slika caroitem" data-slide="3">
                                 <div class="glavna-slika">
-                                    <div><img src="img/glavna-img5.jpg" alt="" class="responsive"></div>
+                                    <div id="img4"></div>
                                 </div>
                             </div>
 
@@ -99,47 +115,43 @@
                         </div>
                         <div class="ukratko_tekst ">
                             <div class="s_leva ">
-                                <div> <span>Cena</span></div>
-                                <div><span>Cena po m²</span></div>
-                                <div><span>Uknjiženost</span> </div>
-                                <div><span>Grejanje</span> </div>
-                                <div><span>Površina</span> </div>
-                                <div><span>Parking mesto</span> </div>
-                                <div><span>Sprat</span> </div>
-                                <div><span>Struktura</span> </div>
-                                <div><span>Broj spavaćih soba</span></div>
-                                <div><span>Broj kupatila</span></div>
+                                <div>
+                                    <span>Cena</span></div>
+                                <div>
+                                    <span>Cena po m<sup>2</sup></span></div>
+                                <div>
+                                    <span>Uknjiženost</span>
+                                </div>
+                                <div>
+                                    <span>Grejanje</span>
+                                </div>
+                                <div>
+                                    <span>Površina</span>
+                                </div>
+                                <div>
+                                    <span>Parking mesto</span>
+                                </div>
+                                <div>
+                                    <span>Sprat</span>
+                                </div>
+                                <div>
+                                    <span>Struktura</span>
+                                </div>
+                                <div>
+                                    <span>Lift</span></div>
+                                <div>
+                                    <span>Terasa</span></div>
                             </div>
                             <div class="s_desna ">
-                                <div><span>220.000,00€</span></div>
-                                <div><span>2,750€</span></div>
-                                <div><span>Da</span></div>
-                                <div><span>Centralno</span></div>
-                                <div><span>80m²</span></div>
-                                <div><span>Da</span></div>
-                                <div><span>3</span></div>
-                                <div><span>Trosoban</span></div>
-                                <div><span>Dve</span></div>
-                                <div><span>Dva</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="opis_oglasa text-center marg-top">
-                <h2>Koste Stankovica, 44m2, jednoiposoban</h2>
-                <p>
-                    BW Magnolia se nalazi u tački spajanja najvažnijih komercijalnih i rekreativnih sadržaja, a poslovni
-                    i istorijski centri Beograda su peške dostupni.
-                    <br /> Locirana u istočnom delu Belgrade Waterfont kompleksa, BW Magnolia se nalazi u neposrednoj
-                    blizini poznate boemske četvrti Savamala
-                    <br /> Glavne atrakcije koje nudi Belgrade Waterfront obuhvataju bogat izbor najposećenijih kafea,
-                    specijalizovanih restorana i svetski poznatih prodavnica, na samo nekoliko minuta hoda.
-                </p>
             </div>
         </div>
 
-        <!--  DRUGI CAROUSEL -->
         <div class="enlarged" id="enlarged">
 
             <div class="tekucaslika velikaslika">
@@ -149,9 +161,10 @@
                 <img src="img/glavna-img4.jpg" alt="" class="crnaslika videcesme" />
             </div>
             <div class="left"><img src="img/levo.svg" alt="<" /></div>
-            <div class="rihgt"><img src="img/desno.svg" alt=">" /></div>
+            <div class="rihgt"><img src=" img/desno.svg" alt=">" />
+            </div>
             <div class="close-carousel">&times;</div>
-        </div> <!-- DRUGI CAROUSEL -kraj -->
+        </div>
     </div>
     <div id="modal-prijava" class="moj-modal">
         <div class="modal-content">
@@ -162,29 +175,31 @@
                 <div class="forma text-left">
                     <label for="email-prijava">E-mail adresa:</label><br>
                     <input type="email" id="email-prijava" name="email-prijava" placeholder="Email" size="30"
-                        class="inp form-control" required>
+                        class="inp form-control" required="required">
                     <p id='emailporuka1' class="poruka-greska"></p>
                 </div>
                 <div class="forma text-left">
                     <label for="lozinka-prijava">Lozinka:</label><br>
                     <input type="password" id="lozinka-prijava" name="lozinka-prijava" placeholder="Lozinka" size="30"
-                        class="inp form-control" required>
+                        class="inp form-control" required="required">
                     <p id='lozinkaporuka1' class="poruka-greska"></p>
                 </div>
 
                 <button type="submit" id="dugme-login1" class="za-formu">Ulogujte se</button>
 
-                <div class="marg-top"><label><input type="checkbox" name="upamti" checked="">
-                        Upamti
-                        me na
-                        ovom
-                        kompjuteru</label></div>
+                <div class="marg-top">
+                    <label><input type="checkbox" name="upamti" checked="">
+                        Upamti me na ovom kompjuteru</label>
+                </div>
 
-                <div class="marg-top"><a href="#">Lozinka zaboravljena?</a></div>
+                <div class="marg-top">
+                    <a href="#">Lozinka zaboravljena?</a>
+                </div>
 
                 <h3 class="marg-top">Još uvek nemate nalog na sajt Oglasi?</h3>
                 <button type="submit" id="dugme-registracija1" class="za-formu">Registracija</button>
-                <p>Neophodno za postavljanje oglasa i kontakt sa oglašivačima. </p>
+                <p>Neophodno za postavljanje oglasa i kontakt sa oglašivačima.
+                </p>
             </form>
         </div>
     </div>
@@ -198,41 +213,48 @@
                 <div class="forma text-left">
                     <label for="email-registracija">E-mail adresa:</label><br>
                     <input type="email" id="email-registracija" name="email-registracija" placeholder="Email" size="30"
-                        class="inp form-control" required>
+                        class="inp form-control" required="required">
                     <p id='emailporuka2' class="poruka-greska"></p>
                 </div>
                 <div class="forma text-left">
                     <label for="lozinka-registracija1">Lozinka:</label><br>
                     <input type="password" id="lozinka-registracija1" name="lozinka-registracija1" placeholder="Lozinka"
-                        size="30" class="inp form-control" required>
+                        size="30" class="inp form-control" required="required">
                     <p id='lozinkaporuka2' class="poruka-greska"></p>
                 </div>
                 <div class="forma text-left">
                     <label for="lozinka-registracija2">Ponovite lozinku:</label><br>
                     <input type="password" id="lozinka-registracija2" name="lozinka-registracija2" placeholder="Lozinka"
-                        size="30" class="inp form-control" required>
+                        size="30" class="inp form-control" required="required">
                     <p id='lozinkaporuka3' class="poruka-greska"></p>
                 </div>
 
-                <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked="" required="">
-                        Prihvatam
-                        pravila i uslove Oglasi.com</label></div>
-                <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked="" required=""> Imam
-                        više od 16
-                        godina</label></div>
+                <div class="marg-top text-left">
+                    <label><input type="checkbox" name="pravila" checked="" required="">
+                        Prihvatam pravila i uslove Oglasi.com</label>
+                </div>
+                <div class="marg-top text-left">
+                    <label><input type="checkbox" name="godine" checked="" required="">
+                        Imam više od 16 godina</label>
+                </div>
 
                 <button type="submit" id="dugme-registracija" class="za-formu">Pošalji</button>
 
-                <p>Registracija nije moguća ako e-mail adresa nije korektna! </p>
+                <p>Registracija nije moguća ako e-mail adresa nije korektna!
+                </p>
             </form>
         </div>
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/oglas.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/carousel.js"></script>
+
+    <!-- <script src="../dist/bundle.js"></script> -->
+
 </body>
 
 </html>

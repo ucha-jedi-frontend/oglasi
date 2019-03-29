@@ -30,11 +30,12 @@ html , body {background-color: #efefd6;}
 }
 .s_leva {flex: 60%}
 .s_desna {flex: 40%;}
-.s_leva div , .s_desna div {border-bottom: 1px solid #658295;}
+.s_leva div , .s_desna div {border-bottom: 1px solid #658295;height: 1.5em;}
 .opis_oglasa {
   margin-top: 3%;
   background-color: #658295;
   color: #efefd6;
+  min-height: 175px;
 }
 p {
   text-align: justify;

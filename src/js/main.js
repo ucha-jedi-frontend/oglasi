@@ -2,9 +2,15 @@ import "@babel/polyfill";
 import {getRoomDescription, getCategoryName, searchRealEstates, saveToSessionStorage,
          filter, getChechboxValues, sortBy, searchNav} from "./misc.js"
 import {autocomplete, city} from "./autocomplete" 
+import {} from "./modal.js"
+import {} from "./form-validation.js"
+import {} from "./oglas.js"
+import {} from "./carousel.js"
+import {} from "./objavi.js"
 
 autocomplete(document.getElementById(`town`), city);
 autocomplete(document.getElementById(`detail_search_id_city`), city);
+
 
 const _api = axios.create({
   baseURL: `http://localhost:3000`
@@ -74,4 +80,4 @@ $(document).ready(function () {
   $(`#searhInNav`).click(searchNav);
 });
 
-export {getDescription,_render,displayAds}
+export {getDescription,_render,displayAds,_api}

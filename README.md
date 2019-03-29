@@ -21,3 +21,7 @@ Project structure should look something like this:
 ├── favicon.ico
 └── index.html
 ```
+Dizajnirale , razvile i implementirale Štreberke.
+Tim Štreberke: Ana, Jelena, Mirjana, Zorica, Ana, Marija.
+Korišćene tehnologije: HTML, CSS, JAVASCRIPT, jQUERY, BOOTSTRAP, JSON, AXIOS, WEBPACK, ESLint.
+

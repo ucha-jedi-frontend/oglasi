@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <title>Oglasi</title>
+    <link href="https://fonts.googleapis.com/css?family=Krub:300,400" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/objavi.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.jpg" alt="Oglasi logo" class="veliki-logo"></a>
+                    <a href="index.html"><img src="img/logo-m.png" alt="Oglasi logo" class="mali-logo"></a>
+                </div>
+                <div class="signIn">
+                    <div class="registracija"><button id="btn-prijava" class="button reg-button">Prijava</button></div>
+                    <div class="crta"> | </div>
+                    <div class="registracija"><button id="btn-registracija"
+                            class="button reg-button">Registracija</button></div>
+                    <div class="postavi"><a href="#" class="button">Postavi oglas</a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Kuće</a></li>
+                <li><a href="index.html">Stanovi</a></li>
+                <li><a href="index.html">Lokali</a></li>
+                <li><a href="index.html">Zemljišta </a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="col-md-8">
+            <h4 class="mb-3">Postavi oglas</h4>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="descriptionId">Tip objekta</label>
+                        <select class="custom-select d-block w-100" id="descriptionId" name="descriptionId" required>
+                            <option value="">Tip objekta...</option>
+                            <option value=1>Stan</option>
+                            <option value=2>Kuća</option>
+                            <option value=3>Lokal</option>
+                            <option value=4>Zemljište</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Obavezno polje
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="street">Ulica</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="street" placeholder="Ulica" name="street"
+                                required>
+                            <div class="invalid-feedback" style="width: 100%;">
+                                Obavezno polje
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="area">Grad</label>
+                        <select class="form-control" id="area" name="area">
+                            <option value="">Grad</option>
+                            <option>Beograd</option>
+                            <option>Novi Sad</option>
+                            <option>NiŠ</option>
+                            <option>Kragujevac</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="district">Opština</label>
+                        <select class="form-control" id="district" name="district">
+                            <option value="">Opština</option>
+                            <option>Palilula</option>
+                            <option>Zvezdara</option>
+                            <option>Novi Beograd</option>
+                            <option>Labudovo Brdo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="m2">Kvadratura</label>
+                        <input type="text" class="form-control" id="m2" name="m2" placeholder="Kvadratura" required>
+                        <div class="invalid-feedback">
+                            Obavezno polje
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="floor">Sprat</label>
+                        <input type="text" class="form-control" id="floor" name="floor" placeholder="Sprat">
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="roomCount">Broj soba</label>
+                        <input type="text" class="form-control" id="roomCount" name="roomCount" placeholder="Broj soba">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="heating">Grejanje </label>
+                        <select class="custom-select d-block w-100" id="heating" name="heating">
+                            <option value="">Grejanje</option>
+                            <option value=1>Centralno</option>
+                            <option value=2>Gas</option>
+                            <option value=3>Struja</option>
+                            <option value=4>Čvsto gorivo</option>
+                            <option value=5>Podno</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="imgUrl">URL adresa</label>
+                        <input type="text" class="form-control" id="imgUrl" name="imgUrl" placeholder="URL adresa"
+                            required>
+                        <div class="invalid-feedback">
+                            Obavezno polje
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="price">Cena</label>
+                        <input type="text" class="form-control" id="price" name="price" placeholder="Cena" required>
+                        <div class="invalid-feedback">
+                            Obavezno polje
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="parking" name="parking">
+                            <label class="custom-control-label" for="parking">Parking</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="garage" name="garage">
+                            <label class="custom-control-label" for="garage">Garaža</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="elevator" name="elevator">
+                            <label class="custom-control-label" for="elevator">Lift</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="terrace" name="terrace">
+                            <label class="custom-control-label" for="terrace">Terasa</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="loda" name="loda">
+                            <label class="custom-control-label" for="loda">Lođa</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="yard" name="yard">
+                            <label class="custom-control-label" for="yard">Dvorište</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="cableTV" name="cableTV">
+                            <label class="custom-control-label" for="cableTV">Kablovska TV</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="internet" name="internet">
+                            <label class="custom-control-label" for="internet">Internet</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="phone" name="phone">
+                            <label class="custom-control-label" for="phone">Telefon</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="air_condition" name="air_condition">
+                            <label class="custom-control-label" for="air_condition">Klima</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="recent" name="recent">
+                            <label class="custom-control-label" for="recent">Novogradnja</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="in_construction"
+                                name="in_construction">
+                            <label class="custom-control-label" for="in_construction">U izgradnji</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="legalized" name="legalized">
+                            <label class="custom-control-label" for="legalized">U legalizaciji</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mb-3">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="legalization_completed"
+                                name="legalization_completed">
+                            <label class="custom-control-label" for="legalization_completed">Legalizovano</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="addAd" class=" btn button_filter_search" type="submit">Objavi oglas</button>
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <div id="modal-prijava" class="moj-modal">
+        <div class="modal-content">
+            <span class="close close-modal">&times;</span>
+            <h3>Ulogujte se na sajt Oglasi</h3>
+
+            <form id="forma-prijava" class="needs-validation" novalidate>
+                <div class="forma text-left">
+                    <label for="email-prijava">E-mail adresa:</label><br>
+                    <input type="email" id="email-prijava" name="email-prijava" placeholder="Email" size="30"
+                        class="inp" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                    <p id=' emailporuka1' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-prijava">Lozinka:</label><br>
+                    <input type="password" id="lozinka-prijava" name="lozinka-prijava" placeholder="Lozinka" size="30"
+                        class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$" required>
+                    <p id='lozinkaporuka1' class="poruka-greska"></p>
+                </div>
+
+                <button type="submit" id="dugme-login1" class="za-formu">Ulogujte se</button>
+
+                <div class="marg-top"><label><input type="checkbox" name="upamti" checked=""> Upamti me na ovom
+                        kompjuteru</label></div>
+
+                <div class="marg-top"><a href="#">Lozinka zaboravljena?</a></div>
+
+                <h3 class="marg-top">Još uvek nemate nalog na sajt Oglasi?</h3>
+                <button type="submit" id="dugme-registracija1" class="za-formu">Registracija</button>
+                <p>Neophodno za postavljanje oglasa i kontakt sa oglašivačima. </p>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-registracija" class="moj-modal">
+        <div class="modal-content">
+            <span class="close close-modal">&times;</span>
+            <h3>Registracija naloga na sajt Oglasi</h3>
+
+            <form id="forma-registracija" class="needs-validation" novalidate>
+                <div class="forma text-left">
+                    <label for="email-registracija">E-mail adresa:</label><br>
+                    <input type="email" id="email-registracija" name="email-registracija" placeholder="Email" size="30"
+                        class="inp" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                    <p id='emailporuka2' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-registracija1">Lozinka:</label><br>
+                    <input type="password" id="lozinka-registracija1" name="lozinka-registracija1" placeholder="Lozinka"
+                        size="30" class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$"
+                        required>
+                    <p id='lozinkaporuka2' class="poruka-greska"></p>
+                </div>
+                <div class="forma text-left">
+                    <label for="lozinka-registracija2">Ponovite lozinku:</label><br>
+                    <input type="password" id="lozinka-registracija2" name="lozinka-registracija2" placeholder="Lozinka"
+                        size="30" class="inp" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zšđžćčA-ZŠĐŽČĆ\d]{8,}$"
+                        required>
+                    <p id='lozinkaporuka3' class="poruka-greska"></p>
+                </div>
+
+                <div class="marg-top text-left"><label><input type="checkbox" name="pravila" checked=""> Prihvatam
+                        pravila i uslove Oglasi.com</label></div>
+                <div class="marg-top text-left"><label><input type="checkbox" name="godine" checked=""> Imam više od 16
+                        godina</label></div>
+
+                <button type="submit" id="dugme-registracija" class="za-formu">Pošalji</button>
+
+                <p>Registracija nije moguća ako e-mail adresa nije korektna! </p>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- <script src="js/modal.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script src="js/main.js"></script> -->
+    <script src="../dist/bundle.js"></script>
+</body>
+
+</html>

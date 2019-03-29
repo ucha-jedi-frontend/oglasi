@@ -1,0 +1,19 @@
+html, body {
+    background-color: #efefd6;
+}
+.container {
+  max-width: 960px;
+}
+
+.lh-condensed { line-height: 1.25; }
+.ana {padding: 25px;}
+.row {margin-left: 0;margin-right: 0;}
+.col-md-8 {margin-left: auto; margin-right: auto;}
+
+@media screen and (max-width: 767px) {
+	.ana {padding: 15px;}
+	.autocomplete {margin-right: 0;}
+}
+@media screen and (min-width: 768px) {
+	.col-md-8 {background-color: #fff;padding-bottom: 1em; padding-top: 1em;border-radius: 3px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+}
