@@ -25,14 +25,14 @@
 }
 .modal-content {
   position: absolute;	
-  background: #fff;
+  background: #efefd6;
   border-radius: .25rem;
   left:50%;top:120px;margin-left: -250px;
   display: table-cell; width: 500px; 
   text-align: center; padding: 2rem ; border:1px solid #ddd;box-shadow: 5px 5px 12px;
 }
 .close {
-  color: #aaaaaa;
+  color: #70a045;
   position: absolute;
   right:5px;
   top:-5px;
@@ -40,7 +40,7 @@
   font-weight: bold;
 }
 .close:hover , .close:focus {
-  color: #000;
+  color: #333;
   text-decoration: none;
   cursor: pointer;
 }
